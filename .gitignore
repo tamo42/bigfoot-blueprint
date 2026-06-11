@@ -1,0 +1,29 @@
+# Local env files
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+.env.staging
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Gemini files
+.gemini/
+
+# Node modules
+node_modules/
+dist/
+build/

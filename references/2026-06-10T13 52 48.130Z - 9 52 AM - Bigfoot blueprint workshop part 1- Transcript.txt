@@ -1,0 +1,17 @@
+---
+date: 
+type: 
+attendees: 
+client_name: 
+entity: 
+project_code: 
+roles: 
+strategies: 
+source_transcript: Krisp.ai
+---
+
+Neal McSpadden | 00:02
+By the way, all this stuff's been possible for a lot of years, but you've hired 19 to do all this stuff. Now you can do it literally on weekends and as a test that you've done hundreds of millions of dollars in development matters in a few days.
+What does that mean? So I subscribe to something called Import Genius, and it takes all the data about who's shipping and importing and exporting inside the United States. It finds free data, and we're talking about data acquisition a little bit, but it takes free data and sources data and makes it usable to people and charges, I think, $399 a month. Somebody else can be looking for GenAI.
+So if they come down in pricing... But basically, what it does is it's a directory of importers and exports, and it charges $309 a month. There's another one that I know, another person I know that keeps all the data on who's sponsoring what events and sells a directory of sponsors to people who are looking for sponsors for $290 a month.
+So some of these directories can have a paid level. We're generally talking about free, open directories. I've got a lot of ways. $299 a month, they come down. I think they should be $399.
