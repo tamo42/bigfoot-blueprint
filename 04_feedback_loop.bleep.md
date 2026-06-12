@@ -24,6 +24,8 @@
         - R-101: Never run geocoding APIs without local cache layers to prevent redundant coordinate calls.
         - R-102: Enrichments using Gemini 2.5 must use strict JSON schemas (structured output) to prevent parsing errors on special characters.
         - R-103: When deploying new directory subdomains, they must follow the format `niche-city.com` or `niche-state.com` and must be cataloged in `/02-workbench/nhq-bigfoot-blueprint/directory-registry.md` before going live.
+        - R-106: Any scraping activity must be small, self-contained, iterative, and non-duplicate. Do not run large all-at-once pulls. Test and iterate on smaller runs first to verify API mechanisms and dataset structures, securing a definable result before scaling up.
+
     </RULE_ABSTRACTION_CONTROL>
   </TAB_7_FEEDBACK_GYROSCOPE>
 
