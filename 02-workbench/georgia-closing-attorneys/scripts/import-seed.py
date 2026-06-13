@@ -53,6 +53,12 @@ def main():
         quickfact_fee_structure TEXT,
         quickfact_access TEXT,
         faq_enriched TEXT,
+        specialty_wholesale INTEGER DEFAULT 0,
+        specialty_creative_finance INTEGER DEFAULT 0,
+        specialty_land_deals INTEGER DEFAULT 0,
+        specialty_title_resolution INTEGER DEFAULT 0,
+        languages_spoken TEXT DEFAULT '["English"]',
+        specialties_crawled INTEGER DEFAULT 0,
         claimed INTEGER DEFAULT 0
     )
     """)

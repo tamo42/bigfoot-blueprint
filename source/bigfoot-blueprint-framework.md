@@ -261,7 +261,7 @@ flowchart TD
 * **Action**: Identify a fragmented market and map out the core educational topics:
   1. *Registry Audit*: Is there an easily exportable state/county registry of licensed entities? (e.g., HVAC, Closing Attorneys, Septic Haulers).
   2. *Digital Footprint Audit*: Do the local competitors have poor digital footprints? (Average website is outdated or non-existent).
-  3. *Head-Term Keyword Research*: Download search query reports from **AnswerThePublic (askthepublic.com)** to identify the broad, high-volume "head" questions users ask about this niche (e.g., *"how often to clean grease traps,"* *"septic system inspection requirements"*).
+  3. *Head-Term Keyword Research*: Run programmatic search queries using the **AnswerThePublic API** via the shared CLI script (`02-workbench/answerthepublic/scripts/fetch-atp.py`) to extract real search queries, questions, and comparisons. These queries are cached locally in `02-workbench/answerthepublic/cache/` to avoid redundant credit consumption (limit to 10 or fewer searches per directory launch to conserve plan credits).
   4. *Geo-Intent Multiplexing Setup*: Plan the programmatic combination of these broad educational head queries with target geographic locations (e.g., combining *"grease trap requirements"* + *"Macon, Georgia"* into a single, high-intent local educational page: *"What are the requirements for cleaning grease traps in Macon, Georgia?"*).
 
 
