@@ -1,0 +1,265 @@
+[
+  {
+    "#debug": {
+      "requestId": "0gHCLo0sSDXL4rt",
+      "url": "http://www.google.com/search?q=septic+pumping&hl=en",
+      "loadedUrl": "http://www.google.com/search?q=septic+pumping&hl=en",
+      "method": "GET",
+      "retryCount": 0,
+      "errorMessages": [],
+      "statusCode": 200
+    },
+    "#error": false,
+    "searchQuery": {
+      "term": "septic pumping",
+      "url": "http://www.google.com/search?q=septic+pumping&hl=en",
+      "device": "DESKTOP",
+      "page": 1,
+      "type": "SEARCH",
+      "domain": "google.com",
+      "countryCode": "US",
+      "languageCode": "en",
+      "locationUule": null,
+      "resultsPerPage": 10
+    },
+    "url": "http://www.google.com/search?q=septic+pumping&hl=en",
+    "hasNextPage": true,
+    "serpProviderCode": "N",
+    "resultsTotal": null,
+    "relatedQueries": [
+      {
+        "title": "septic pumping near california",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=septic+pumping+near+california&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAhcEAE"
+      },
+      {
+        "title": "septic pumping near texas",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=septic+pumping+near+texas&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAhiEAE"
+      },
+      {
+        "title": "Septic pumping near me",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Septic+pumping+near+me&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAhbEAE"
+      },
+      {
+        "title": "Septic pumping cost",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Septic+pumping+cost&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAhgEAE"
+      },
+      {
+        "title": "Septic pumping companies",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Septic+pumping+companies&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAhfEAE"
+      },
+      {
+        "title": "Residential septic pumping",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Residential+septic+pumping&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAheEAE"
+      },
+      {
+        "title": "Septic pumping near me open Now",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Septic+pumping+near+me+open+Now&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAhdEAE"
+      },
+      {
+        "title": "Septic pumping sandpoint",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Septic+pumping+sandpoint&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAhhEAE"
+      },
+      {
+        "title": "septic pumping near california",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=septic+pumping+near+california&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAhcEAE"
+      },
+      {
+        "title": "septic pumping near texas",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=septic+pumping+near+texas&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAhiEAE"
+      },
+      {
+        "title": "Septic pumping near me",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Septic+pumping+near+me&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAhbEAE"
+      },
+      {
+        "title": "Septic pumping cost",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Septic+pumping+cost&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAhgEAE"
+      },
+      {
+        "title": "Septic pumping companies",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Septic+pumping+companies&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAhfEAE"
+      },
+      {
+        "title": "Residential septic pumping",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Residential+septic+pumping&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAheEAE"
+      },
+      {
+        "title": "Septic pumping near me open Now",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Septic+pumping+near+me+open+Now&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAhdEAE"
+      },
+      {
+        "title": "Septic pumping sandpoint",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Septic+pumping+sandpoint&sa=X&ved=2ahUKEwjLzqvq3oSVAxXFRaQEHWWmEdEQ1QJ6BAhhEAE"
+      }
+    ],
+    "paidResults": [],
+    "paidProducts": [],
+    "organicResults": [
+      {
+        "title": "Septic Tank Services: Maintenance & Repair",
+        "websiteTitle": "Roto-Rooter",
+        "url": "https://www.rotorooter.com/plumbing/septic-tank/",
+        "displayedUrl": "https://www.rotorooter.com \u203a plumbing \u203a septic-tank",
+        "description": "Roto-Rooter provides 24/7 septic tank services, including pumping, cleaning, and repair. Call 800-768-6911 Home",
+        "emphasizedKeywords": [
+          "Roto-Rooter provides 24/7 septic tank services"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "averageRating": 5,
+        "numberOfReviews": 23,
+        "type": "organic",
+        "position": 1
+      },
+      {
+        "title": "Las Vegas Septic Service: Septic Service Company in NV",
+        "websiteTitle": "Las Vegas Septic Service",
+        "url": "https://lasvegassepticservice.com/",
+        "displayedUrl": "https://lasvegassepticservice.com",
+        "description": "Las Vegas Septic Service offers residential & commercial septic & grease pumping to the Las Vegas valley & surrounding areas. 702-600-9495Read more",
+        "emphasizedKeywords": [
+          "offers residential & commercial septic & grease pumping"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 2
+      },
+      {
+        "title": "How to Care for Your Septic System",
+        "websiteTitle": "U.S. Environmental Protection Agency (.gov)",
+        "url": "https://www.epa.gov/septic/how-care-your-septic-system",
+        "displayedUrl": "https://www.epa.gov \u203a septic \u203a how-care-your-septic-sy...",
+        "description": "Household septic tanks are typically pumped every three to five years. Alternative systems with electrical float switches, pumps, or mechanical\u00a0...Read more",
+        "date": "2025-08-28T12:00:00.000Z",
+        "emphasizedKeywords": [
+          "Household septic tanks are typically pumped every three to five years"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 3
+      },
+      {
+        "title": "Septic Tank Pumping Services Near Me",
+        "websiteTitle": "United Site Services",
+        "url": "https://www.unitedsiteservices.com/what-we-offer/other-services/septic-tank-service/",
+        "displayedUrl": "https://www.unitedsiteservices.com \u203a septic-tank-service",
+        "description": "United Site Services offers worry-free and on-time septic tank pumping services for your commercial or residential property.Read more",
+        "emphasizedKeywords": [
+          "worry-free and on-time septic tank pumping services"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 4
+      },
+      {
+        "title": "How Much Does It Cost to Pump a Septic Tank? [2026 Data]",
+        "websiteTitle": "Angie's List",
+        "url": "https://www.angi.com/articles/how-much-does-septic-tank-pumping-cost.htm",
+        "displayedUrl": "https://www.angi.com \u203a ... \u203a Drainage \u203a Septic Tank",
+        "description": "The average cost to pump a septic tank is $427, with most people paying between $291 and $563. Septic tank pumping isn't the most glamorous\u00a0...Read more",
+        "date": "2026-04-06T12:00:00.000Z",
+        "emphasizedKeywords": [
+          "The average cost to pump a septic tank is $427"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "averageRating": 5,
+        "numberOfReviews": 1,
+        "type": "organic",
+        "position": 5
+      },
+      {
+        "title": "Finding and Pumping Out a Septic Tank",
+        "websiteTitle": "YouTube\u00a0\u00b7\u00a0Poor Pumper Society",
+        "url": "https://www.youtube.com/watch?v=xS2nzZSAbQU",
+        "displayedUrl": "YouTube\u00a0\u203a\u00a0Poor Pumper Society",
+        "description": "We got both lids of the tank popped open cleaned out both chambers of the tank and rinsed it all off with the water hose.",
+        "emphasizedKeywords": [],
+        "siteLinks": [],
+        "productInfo": {},
+        "views": "11.7K+ views",
+        "lastUpdated": "4 years ago",
+        "type": "organic",
+        "position": 6
+      },
+      {
+        "title": "Best Septic Tank Pumping Near Me - June 2026",
+        "websiteTitle": "Yelp",
+        "url": "https://www.yelp.com/nearme/septic-tank-pumping",
+        "displayedUrl": "https://www.yelp.com \u203a nearme \u203a septic-tank-pumping",
+        "description": "Some of the best septic tank pumping near me are: Local Cesspool Service \u00b7 The Pump Guys \u00b7 24 Hours Plumbing. What are the most reviewed septic tank pumping\u00a0...Read more",
+        "emphasizedKeywords": [
+          "Local Cesspool Service"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 7
+      },
+      {
+        "title": "Easy Clean Septic: Emergency Septic Service in Atlanta and ...",
+        "websiteTitle": "Easy Clean Septic",
+        "url": "https://www.easycleanseptic.com/",
+        "displayedUrl": "https://www.easycleanseptic.com",
+        "description": "Call Today: 6785321276 or 678-683-6210. Septic Tank Pumping. We provide top-notch Emergency Septic Service in Atlanta and surrounding areas. Say goodbye to\u00a0...",
+        "emphasizedKeywords": [
+          "Septic Tank Pumping"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 8
+      },
+      {
+        "title": "7 Services Septic Companies Can Offer - ProSeptic",
+        "websiteTitle": "proseptichv.com",
+        "url": "https://www.proseptichv.com/7-services-septic-companies-can-offer",
+        "displayedUrl": "https://www.proseptichv.com \u203a 7-services-septic-compan...",
+        "description": "1. Septic Tank Pumping. One of the most common services septic tank companies offer is periodic pumping of your septic tank. \u00b7 2. Septic Tank Inspections \u00b7 3.Read more",
+        "emphasizedKeywords": [
+          "Septic Tank Pumping"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 9
+      }
+    ],
+    "suggestedResults": [],
+    "peopleAlsoAsk": [
+      {
+        "answer": null,
+        "question": "What is the average cost to pump your septic tank?",
+        "title": null,
+        "url": "https://wastedoor.com/article/septic-pumping-cost-by-state",
+        "date": null
+      },
+      {
+        "answer": null,
+        "question": "How often should a septic pump be pumped?",
+        "title": null,
+        "url": null,
+        "date": null
+      },
+      {
+        "answer": null,
+        "question": "Should I use Ridex in my septic?",
+        "title": null,
+        "url": null,
+        "date": null
+      },
+      {
+        "answer": null,
+        "question": "How much does it cost to empty a 500 gallon septic tank?",
+        "title": null,
+        "url": null,
+        "date": null
+      }
+    ],
+    "customData": null,
+    "htmlSnapshotUrl": "https://api.apify.com/v2/key-value-stores/nzj90rgbgHsga1Km3/records/0gHCLo0sSDXL4rt-0.html?signature=AHRDPUTTw7ItUtxFzVhZ"
+  }
+]

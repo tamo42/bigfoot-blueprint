@@ -1,0 +1,262 @@
+[
+  {
+    "#debug": {
+      "requestId": "JIzd6VChzTFiOAc",
+      "url": "http://www.google.com/search?q=grease+trap+cleaning&hl=en",
+      "loadedUrl": "http://www.google.com/search?q=grease+trap+cleaning&hl=en",
+      "method": "GET",
+      "retryCount": 0,
+      "errorMessages": [],
+      "statusCode": 200
+    },
+    "#error": false,
+    "searchQuery": {
+      "term": "grease trap cleaning",
+      "url": "http://www.google.com/search?q=grease+trap+cleaning&hl=en",
+      "device": "DESKTOP",
+      "page": 1,
+      "type": "SEARCH",
+      "domain": "google.com",
+      "countryCode": "US",
+      "languageCode": "en",
+      "locationUule": null,
+      "resultsPerPage": 10
+    },
+    "url": "http://www.google.com/search?q=grease+trap+cleaning&hl=en",
+    "hasNextPage": true,
+    "serpProviderCode": "N",
+    "resultsTotal": null,
+    "relatedQueries": [
+      {
+        "title": "grease trap cleaning near california",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=grease+trap+cleaning+near+california&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAhaEAE"
+      },
+      {
+        "title": "grease trap cleaning near texas",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=grease+trap+cleaning+near+texas&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAhbEAE"
+      },
+      {
+        "title": "Grease trap cleaning near me",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Grease+trap+cleaning+near+me&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAhgEAE"
+      },
+      {
+        "title": "Grease trap cleaning service",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Grease+trap+cleaning+service&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAhcEAE"
+      },
+      {
+        "title": "Grease trap cleaning cost",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Grease+trap+cleaning+cost&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAheEAE"
+      },
+      {
+        "title": "Grease trap cleaning kit",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Grease+trap+cleaning+kit&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAhZEAE"
+      },
+      {
+        "title": "Grease trap cleaning truck",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Grease+trap+cleaning+truck&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAhfEAE"
+      },
+      {
+        "title": "Homemade grease trap cleaning",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Homemade+grease+trap+cleaning&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAhdEAE"
+      },
+      {
+        "title": "grease trap cleaning near california",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=grease+trap+cleaning+near+california&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAhaEAE"
+      },
+      {
+        "title": "grease trap cleaning near texas",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=grease+trap+cleaning+near+texas&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAhbEAE"
+      },
+      {
+        "title": "Grease trap cleaning near me",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Grease+trap+cleaning+near+me&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAhgEAE"
+      },
+      {
+        "title": "Grease trap cleaning service",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Grease+trap+cleaning+service&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAhcEAE"
+      },
+      {
+        "title": "Grease trap cleaning cost",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Grease+trap+cleaning+cost&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAheEAE"
+      },
+      {
+        "title": "Grease trap cleaning kit",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Grease+trap+cleaning+kit&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAhZEAE"
+      },
+      {
+        "title": "Grease trap cleaning truck",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Grease+trap+cleaning+truck&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAhfEAE"
+      },
+      {
+        "title": "Homemade grease trap cleaning",
+        "url": "https://www.google.com/search?sca_esv=1aa2181320e8cba3&gl=US&hl=en&q=Homemade+grease+trap+cleaning&sa=X&ved=2ahUKEwjRqevi3oSVAxUxj5UCHU9eGL0Q1QJ6BAhdEAE"
+      }
+    ],
+    "paidResults": [],
+    "paidProducts": [],
+    "organicResults": [
+      {
+        "title": "Grease Trap Cleaning",
+        "websiteTitle": "YouTube\u00a0\u00b7\u00a0CityStAug",
+        "url": "https://www.youtube.com/watch?v=8Uw8FbvKwZA",
+        "displayedUrl": "YouTube\u00a0\u203a\u00a0CityStAug",
+        "description": "I'm here at a local bakery to show you how to clean out a small under the sink grease trap.",
+        "emphasizedKeywords": [],
+        "siteLinks": [],
+        "productInfo": {},
+        "views": "22.7K+ views",
+        "lastUpdated": "3 years ago",
+        "type": "organic",
+        "position": 1
+      },
+      {
+        "title": "What Is Grease Trap Cleaning?",
+        "websiteTitle": "Roto-Rooter",
+        "url": "https://www.rotorooter.com/blog/commercial-plumbing/everything-you-need-to-know-about-grease-trap-service/",
+        "displayedUrl": "https://www.rotorooter.com \u203a ... \u203a Commercial Plumbing",
+        "description": "Grease trap cleaning is the process of pumping accumulated FOG waste and food solids out of the trap unit itself, then cleaning the trap's internal components.Read more",
+        "emphasizedKeywords": [
+          "Grease trap cleaning"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 2
+      },
+      {
+        "title": "Restaurant Grease Trap Cleaning Guide",
+        "websiteTitle": "WebstaurantStore",
+        "url": "https://www.webstaurantstore.com/article/999/how-to-clean-a-grease-trap.html?srsltid=AfmBOoqABObwj9FYAYjcE-OwZT6IrsxjzgVqzWFv4Tp47QAa2Q_gErbO",
+        "displayedUrl": "https://www.webstaurantstore.com \u203a article \u203a how-to-clea...",
+        "description": "Pour a gallon of warm water down the sink drain to rinse the trap clean. Make sure that the water flows freely in and out of the trap. Repeat if\u00a0...Read more",
+        "date": "2024-08-27T12:00:00.000Z",
+        "emphasizedKeywords": [
+          "Pour a gallon of warm water down the sink drain"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 3
+      },
+      {
+        "title": "Grease Trap Cleaning Service in Fayetteville, GA | WRE",
+        "websiteTitle": "Wind River Environmental",
+        "url": "https://www.wrenvironmental.com/fayetteville-ga/business-commercial/grease-trap-cleaning/",
+        "displayedUrl": "https://www.wrenvironmental.com \u203a business-commercial",
+        "description": "Call our team at (978) 708-4802 or contact us online today. clean grease traps every 1\u20133 months, depending on usage. us a call at (978) 708-4802.",
+        "emphasizedKeywords": [
+          "978) 708-4802"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 4
+      },
+      {
+        "title": "TOP 10 BEST Grease Trap Cleaning in Las Vegas, NV",
+        "websiteTitle": "Yelp",
+        "url": "https://www.yelp.com/search?find_desc=Grease+Trap+Cleaning&find_loc=Las+Vegas%2C+NV",
+        "displayedUrl": "https://www.yelp.com \u203a Home Services",
+        "description": "Top 10 Best Grease Trap Cleaning Near Las Vegas, Nevada with Reviews and Photos. Call (702) 613-0939 to get started today. We are available 24/7 for emergency\u00a0...",
+        "emphasizedKeywords": [
+          "Call (702) 613-0939"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "averageRating": 4.8,
+        "numberOfReviews": null,
+        "type": "organic",
+        "position": 5
+      },
+      {
+        "title": "Grease Trap Cleaning Kansas City",
+        "websiteTitle": "Honey Wagon Septic",
+        "url": "https://www.honey-wagonkc.com/services/grease-trap-cleaning.html",
+        "displayedUrl": "https://www.honey-wagonkc.com \u203a services \u203a grease-tra...",
+        "description": "Honey-Wagon's grease trap cleaning service thoroughly pumps your grease trap, eliminating odor and any safety issues associated with poorly maintained\u00a0...Read more",
+        "emphasizedKeywords": [
+          "thoroughly pumps your grease trap"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 6
+      },
+      {
+        "title": "Cleaning Grease Trap - Drain Pros Ep. 30",
+        "websiteTitle": "YouTube\u00a0\u00b7\u00a0Drain Pros",
+        "url": "https://www.youtube.com/watch?v=XoYiEcrmq3E",
+        "displayedUrl": "YouTube\u00a0\u203a\u00a0Drain Pros",
+        "description": "Clean off just the sides with a screwdriver, just clean up to the bottom, start filling up one of the drains with some hot water.",
+        "emphasizedKeywords": [],
+        "siteLinks": [],
+        "productInfo": {},
+        "views": "60.4K+ views",
+        "lastUpdated": "6 years ago",
+        "type": "organic",
+        "position": 7
+      },
+      {
+        "title": "Commercial Grease Trap Cleaning in Washington, D.C.",
+        "websiteTitle": "Emerald Plumbing Co.",
+        "url": "https://www.emerald911.com/commercial-plumbing/grease-trap-services/",
+        "displayedUrl": "https://www.emerald911.com \u203a grease-trap-services",
+        "description": "Call us at (240) 392-3535 for same-day scheduling s are designed to capture and separate fats, oils, and grease from wastewater. Call Emerald Plumbing at (240)\u00a0...",
+        "emphasizedKeywords": [
+          "Call us at (240) 392-3535"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 8
+      },
+      {
+        "title": "Grease Trap Cleaning In Seattle WA",
+        "websiteTitle": "West Coast Renewables",
+        "url": "https://wcrenewables.com/services/grease-trap-cleaning/",
+        "displayedUrl": "https://wcrenewables.com \u203a Services",
+        "description": "Professional grease trap cleaning and pumping in Seattle, WA. West Coast Renewables removes 100% of grease trap content to keep your kitchen compliant and\u00a0...",
+        "emphasizedKeywords": [
+          "Professional grease trap cleaning and pumping in Seattle, WA"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 9
+      }
+    ],
+    "suggestedResults": [],
+    "peopleAlsoAsk": [
+      {
+        "answer": null,
+        "question": "What is the best way to clean out a grease trap?",
+        "title": null,
+        "url": null,
+        "date": null
+      },
+      {
+        "answer": "Automatic indoor grease traps should be easily accessible and cleaned daily by removing grease and cleaning out the screening baskets. Manual grease traps need to be cleaned at least weekly, but if the trap is more than 25 percent full of grease after one week, the trap should be cleaned more often.",
+        "question": "How often should a grease trap be cleaned?",
+        "title": null,
+        "url": null,
+        "date": null
+      },
+      {
+        "answer": null,
+        "question": "How much is it to clean out a grease trap?",
+        "title": null,
+        "url": null,
+        "date": null
+      },
+      {
+        "answer": null,
+        "question": "What chemical dissolves grease in sewer lines?",
+        "title": null,
+        "url": null,
+        "date": null
+      }
+    ],
+    "customData": null,
+    "htmlSnapshotUrl": "https://api.apify.com/v2/key-value-stores/5JwFfTOQOyIYclo5G/records/JIzd6VChzTFiOAc-0.html?signature=uDsOqF6zqCP4Pehkc9mh"
+  }
+]
