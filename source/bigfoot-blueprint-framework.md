@@ -205,9 +205,9 @@ To address the double-sided market challenge (providing high value to the search
   * **Quick Vetting**: Standardized badges ("Licensed," "COI Verified," "Top Rated") in the primary viewport so the user can compare vendors in seconds.
   * **Action-First**: An omnipresent "Request Quote" or "Check Booking Availability" button on every page.
 * **For the Listing Owner (The Claiming Incentive)**:
-  * **Unverified Status Alert**: Unclaimed profiles display a prominent, neutral notification: *"Unverified Profile. If you are the owner, claim this profile to update your details and upload your Certificate of Insurance (COI) for the Verified Insured badge."*
-  * **The "Locked Value" Preview**: The listing details display placeholders for premium features (e.g., "Owner Video Walkthrough," "Social Links," "Special Offers") showing exactly what the business is missing out on by remaining on the free, unverified tier.
-  * **Loss Aversion (Conquest Ads)**: Unclaimed profiles display ads for competitor agencies. To remove competitor ads, the business must claim the profile and upgrade.
+  * **Neutral Default State**: Regular unclaimed profiles display NO negative "unverified" or "unclaimed" badges, flags, or alerts to the public. The business details are presented neutrally to preserve accuracy and trust.
+  * **The "Locked Value" Preview**: The listing details display placeholders for premium features (e.g., "Owner Video Walkthrough," "Social Links," "Special Offers") showing exactly what the business is missing out on by remaining on the free, neutral tier.
+  * **Loss Aversion (Conquest Ads)**: Unclaimed profiles may display ads for competitor agencies or verified alternatives. To remove competitor ads and gain a verified premium badge, the business must claim the profile and upgrade.
 
 ---
 
@@ -603,7 +603,7 @@ mindmap
 ### 6. Scarcity & Loss Aversion (Conquest Placements)
 * **The Principle**: The pain of losing an asset is twice as powerful as the pleasure of gaining it. Rarity (2 cookies in a jar vs. 10) increases perceived value.
 * **Directory Application**:
-  * **Conquest Ads**: Unclaimed profiles display a prominent "Unverified" notification and show ads for local competitors in the sidebar (Loss Aversion). To remove competitor ads and lock their profile, the business must claim it.
+  * **Conquest Ads**: Unclaimed profiles display neutrally but show ads for local competitor alternatives in the sidebar (Loss Aversion). To remove competitor ads, gain positive verification badges, and lock their profile, the business must claim it.
   * **Inventory Scarcity**: Limit featured spots on city hubs (e.g., *"Only 3 featured attorney slots available for Fulton County this quarter. 2 currently filled"*).
 
 ### 7. Unity (Shared Identity & Partnerships)

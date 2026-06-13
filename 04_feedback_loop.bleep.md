@@ -25,6 +25,9 @@
         - R-102: Enrichments using Gemini 2.5 must use strict JSON schemas (structured output) to prevent parsing errors on special characters.
         - R-103: When deploying new directory subdomains, they must follow the format `niche-city.com` or `niche-state.com` and must be cataloged in `/02-workbench/nhq-bigfoot-blueprint/directory-registry.md` before going live.
         - R-106: Any scraping activity must be small, self-contained, iterative, and non-duplicate. Do not run large all-at-once pulls. Test and iterate on smaller runs first to verify API mechanisms and dataset structures, securing a definable result before scaling up.
+        - R-108: If a PDF file is available online, always download it and parse it locally using a Python script (e.g. via `fitz`/PyMuPDF or `pypdf`) instead of using browser screenshots or browser-based text extraction. This minimizes token consumption and prevents browser navigation loops.
+        - R-109: Fictional, mock, synthetic, or realistic-looking placeholder data is strictly prohibited for regulatory fields (such as permit numbers or license statuses). All compliance and listing metadata must be derived from verified public registries and actual records.
+        - R-110: Unclaimed or basic listings on all directory sites must never display negative badges or labels (e.g. "Unclaimed" or "Unverified") to the public user. Move from neutral to positive branding only.
 
     </RULE_ABSTRACTION_CONTROL>
   </TAB_7_FEEDBACK_GYROSCOPE>
