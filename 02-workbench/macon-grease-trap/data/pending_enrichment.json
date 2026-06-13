@@ -1,0 +1,842 @@
+[
+  {
+    "name": "Birmingham Hide & Tallow Co. Inc.",
+    "slug": "birmingham-hide-tallow-co-inc",
+    "city": "Montgomry",
+    "state": "AL",
+    "zip_code": "36108",
+    "phone_number": "(205) 252-1197",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"AL-1212359\", \"fog_id\": \"FOG273-435\"}, {\"truck_tag\": \"AL-1197931\", \"fog_id\": \"FOG273-475\"}]"
+  },
+  {
+    "name": "Georgia Grease & Plumbing",
+    "slug": "georgia-grease-plumbing",
+    "city": "Cartersville,",
+    "state": "GA",
+    "zip_code": "30120",
+    "phone_number": "(770) 596-2083",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-PJW5285\", \"fog_id\": \"FOG211-001\"}]"
+  },
+  {
+    "name": "Kaylors Septic Service LLC",
+    "slug": "kaylors-septic-service-llc",
+    "city": "White",
+    "state": "GA",
+    "zip_code": "30184",
+    "phone_number": "(770) 597-3241",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-XKY810\", \"fog_id\": \"FOG464-389\"}]"
+  },
+  {
+    "name": "Green Energy Biofuel",
+    "slug": "green-energy-biofuel",
+    "city": "Winnsboro",
+    "state": "SC",
+    "zip_code": "29180",
+    "phone_number": "(706) 383-9087",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"SC-A002729\", \"fog_id\": \"FOG501-001\"}, {\"truck_tag\": \"SC-P783264\", \"fog_id\": \"FOG501-002\"}]"
+  },
+  {
+    "name": "Digs Septic Services",
+    "slug": "digs-septic-services",
+    "city": "Millen",
+    "state": "GA",
+    "zip_code": "30442",
+    "phone_number": "(912) 661-2834",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-GEM930\", \"fog_id\": \"FOG111-001\"}]"
+  },
+  {
+    "name": "Parr Industries",
+    "slug": "parr-industries",
+    "city": "Pulaski",
+    "state": "TN",
+    "zip_code": "38478",
+    "phone_number": "(931) 363-5379",
+    "fleet_size": 5,
+    "fleet_registry_json": "[{\"truck_tag\": \"TX-K166275\", \"fog_id\": \"FOG243-930\"}, {\"truck_tag\": \"TX-K166249\", \"fog_id\": \"FOG243-217\"}, {\"truck_tag\": \"OK-BW7027\", \"fog_id\": \"FOG243-622\"}, {\"truck_tag\": \"TX-K166244\", \"fog_id\": \"FOG243-220\"}, {\"truck_tag\": \"OK-BW7036\", \"fog_id\": \"FOG243-113\"}]"
+  },
+  {
+    "name": "NDB Septi Service",
+    "slug": "ndb-septi-service",
+    "city": "Nashville",
+    "state": "GA",
+    "zip_code": "31639",
+    "phone_number": "(229) 686-8515",
+    "fleet_size": 6,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-ECM405\", \"fog_id\": \"FOG217-003\"}, {\"truck_tag\": \"GA-ECM406\", \"fog_id\": \"FOG217-006\"}, {\"truck_tag\": \"GA-EIP320\", \"fog_id\": \"FOG217-008\"}, {\"truck_tag\": \"GA-ECQ804\", \"fog_id\": \"FOG271-001\"}, {\"truck_tag\": \"GA-ECM408\", \"fog_id\": \"FOG271-004\"}, {\"truck_tag\": \"GA-EIP380\", \"fog_id\": \"FOG271-009\"}]"
+  },
+  {
+    "name": "Southern Green Industries, Inc",
+    "slug": "southern-green-industries-inc",
+    "city": "Atlanta",
+    "state": "GA",
+    "zip_code": "30336",
+    "phone_number": "(404) 419-6887",
+    "fleet_size": 11,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-XJM113\", \"fog_id\": \"FOG204-007\"}, {\"truck_tag\": \"GA-WBP251\", \"fog_id\": \"FOG204-008\"}, {\"truck_tag\": \"GA-WDG317\", \"fog_id\": \"FOG204-010\"}, {\"truck_tag\": \"GA-EPL960\", \"fog_id\": \"FOG204-011\"}, {\"truck_tag\": \"GA-EPG524\", \"fog_id\": \"FOG204-012\"}, {\"truck_tag\": \"GA-YMS108\", \"fog_id\": \"FOG204-014\"}, {\"truck_tag\": \"GA-XSL901\", \"fog_id\": \"FOG204-016\"}, {\"truck_tag\": \"GA-GEB808\", \"fog_id\": \"FOG204-017\"}, {\"truck_tag\": \"GA-GEB810\", \"fog_id\": \"FOG204-018\"}, {\"truck_tag\": \"GA-GME590\", \"fog_id\": \"FOG204-019\"}, {\"truck_tag\": \"GA-GMT618\", \"fog_id\": \"FOG204-020\"}]"
+  },
+  {
+    "name": "Capital Pumping Service",
+    "slug": "capital-pumping-service",
+    "city": "Rocky Face",
+    "state": "GA",
+    "zip_code": "30740",
+    "phone_number": "(706) 847-7732",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EWC310\", \"fog_id\": \"FOG433-003\"}, {\"truck_tag\": \"GA-GNP856\", \"fog_id\": \"FOG433-004\"}]"
+  },
+  {
+    "name": "Watson Plumbing",
+    "slug": "watson-plumbing",
+    "city": "Macon",
+    "state": "GA",
+    "zip_code": "31211",
+    "phone_number": "(478) 256-5438",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-DQQ578\", \"fog_id\": \"FOG038-001\"}, {\"truck_tag\": \"GA-ECD532\", \"fog_id\": \"FOG038-002\"}]"
+  },
+  {
+    "name": "Liquid Envornmental Solutions",
+    "slug": "liquid-envornmental-solutions",
+    "city": "Symrna",
+    "state": "GA",
+    "zip_code": "30080",
+    "phone_number": "(678) 540-9762",
+    "fleet_size": 16,
+    "fleet_registry_json": "[{\"truck_tag\": \"TX-FVB2880\", \"fog_id\": \"FOG255-008\"}, {\"truck_tag\": \"TX-K178319\", \"fog_id\": \"FOG255-036\"}, {\"truck_tag\": \"OK-AX9353\", \"fog_id\": \"FOG255-137\"}, {\"truck_tag\": \"TX-K134641\", \"fog_id\": \"FOG255-228\"}, {\"truck_tag\": \"OK-BQ9679\", \"fog_id\": \"FOG255-373\"}, {\"truck_tag\": \"TX-K134619\", \"fog_id\": \"FOG255-477\"}, {\"truck_tag\": \"TX-K130482\", \"fog_id\": \"FOG255-478\"}, {\"truck_tag\": \"OK-9298LK\", \"fog_id\": \"FOG255-482\"}, {\"truck_tag\": \"TX-K166332\", \"fog_id\": \"FOG255-528\"}, {\"truck_tag\": \"TX-K061686\", \"fog_id\": \"FOG255-557\"}, {\"truck_tag\": \"TX-111K86\", \"fog_id\": \"FOG255-633\"}, {\"truck_tag\": \"OK-BE3292\", \"fog_id\": \"FOG255-893\"}, {\"truck_tag\": \"TX-K130656\", \"fog_id\": \"FOG255-970\"}, {\"truck_tag\": \"TX-K130659\", \"fog_id\": \"FOG255-973\"}, {\"truck_tag\": \"TX-111L28\", \"fog_id\": \"FOG255-986\"}, {\"truck_tag\": \"OK-BE3292\", \"fog_id\": \"FOG255-993\"}]"
+  },
+  {
+    "name": "Scotts Plumbing & Septic Repair",
+    "slug": "scotts-plumbing-septic-repair",
+    "city": "Carrolton",
+    "state": "GA",
+    "zip_code": "30117",
+    "phone_number": "(404) 704-6025",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-C1162495\", \"fog_id\": \"FOG540-003\"}]"
+  },
+  {
+    "name": "Hunter Septic Service & Install",
+    "slug": "hunter-septic-service-install",
+    "city": "Valdosta",
+    "state": "GA",
+    "zip_code": "31601",
+    "phone_number": "(229) 292-8625",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-BC08AK\", \"fog_id\": \"FOG542-045\"}]"
+  },
+  {
+    "name": "Wells Septic, Inc.",
+    "slug": "wells-septic-inc",
+    "city": "Griffin",
+    "state": "GA",
+    "zip_code": "30223",
+    "phone_number": "(770) 412-9494",
+    "fleet_size": 3,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EIB785\", \"fog_id\": \"FOG382-122\"}, {\"truck_tag\": \"GA-GKV008\", \"fog_id\": \"FOG382-445\"}, {\"truck_tag\": \"GA-GMC922\", \"fog_id\": \"FOG382-663\"}]"
+  },
+  {
+    "name": "NorthStar Environmental Group Inc.",
+    "slug": "northstar-environmental-group-inc",
+    "city": "Gallatin",
+    "state": "TN",
+    "zip_code": "37066",
+    "phone_number": "(615) 451-4867",
+    "fleet_size": 10,
+    "fleet_registry_json": "[{\"truck_tag\": \"IN-3362379\", \"fog_id\": \"FOG138-019\"}, {\"truck_tag\": \"KS-232721\", \"fog_id\": \"FOG138-018\"}, {\"truck_tag\": \"KS-207789\", \"fog_id\": \"FOG138-017\"}, {\"truck_tag\": \"KS-258183\", \"fog_id\": \"FOG138-014\"}, {\"truck_tag\": \"KS-258185\", \"fog_id\": \"FOG138-012\"}, {\"truck_tag\": \"KS-192953\", \"fog_id\": \"FOG138-011\"}, {\"truck_tag\": \"KS-235380\", \"fog_id\": \"FOG138-020\"}, {\"truck_tag\": \"KS-200121\", \"fog_id\": \"FOG138-015\"}, {\"truck_tag\": \"KS-235381\", \"fog_id\": \"FOG138-021\"}, {\"truck_tag\": \"KS-200205\", \"fog_id\": \"FOG138-016\"}]"
+  },
+  {
+    "name": "R&R Pumping Service",
+    "slug": "rr-pumping-service",
+    "city": "Kannapolis",
+    "state": "NC",
+    "zip_code": "28083",
+    "phone_number": "(704) 985-3707",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"NC-NM4240\", \"fog_id\": \"FOG372-002\"}]"
+  },
+  {
+    "name": "Veteran Septic, LLC",
+    "slug": "veteran-septic-llc",
+    "city": "Clarkseville",
+    "state": "GA",
+    "zip_code": "30523",
+    "phone_number": "(770) 990-4882",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-GMA954\", \"fog_id\": \"FOG548-288\"}]"
+  },
+  {
+    "name": "Bob Fitzpatrick Septic",
+    "slug": "bob-fitzpatrick-septic",
+    "city": "Dainelsville",
+    "state": "GA",
+    "zip_code": "30633",
+    "phone_number": "(706) 308-7633",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-PX013K\", \"fog_id\": \"FOG549-801\"}]"
+  },
+  {
+    "name": "Carter's Environmental",
+    "slug": "carters-environmental",
+    "city": "Silver Creek",
+    "state": "GA",
+    "zip_code": "30173",
+    "phone_number": "(480) 235-8997",
+    "fleet_size": 5,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EYE584\", \"fog_id\": \"FOG018-467\"}, {\"truck_tag\": \"GA-GLT476\", \"fog_id\": \"FOG018-469\"}, {\"truck_tag\": \"GA-DQS208\", \"fog_id\": \"FOG018-102\"}, {\"truck_tag\": \"GA-DQS411\", \"fog_id\": \"FOG018-104\"}, {\"truck_tag\": \"GA-GFC635\", \"fog_id\": \"FOG018-110\"}]"
+  },
+  {
+    "name": "Southern Pines Septic Services, LLC",
+    "slug": "southern-pines-septic-services-llc",
+    "city": "Clyo",
+    "state": "GA",
+    "zip_code": "31303",
+    "phone_number": "(912) 667-6971",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-P6705021\", \"fog_id\": \"FOG500-004\"}]"
+  },
+  {
+    "name": "Bulk Silo Solutions",
+    "slug": "bulk-silo-solutions",
+    "city": "Cedartown",
+    "state": "GA",
+    "zip_code": "30125",
+    "phone_number": "(770) 547-1117",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-YBP098\", \"fog_id\": \"FOG467-102\"}]"
+  },
+  {
+    "name": "Banks Septic",
+    "slug": "banks-septic",
+    "city": "Cumming",
+    "state": "Ga",
+    "zip_code": "30028",
+    "phone_number": "(678) 951-7210",
+    "fleet_size": 10,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-XRB813\", \"fog_id\": \"FOG541-002\"}, {\"truck_tag\": \"GA-YHN928\", \"fog_id\": \"FOG541-003\"}, {\"truck_tag\": \"GA-YNA459\", \"fog_id\": \"FOG541-004\"}, {\"truck_tag\": \"GA-GD1915\", \"fog_id\": \"FOG541-006\"}, {\"truck_tag\": \"GA-GD1924\", \"fog_id\": \"FOG541-008\"}, {\"truck_tag\": \"GA-GD1916\", \"fog_id\": \"FOG541-009\"}, {\"truck_tag\": \"GA-GD1912\", \"fog_id\": \"FOG541-010\"}, {\"truck_tag\": \"GA-C1324602\", \"fog_id\": \"FOG541-011\"}, {\"truck_tag\": \"GA-GRU470\", \"fog_id\": \"FOG541-001\"}, {\"truck_tag\": \"GA-GDI913\", \"fog_id\": \"FOG541-007\"}]"
+  },
+  {
+    "name": "Quality Grease Trap Pumping",
+    "slug": "quality-grease-trap-pumping",
+    "city": "Lithonia",
+    "state": "GA",
+    "zip_code": "30058",
+    "phone_number": "(678) 865-3143",
+    "fleet_size": 4,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EKD316\", \"fog_id\": \"FOG509-002\"}, {\"truck_tag\": \"GA-EKD317\", \"fog_id\": \"FOG509-003\"}, {\"truck_tag\": \"GA-GNX178\", \"fog_id\": \"FOG509-004\"}, {\"truck_tag\": \"GA-ZJM039\", \"fog_id\": \"FOG509-005\"}]"
+  },
+  {
+    "name": "Burnley Sanitary Sewer & Draing Service LLC",
+    "slug": "burnley-sanitary-sewer-draing-service-llc",
+    "city": "Thomas",
+    "state": "GA",
+    "zip_code": "30824",
+    "phone_number": "(706) 595-7736",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-P433CR\", \"fog_id\": \"FOG124-005\"}]"
+  },
+  {
+    "name": "AAA Industries, DBA Roto Rooter",
+    "slug": "aaa-industries-dba-roto-rooter",
+    "city": "Albany",
+    "state": "GA",
+    "zip_code": "31707",
+    "phone_number": "(229) 432-5470",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EJP235\", \"fog_id\": \"FOG083-200\"}]"
+  },
+  {
+    "name": "Jim Boyd Construction, Inc.",
+    "slug": "jim-boyd-construction-inc",
+    "city": "Albany",
+    "state": "GA",
+    "zip_code": "31707",
+    "phone_number": "(229) 420-9898",
+    "fleet_size": 3,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EBJ389\", \"fog_id\": \"FOG326-017\"}, {\"truck_tag\": \"GA-GEL635\", \"fog_id\": \"FOG326-321\"}, {\"truck_tag\": \"GA-EBJ392\", \"fog_id\": \"FOG326-520\"}]"
+  },
+  {
+    "name": "Jones Septc Tank Inc",
+    "slug": "jones-septc-tank-inc",
+    "city": "Thomasville",
+    "state": "GA",
+    "zip_code": "31757",
+    "phone_number": "(229) 226-8708",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EEH404\", \"fog_id\": \"FOG293-610\"}]"
+  },
+  {
+    "name": "American Pit",
+    "slug": "american-pit",
+    "city": "Dawsonville",
+    "state": "GA",
+    "zip_code": "30534",
+    "phone_number": "(706) 206-5041",
+    "fleet_size": 4,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EHW203\", \"fog_id\": \"FOG077-181\"}, {\"truck_tag\": \"GA-EMP518\", \"fog_id\": \"FOG077-202\"}, {\"truck_tag\": \"GA-TT34B80\", \"fog_id\": \"FOG077-303\"}, {\"truck_tag\": \"GA-GCR327\", \"fog_id\": \"FOG077-404\"}]"
+  },
+  {
+    "name": "You Dig It! Septic",
+    "slug": "you-dig-it-septic",
+    "city": "Murphy",
+    "state": "NC",
+    "zip_code": "28906",
+    "phone_number": "(828) 557-0251",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"TX-4129\", \"fog_id\": \"FOG455-112\"}]"
+  },
+  {
+    "name": "South Bound Septic",
+    "slug": "south-bound-septic",
+    "city": "Savannah",
+    "state": "GA",
+    "zip_code": "31405",
+    "phone_number": "(912) 328-0591",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-YIK565\", \"fog_id\": \"FOG446-050\"}]"
+  },
+  {
+    "name": "Wind River Environmental",
+    "slug": "wind-river-environmental",
+    "city": "Fayetteville",
+    "state": "GA",
+    "zip_code": "30215",
+    "phone_number": "(404) 273-7445",
+    "fleet_size": 9,
+    "fleet_registry_json": "[{\"truck_tag\": \"MA-1522B\", \"fog_id\": \"FOG029-103\"}, {\"truck_tag\": \"GA-P621CS\", \"fog_id\": \"FOG029-357\"}, {\"truck_tag\": \"GA-EPM575\", \"fog_id\": \"FOG029-083\"}, {\"truck_tag\": \"GA-DQS441\", \"fog_id\": \"FOG029-084\"}, {\"truck_tag\": \"MA-P005Cj\", \"fog_id\": \"FOG029-586\"}, {\"truck_tag\": \"MA-9668A\", \"fog_id\": \"FOG029-108\"}, {\"truck_tag\": \"GA-GME222\", \"fog_id\": \"FOG029-028\"}, {\"truck_tag\": \"GA-P520CL\", \"fog_id\": \"FOG029-811\"}, {\"truck_tag\": \"MA-8101A\", \"fog_id\": \"FOG029-115\"}]"
+  },
+  {
+    "name": "Colonial Transportation Solutions",
+    "slug": "colonial-transportation-solutions",
+    "city": "Savannah",
+    "state": "GA",
+    "zip_code": "31415",
+    "phone_number": "(912) 813-4908",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-C922EY\", \"fog_id\": \"FOG577-001\"}]"
+  },
+  {
+    "name": "Ricky Heath Plumbing Company",
+    "slug": "ricky-heath-plumbing-company",
+    "city": "Macon",
+    "state": "GA",
+    "zip_code": "31204",
+    "phone_number": "(478) 738-0882",
+    "fleet_size": 4,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-TEMP\", \"fog_id\": \"FOG036-790\"}, {\"truck_tag\": \"GA-WLF385\", \"fog_id\": \"FOG036-002\"}, {\"truck_tag\": \"GA-WLF384\", \"fog_id\": \"FOG036-003\"}, {\"truck_tag\": \"GA-TEMP\", \"fog_id\": \"FOG036-005\"}]"
+  },
+  {
+    "name": "Armour Plumbing - Rapid-Rooter Sewer & Drain",
+    "slug": "armour-plumbing-rapid-rooter-sewer-drain",
+    "city": "Athens",
+    "state": "GA",
+    "zip_code": "30601",
+    "phone_number": "(706) 543-9850",
+    "fleet_size": 9,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-PG2835\", \"fog_id\": \"FOG011-006\"}, {\"truck_tag\": \"GA-PG2834\", \"fog_id\": \"FOG011-011\"}, {\"truck_tag\": \"GA-PG2830\", \"fog_id\": \"FOG011-015\"}, {\"truck_tag\": \"GA-ENx442\", \"fog_id\": \"FOG011-016\"}, {\"truck_tag\": \"GA-ECG840\", \"fog_id\": \"FOG011-017\"}, {\"truck_tag\": \"GA-ESJ772\", \"fog_id\": \"FOG011-020\"}, {\"truck_tag\": \"GA-EGR017\", \"fog_id\": \"FOG011-022\"}, {\"truck_tag\": \"GA-ECG935\", \"fog_id\": \"FOG011-026\"}, {\"truck_tag\": \"GA-GKM113\", \"fog_id\": \"FOG011-027\"}]"
+  },
+  {
+    "name": "Intergrated Plumbing Solutions",
+    "slug": "intergrated-plumbing-solutions",
+    "city": "Kennesaw",
+    "state": "GA",
+    "zip_code": "30144",
+    "phone_number": "(770) 343-7370",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-GGI259\", \"fog_id\": \"FOG461-002\"}, {\"truck_tag\": \"GA-YNU385\", \"fog_id\": \"FOG461-003\"}]"
+  },
+  {
+    "name": "Grease Guardian Cycle Services",
+    "slug": "grease-guardian-cycle-services",
+    "city": "Brunswick",
+    "state": "GA",
+    "zip_code": "31520",
+    "phone_number": "(336) 437-2102",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"FL-58FDBN\", \"fog_id\": \"FOG314-001\"}]"
+  },
+  {
+    "name": "Pumpco Septic & Sewer",
+    "slug": "pumpco-septic-sewer",
+    "city": "Duluth",
+    "state": "GA",
+    "zip_code": "30096",
+    "phone_number": "(678) 454-5911",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EMP518\", \"fog_id\": \"FOG507-202\"}, {\"truck_tag\": \"GA-DYU744\", \"fog_id\": \"FOG507-477\"}]"
+  },
+  {
+    "name": "Rooter Plus",
+    "slug": "rooter-plus",
+    "city": "Cumming",
+    "state": "GA",
+    "zip_code": "30040",
+    "phone_number": "(770) 888-1931",
+    "fleet_size": 3,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-DQS269\", \"fog_id\": \"FOG078-116\"}, {\"truck_tag\": \"GA-ERM016\", \"fog_id\": \"FOG078-121\"}, {\"truck_tag\": \"GA-WTD900\", \"fog_id\": \"FOG078-115\"}]"
+  },
+  {
+    "name": "Elite Septic & Plumbing",
+    "slug": "elite-septic-plumbing",
+    "city": "Cleaveland",
+    "state": "TN",
+    "zip_code": "37323",
+    "phone_number": "(706) 537-6025",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"TN-K097HT\", \"fog_id\": \"FOG528-001\"}, {\"truck_tag\": \"TN-H483205\", \"fog_id\": \"FOG528-002\"}]"
+  },
+  {
+    "name": "Clean Energy Biofuels",
+    "slug": "clean-energy-biofuels",
+    "city": "Monroe",
+    "state": "GA",
+    "zip_code": "30655",
+    "phone_number": "(904) 840-3366",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-C741EX\", \"fog_id\": \"FOG438-241\"}, {\"truck_tag\": \"GA-C401EA\", \"fog_id\": \"FOG438-220\"}]"
+  },
+  {
+    "name": "Ranger Mechanical, Inc",
+    "slug": "ranger-mechanical-inc",
+    "city": "Covington",
+    "state": "GA",
+    "zip_code": "30014",
+    "phone_number": "(770) 787-7010",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-GHW600\", \"fog_id\": \"FOG448-902\"}]"
+  },
+  {
+    "name": "Farmer Oil Inc.",
+    "slug": "farmer-oil-inc",
+    "city": "Oxford",
+    "state": "GA",
+    "zip_code": "30054",
+    "phone_number": "(770) 385-8075",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-C064EM\", \"fog_id\": \"FOG140-114\"}, {\"truck_tag\": \"GA-IC93G4\", \"fog_id\": \"FOG140-568\"}]"
+  },
+  {
+    "name": "SP Petroleum Transporters, Inc.",
+    "slug": "sp-petroleum-transporters-inc",
+    "city": "Ellenwood",
+    "state": "GA",
+    "zip_code": "30294",
+    "phone_number": "(404) 361-0556",
+    "fleet_size": 9,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-P18730\", \"fog_id\": \"FOG072-001\"}, {\"truck_tag\": \"GA-IPI62C\", \"fog_id\": \"FOG072-002\"}, {\"truck_tag\": \"GA-P898AC\", \"fog_id\": \"FOG072-004\"}, {\"truck_tag\": \"GA-IP222B\", \"fog_id\": \"FOG072-005\"}, {\"truck_tag\": \"GA-IP428P\", \"fog_id\": \"FOG072-006\"}, {\"truck_tag\": \"GA-IPI62C\", \"fog_id\": \"FOG072-026\"}, {\"truck_tag\": \"GA-IP649Y\", \"fog_id\": \"FOG072-048\"}, {\"truck_tag\": \"GA-P6529B\", \"fog_id\": \"FOG072-056\"}, {\"truck_tag\": \"GA-P484CJ\", \"fog_id\": \"FOG072-062\"}]"
+  },
+  {
+    "name": "B & B Concret Products Inc.",
+    "slug": "b-b-concret-products-inc",
+    "city": "Franklin",
+    "state": "NC",
+    "zip_code": "28734",
+    "phone_number": "(828) 524-6483",
+    "fleet_size": 3,
+    "fleet_registry_json": "[{\"truck_tag\": \"NC-ND1083\", \"fog_id\": \"FOG113-153\"}, {\"truck_tag\": \"NC-ND9882\", \"fog_id\": \"FOG113-170\"}, {\"truck_tag\": \"NC-NK5245\", \"fog_id\": \"FOG113-863\"}]"
+  },
+  {
+    "name": "Elliott's Septic Tank & Grease Trap Service, Inc.",
+    "slug": "elliotts-septic-tank-grease-trap-service-inc",
+    "city": "McDonough",
+    "state": "GA",
+    "zip_code": "30253",
+    "phone_number": "(770) 898-3761",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EFR898\", \"fog_id\": \"FOG039-201\"}]"
+  },
+  {
+    "name": "Chris Motes Plumbing",
+    "slug": "chris-motes-plumbing",
+    "city": "Cleaveland",
+    "state": "GA",
+    "zip_code": "30528",
+    "phone_number": "(706) 865-5526",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-ETG100\", \"fog_id\": \"FOG052-596\"}, {\"truck_tag\": \"GA-ETH037\", \"fog_id\": \"FOG052-622\"}]"
+  },
+  {
+    "name": "Huggins Waste Services",
+    "slug": "huggins-waste-services",
+    "city": "Pooler",
+    "state": "GA",
+    "zip_code": "31322",
+    "phone_number": "(912) 667-0426",
+    "fleet_size": 9,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-GJA220\", \"fog_id\": \"FOG400-001\"}, {\"truck_tag\": \"GA-P913CS\", \"fog_id\": \"FOG400-002\"}, {\"truck_tag\": \"GA-GMN230\", \"fog_id\": \"FOG400-003\"}, {\"truck_tag\": \"GA-GBS622\", \"fog_id\": \"FOG400-004\"}, {\"truck_tag\": \"GA-GKV487\", \"fog_id\": \"FOG400-005\"}, {\"truck_tag\": \"GA-P781CS\", \"fog_id\": \"FOG400-006\"}, {\"truck_tag\": \"GA-P782CS\", \"fog_id\": \"FOG400-007\"}, {\"truck_tag\": \"FL-DXM2754\", \"fog_id\": \"FOG400-008\"}, {\"truck_tag\": \"GA-P559CT\", \"fog_id\": \"FOG400-009\"}]"
+  },
+  {
+    "name": "Athens Plumbing",
+    "slug": "athens-plumbing",
+    "city": "Athens",
+    "state": "GA",
+    "zip_code": "30601",
+    "phone_number": "(706) 543-1497",
+    "fleet_size": 3,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-RG258D\", \"fog_id\": \"FOG135-586\"}, {\"truck_tag\": \"GA-HG2142\", \"fog_id\": \"FOG135-169\"}, {\"truck_tag\": \"GA-RG258D\", \"fog_id\": \"FOG135-184\"}]"
+  },
+  {
+    "name": "AA&A Draing Cleaning",
+    "slug": "aaa-draing-cleaning",
+    "city": "Dalton",
+    "state": "GA",
+    "zip_code": "30720",
+    "phone_number": "(706) 226-1267",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-PG3657\", \"fog_id\": \"FOG045-001\"}, {\"truck_tag\": \"GA-WEQ781\", \"fog_id\": \"FOG045-003\"}]"
+  },
+  {
+    "name": "Grease Trap Pro's, Inc.",
+    "slug": "grease-trap-pros-inc",
+    "city": "Milner",
+    "state": "GA",
+    "zip_code": "30257",
+    "phone_number": "(770) 780-2336",
+    "fleet_size": 5,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-RVZ9653\", \"fog_id\": \"FOG183-342\"}, {\"truck_tag\": \"GA-SCS3258\", \"fog_id\": \"FOG138-350\"}, {\"truck_tag\": \"GA-BJY3561\", \"fog_id\": \"FOG138-337\"}, {\"truck_tag\": \"GA-CLR3371\", \"fog_id\": \"FOG138-341\"}, {\"truck_tag\": \"GA-RPL1190\", \"fog_id\": \"FOG138-340\"}]"
+  },
+  {
+    "name": "Marely;s Septic Tank Service, LLC",
+    "slug": "marelys-septic-tank-service-llc",
+    "city": "Fayetteville",
+    "state": "GA",
+    "zip_code": "30214",
+    "phone_number": "(610) 802-1388",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-DQS385\", \"fog_id\": \"FOG432-001\"}, {\"truck_tag\": \"GA-EYY180\", \"fog_id\": \"FOG432-002\"}]"
+  },
+  {
+    "name": "Price's Septic Tank Service",
+    "slug": "prices-septic-tank-service",
+    "city": "Danielsville",
+    "state": "GA",
+    "zip_code": "30633",
+    "phone_number": "(706) 789-3263",
+    "fleet_size": 3,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-DQ5263\", \"fog_id\": \"FOG091-056\"}, {\"truck_tag\": \"GA-DQR726\", \"fog_id\": \"FOG091-351\"}, {\"truck_tag\": \"GA-GHC142\", \"fog_id\": \"FOG091-379\"}]"
+  },
+  {
+    "name": "Barfield Underground",
+    "slug": "barfield-underground",
+    "city": "Hampton",
+    "state": "GA",
+    "zip_code": "30228",
+    "phone_number": "(404) 606-4483",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EBT528\", \"fog_id\": \"FOG441-003\"}]"
+  },
+  {
+    "name": "Marlers Plumbing Services, LLC",
+    "slug": "marlers-plumbing-services-llc",
+    "city": "Gray",
+    "state": "GA",
+    "zip_code": "31032",
+    "phone_number": "(478) 447-0026",
+    "fleet_size": 3,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EXY538\", \"fog_id\": \"FOG478-001\"}, {\"truck_tag\": \"GA-GAW608\", \"fog_id\": \"FOG478-002\"}, {\"truck_tag\": \"GA-GDC234\", \"fog_id\": \"FOG478-003\"}]"
+  },
+  {
+    "name": "A-1 Pumping Service",
+    "slug": "a-1-pumping-service",
+    "city": "Dalton",
+    "state": "GA",
+    "zip_code": "30721",
+    "phone_number": "(706) 272-3352",
+    "fleet_size": 3,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-PG668E\", \"fog_id\": \"FOG035-101\"}, {\"truck_tag\": \"GA-WEQ804\", \"fog_id\": \"FOG035-104\"}, {\"truck_tag\": \"GA-GAE534\", \"fog_id\": \"FOG035-105\"}]"
+  },
+  {
+    "name": "Ace Plumbing & Draing Cleaning",
+    "slug": "ace-plumbing-draing-cleaning",
+    "city": "Dalton",
+    "state": "GA",
+    "zip_code": "30721",
+    "phone_number": "(706) 270-2276",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EPJ143\", \"fog_id\": \"FOG412-501\"}]"
+  },
+  {
+    "name": "Roto Rooter of Cleveland",
+    "slug": "roto-rooter-of-cleveland",
+    "city": "Cleveland",
+    "state": "TN",
+    "zip_code": "37323",
+    "phone_number": "(423) 479-8148",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"TN-JO47HV\", \"fog_id\": \"FOG037-006\"}, {\"truck_tag\": \"TN-JO45HV\", \"fog_id\": \"FOG037-005\"}]"
+  },
+  {
+    "name": "Apex Environmental Services",
+    "slug": "apex-environmental-services",
+    "city": "Atlanta",
+    "state": "GA",
+    "zip_code": "30340",
+    "phone_number": "(770) 621-9848",
+    "fleet_size": 17,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-GEE034\", \"fog_id\": \"FOG017-002\"}, {\"truck_tag\": \"GA-DFJ828\", \"fog_id\": \"FOG017-003\"}, {\"truck_tag\": \"GA-EDB800\", \"fog_id\": \"FOG017-005\"}, {\"truck_tag\": \"GA-EIJ914\", \"fog_id\": \"FOG017-006\"}, {\"truck_tag\": \"GA-EWC824\", \"fog_id\": \"FOG017-008\"}, {\"truck_tag\": \"GA-GGD950\", \"fog_id\": \"FOG017-009\"}, {\"truck_tag\": \"GA-GKA907\", \"fog_id\": \"FOG017-010\"}, {\"truck_tag\": \"GA-XIH715\", \"fog_id\": \"FOG017-021\"}, {\"truck_tag\": \"GA-GMH429\", \"fog_id\": \"FOG017-011\"}, {\"truck_tag\": \"GA-GRT334\", \"fog_id\": \"FOG017-012\"}, {\"truck_tag\": \"GA-XEN548\", \"fog_id\": \"FOG017-022\"}, {\"truck_tag\": \"GA-XNF743\", \"fog_id\": \"FOG017-023\"}, {\"truck_tag\": \"GA-XTD077\", \"fog_id\": \"FOG017-014\"}, {\"truck_tag\": \"GA-YJH919\", \"fog_id\": \"FOG017-020\"}, {\"truck_tag\": \"GA-ZYH034\", \"fog_id\": \"FOG017-025\"}, {\"truck_tag\": \"GA-ERQ595\", \"fog_id\": \"FOG017-001\"}, {\"truck_tag\": \"GA-EIJ356\", \"fog_id\": \"FOG017-004\"}]"
+  },
+  {
+    "name": "Tillery Septic Services",
+    "slug": "tillery-septic-services",
+    "city": "Moultrie",
+    "state": "GA",
+    "zip_code": "31768",
+    "phone_number": "(229) 891-8614",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-GNP767\", \"fog_id\": \"FOG537-327\"}]"
+  },
+  {
+    "name": "S&S Septic Services",
+    "slug": "ss-septic-services",
+    "city": "Lula",
+    "state": "GA",
+    "zip_code": "30554",
+    "phone_number": "(706) 701-3340",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-YMB245\", \"fog_id\": \"FOG429-057\"}]"
+  },
+  {
+    "name": "Metro Septic LLC",
+    "slug": "metro-septic-llc",
+    "city": "Adairsville",
+    "state": "GA",
+    "zip_code": "30103",
+    "phone_number": "(678) 873-7934",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EF1645\", \"fog_id\": \"FOG159-007\"}]"
+  },
+  {
+    "name": "Stiles Services",
+    "slug": "stiles-services",
+    "city": "Bogart",
+    "state": "GA",
+    "zip_code": "30622",
+    "phone_number": "(706) 548-1328",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-K184445\", \"fog_id\": \"FOG563-001\"}]"
+  },
+  {
+    "name": "North Georgia Environmental",
+    "slug": "north-georgia-environmental",
+    "city": "Cleaveland",
+    "state": "GA",
+    "zip_code": "30528",
+    "phone_number": "(706) 219-1636",
+    "fleet_size": 3,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-TU93M24\", \"fog_id\": \"FOG044-035\"}, {\"truck_tag\": \"GA-DFU966\", \"fog_id\": \"FOG044-152\"}, {\"truck_tag\": \"GA-XRM985\", \"fog_id\": \"FOG044-188\"}]"
+  },
+  {
+    "name": "Universal Environmental Services",
+    "slug": "universal-environmental-services",
+    "city": "Peachtree City",
+    "state": "GA",
+    "zip_code": "30269",
+    "phone_number": "(770) 468-8816",
+    "fleet_size": 5,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-WUC902\", \"fog_id\": \"FOG081-001\"}, {\"truck_tag\": \"GA-IP703W\", \"fog_id\": \"FOG081-002\"}, {\"truck_tag\": \"GA-IP684CG\", \"fog_id\": \"FOG081-003\"}, {\"truck_tag\": \"GA-P176CQ\", \"fog_id\": \"FOG081-328\"}, {\"truck_tag\": \"GA-P911CS\", \"fog_id\": \"FOG081-139\"}]"
+  },
+  {
+    "name": "ACR Environmental LLC",
+    "slug": "acr-environmental-llc",
+    "city": "Dallas",
+    "state": "GA",
+    "zip_code": "30157",
+    "phone_number": "(678) 901-2181",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EVT217\", \"fog_id\": \"FOG522-001\"}, {\"truck_tag\": \"GA-GLU268\", \"fog_id\": \"FOG522-002\"}]"
+  },
+  {
+    "name": "Liberty Environmental",
+    "slug": "liberty-environmental",
+    "city": "Brunswick",
+    "state": "GA",
+    "zip_code": "31525",
+    "phone_number": "(912) 222-7626",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-GFB908\", \"fog_id\": \"FOG445-002\"}, {\"truck_tag\": \"GA-ELS103\", \"fog_id\": \"FOG445-001\"}]"
+  },
+  {
+    "name": "Anytime Septic Service, Inc",
+    "slug": "anytime-septic-service-inc",
+    "city": "Adairsville",
+    "state": "GA",
+    "zip_code": "30120",
+    "phone_number": "(678) 848-4365",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EDC200\", \"fog_id\": \"FOG356-003\"}, {\"truck_tag\": \"GA-ZLW193\", \"fog_id\": \"FOG356-008\"}]"
+  },
+  {
+    "name": "Bowen & Son's Septic",
+    "slug": "bowen-sons-septic",
+    "city": "Athens",
+    "state": "GA",
+    "zip_code": "30607",
+    "phone_number": "(706) 505-5630",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EPJ162\", \"fog_id\": \"FOG384-045\"}, {\"truck_tag\": \"GA-ALU2333\", \"fog_id\": \"FOG384-465\"}]"
+  },
+  {
+    "name": "Tradebe Transportation LLC",
+    "slug": "tradebe-transportation-llc",
+    "city": "Merriville",
+    "state": "IN",
+    "zip_code": "46410",
+    "phone_number": "(219) 354-2472",
+    "fleet_size": 3,
+    "fleet_registry_json": "[{\"truck_tag\": \"IN-3014379\", \"fog_id\": \"FOG431-188\"}, {\"truck_tag\": \"IN-3014498\", \"fog_id\": \"FOG431-250\"}, {\"truck_tag\": \"IN-3250365\", \"fog_id\": \"FOG431-272\"}]"
+  },
+  {
+    "name": "Aaron's Grease Trap Service",
+    "slug": "aarons-grease-trap-service",
+    "city": "Suwanee",
+    "state": "GA",
+    "zip_code": "30024",
+    "phone_number": "(678) 538-8559",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-TL2NU07\", \"fog_id\": \"FOG008-001\"}, {\"truck_tag\": \"GA-TR19N77\", \"fog_id\": \"FOG008-002\"}]"
+  },
+  {
+    "name": "Apump Away, Inc.",
+    "slug": "apump-away-inc",
+    "city": "Covington",
+    "state": "GA",
+    "zip_code": "30014",
+    "phone_number": "(770) 922-4358",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-IP7060\", \"fog_id\": \"FOG031-568\"}]"
+  },
+  {
+    "name": "Burnum Grease",
+    "slug": "burnum-grease",
+    "city": "Douglasville",
+    "state": "GA",
+    "zip_code": "30135",
+    "phone_number": "(770) 489-0056",
+    "fleet_size": 3,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-RJW7618\", \"fog_id\": \"FOG002-003\"}, {\"truck_tag\": \"GA-CGS3100\", \"fog_id\": \"FOG002-007\"}, {\"truck_tag\": \"GA-ETU395\", \"fog_id\": \"FOG002-009\"}]"
+  },
+  {
+    "name": "CM Rogers & Sons Inc",
+    "slug": "cm-rogers-sons-inc",
+    "city": "Lithonia",
+    "state": "GA",
+    "zip_code": "30058",
+    "phone_number": "(770) 482-8746",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-PX550C\", \"fog_id\": \"FOG087-566\"}, {\"truck_tag\": \"GA-GHW295\", \"fog_id\": \"FOG087-568\"}]"
+  },
+  {
+    "name": "Darpro - Darling International - Smyrna",
+    "slug": "darpro-darling-international-smyrna",
+    "city": "Atlanta",
+    "state": "GA",
+    "zip_code": "30339",
+    "phone_number": "(404) 605-0050",
+    "fleet_size": 18,
+    "fleet_registry_json": "[{\"truck_tag\": \"IA-DZ5579\", \"fog_id\": \"FOG001-007\"}, {\"truck_tag\": \"IA-DX5461\", \"fog_id\": \"FOG001-015\"}, {\"truck_tag\": \"IA-MX9118\", \"fog_id\": \"FOG001-016\"}, {\"truck_tag\": \"IA-FX4422\", \"fog_id\": \"FOG001-030\"}, {\"truck_tag\": \"IA-FS4703\", \"fog_id\": \"FOG001-031\"}, {\"truck_tag\": \"VA-70-491P\", \"fog_id\": \"FOG001-166\"}, {\"truck_tag\": \"IA-DF2417\", \"fog_id\": \"FOG001-178\"}, {\"truck_tag\": \"IA-FT0492\", \"fog_id\": \"FOG001-258\"}, {\"truck_tag\": \"IA-FT0493\", \"fog_id\": \"FOG001-259\"}, {\"truck_tag\": \"IA-FT0779\", \"fog_id\": \"FOG001-260\"}, {\"truck_tag\": \"IW-DZ5544\", \"fog_id\": \"FOG001-317\"}, {\"truck_tag\": \"KY-76517T\", \"fog_id\": \"FOG001-406\"}, {\"truck_tag\": \"IA-DZ5088\", \"fog_id\": \"FOG001-458\"}, {\"truck_tag\": \"IW-DX7689\", \"fog_id\": \"FOG001-687\"}, {\"truck_tag\": \"IA-DA9659\", \"fog_id\": \"FOG001-689\"}, {\"truck_tag\": \"IA-FV7131\", \"fog_id\": \"FOG001-954\"}, {\"truck_tag\": \"IA-LR2318\", \"fog_id\": \"FOG001-963\"}, {\"truck_tag\": \"IA-LR2319\", \"fog_id\": \"FOG001-964\"}]"
+  },
+  {
+    "name": "Darpro - Darling International - Thomasville",
+    "slug": "darpro-darling-international-thomasville",
+    "city": "Atlanta",
+    "state": "GA",
+    "zip_code": "30339",
+    "phone_number": "(404) 605-0050",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"IA-DZ5430\", \"fog_id\": \"FOG001-022\"}, {\"truck_tag\": \"IA-DZ5481\", \"fog_id\": \"FOG001-023\"}]"
+  },
+  {
+    "name": "Deep South Industrial Services, Inc.",
+    "slug": "deep-south-industrial-services-inc",
+    "city": "Rockmart",
+    "state": "GA",
+    "zip_code": "30153",
+    "phone_number": "(404) 516-8868",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-IP214Z\", \"fog_id\": \"FOG519-118\"}]"
+  },
+  {
+    "name": "Liquid Recovery Solutions",
+    "slug": "liquid-recovery-solutions",
+    "city": "Forest Park",
+    "state": "GA",
+    "zip_code": "30297",
+    "phone_number": "(786) 520-5034",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-YWN994\", \"fog_id\": \"FOG476-011\"}, {\"truck_tag\": \"GA-P629CT\", \"fog_id\": \"FOG476-856\"}]"
+  },
+  {
+    "name": "Seagraves Enterprises Inc.",
+    "slug": "seagraves-enterprises-inc",
+    "city": "Smyrna",
+    "state": "GA",
+    "zip_code": "30080",
+    "phone_number": "(404) 792-2221",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-DFU864\", \"fog_id\": \"FOG101-001\"}, {\"truck_tag\": \"GA-XKJ799\", \"fog_id\": \"FOG101-002\"}]"
+  },
+  {
+    "name": "Um's Grease Trap Service",
+    "slug": "ums-grease-trap-service",
+    "city": "Suwanee",
+    "state": "GA",
+    "zip_code": "30024",
+    "phone_number": "(770) 614-4157",
+    "fleet_size": 1,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-CMA3302\", \"fog_id\": \"FOG062-001\"}]"
+  },
+  {
+    "name": "Westco Pumping Services",
+    "slug": "westco-pumping-services",
+    "city": "Temple",
+    "state": "GA",
+    "zip_code": "30179",
+    "phone_number": "(678) 491-6429",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-RSG7070\", \"fog_id\": \"FOG023-001\"}, {\"truck_tag\": \"GA-JN31Q2\", \"fog_id\": \"FOG023-002\"}]"
+  },
+  {
+    "name": "Grease Masters Unlimited",
+    "slug": "grease-masters-unlimited",
+    "city": "Round Oak",
+    "state": "GA",
+    "zip_code": "31038",
+    "phone_number": "(478) 447-2725",
+    "fleet_size": 2,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-BJA3179\", \"fog_id\": \"FOG241-001\"}, {\"truck_tag\": \"GA-BJA3179\", \"fog_id\": \"FOG241-002\"}]"
+  },
+  {
+    "name": "Rylander X.P., Inc",
+    "slug": "rylander-xp-inc",
+    "city": "Brooks",
+    "state": "GA",
+    "zip_code": "30205",
+    "phone_number": "(770) 461-4442",
+    "fleet_size": 7,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-GE5099\", \"fog_id\": \"FOG364-002\"}, {\"truck_tag\": \"GA-EWM548\", \"fog_id\": \"FOG364-003\"}, {\"truck_tag\": \"GA-EM056\", \"fog_id\": \"FOG364-004\"}, {\"truck_tag\": \"GA-TEMP\", \"fog_id\": \"FOG364-005\"}, {\"truck_tag\": \"GA-YEM046\", \"fog_id\": \"FOG364-007\"}, {\"truck_tag\": \"GA-GCL485\", \"fog_id\": \"FOG364-008\"}, {\"truck_tag\": \"GA-GCL486\", \"fog_id\": \"FOG364-009\"}]"
+  },
+  {
+    "name": "AmeriPro Environmental",
+    "slug": "ameripro-environmental",
+    "city": "East Dublin",
+    "state": "GA",
+    "zip_code": "31027",
+    "phone_number": "(478) 595-3906",
+    "fleet_size": 4,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-GEX129\", \"fog_id\": \"FOG500-890\"}, {\"truck_tag\": \"GA-YB1054\", \"fog_id\": \"FOG500-891\"}, {\"truck_tag\": \"GA-GEX130\", \"fog_id\": \"FOG500-896\"}, {\"truck_tag\": \"GA-GP1537\", \"fog_id\": \"FOG500-897\"}]"
+  },
+  {
+    "name": "Safety Kleen",
+    "slug": "safety-kleen",
+    "city": "Norcross",
+    "state": "GA",
+    "zip_code": "30071",
+    "phone_number": "(470) 587-2811",
+    "fleet_size": 3,
+    "fleet_registry_json": "[{\"truck_tag\": \"GA-EUC403\", \"fog_id\": \"FOG114-001\"}, {\"truck_tag\": \"IL-P1036076\", \"fog_id\": \"FOG114-278\"}, {\"truck_tag\": \"GA-D483HW\", \"fog_id\": \"FOG114-003\"}]"
+  }
+]

@@ -28,10 +28,10 @@
 
     <STATE_02_INGEST_ENRICH>
       <INSTRUCTIONS>
-        1. Run scraping scripts or Apify actors to crawl the target registry, outputting a raw CSV/JSON.
+        1. Use the Two-Bot approach (Directory Intelligence Architect Bot & Apify Actor Builder Bot) to generate custom Apify Scraper Actors for the target registry. Route seeds and extract raw CSV/JSON data via Apify Key-Value Stores.
         2. Geocode addresses using a free geocoding API to append Latitude and Longitude coordinates.
         3. Run programmatic LLM enrichment script (`gabar-enricher.py` or equivalent) inside the Antigravity IDE using Google AI Ultra (Gemini 2.5 Flash / Pro).
-        4. For each business profile, prompt Gemini 2.5 to answer the niche's Top 20 Questions.
+        4. For each business profile, prompt Gemini 2.5 to answer the niche's Top 20 Questions (converting tabular data into conversational AI engine answers).
         5. Clean and store the enriched profiles inside the local `directory.sqlite` file.
       </INSTRUCTIONS>
       <TRANSITION_CRITERIA>The database is 100% enriched, and `directory.sqlite` is saved and committed to Git.</TRANSITION_CRITERIA>

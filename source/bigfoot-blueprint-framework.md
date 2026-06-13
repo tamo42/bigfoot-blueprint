@@ -36,8 +36,9 @@ By letting businesses claim, verify, and enhance their listings (uploading photo
 ### Moat 3: Comprehensiveness
 A directory must list *every* entity in its niche (e.g., all 45,000 nail salons, all dog breeds, or all government contract RFPs). Google and AI engines prioritize complete, reliable sources over partial lists.
 
-### Moat 4: Local & Niche Specificity
-Do not compete with general giants (like Yelp or Google Maps). Target highly specific search intent (e.g., "vegan catering in Tulsa," "access-friendly cabins in North Georgia," or "cash-pay physical therapists"). Highly specific directories earn higher trust and better conversion rates than generic search engines.
+### Moat 4: Local & Niche Specificity (The Urgency Multiplier)
+Do not compete with general giants (like Yelp or Google Maps). Target highly specific search intent (e.g., "vegan catering in Tulsa," "access-friendly cabins in North Georgia," or "cash-pay physical therapists"). 
+* **The Urgency Multiplier**: Prioritize niches where buyers face high urgency or an immediate need (e.g., grease trap backups, emergency HVAC). Stressed buyers need instant, structured utility rather than long-form blog research. Highly specific directories earn higher trust and better conversion rates than generic search engines.
 
 ### Moat 5: Automated Maintenance
 Use APIs, RSS feeds, and LLM-driven pipelines to auto-refresh data, scrape new locations, and filter spam. The site remains active and updated while the owner goes offline.
@@ -69,7 +70,7 @@ A mature directory provides multiple distinct monetization pathways, categorized
 
 ### Level 2: Lead Gen & Data Licensing (Medium Complexity)
 4. **Lead Generation / RFQ (Request for Quote):** Place quote request forms on listing pages. Sell leads back to verified businesses (e.g., $30–$300 per lead depending on contract value).
-5. **Private Data Licensing (API Access):** License your structured, cleaned dataset to larger companies or directories seeking specialized data feeds (e.g., licensing school ratings data to real estate portals).
+5. **Private Data Licensing (API Access) & Brokerage:** License your structured, cleaned dataset to larger companies, CRM providers, or B2B platforms seeking specialized data feeds. Build an **API Trust Score** (scoring server uptime, data accuracy, latency, and documentation quality) to validate your API's reliability to enterprise buyers.
 6. **Data Reports & Insights:** Package industry trends, salary data, or market analysis into paid PDF downloads.
 7. **Job Boards:** Charge companies to post job openings targeting your highly specialized audience.
 
@@ -101,11 +102,13 @@ flowchart LR
 
 ### Component 1: Ingestion & Storage
 * **Source Feeds:** Google Places API, county tax logs, government API directories, or custom scrapers.
+  * **Apify Actor Architecture:** When building custom scrapers, use the Two-Bot approach (Bot #1 architects the schema, Bot #2 builds the actor). Ensure the resulting Apify Actor follows standard architecture: `package.json`, `input_schema.json`, `main.js` (orchestration), `validate.js` (data checks), and `transform.js` (formatting). Route seeds and output data through Apify Key-Value Stores.
 * **Database:** **SQLite** for smaller, self-contained niche sites (easy to commit to Git and deploy); **Multi-Tenant Supabase** (PostgreSQL cloud database with directory_id tenant partitioning) for Stage 2 directories requiring parallel write operations or complex relational queries.
 
 ### Component 2: LLM Enrichment Pipeline
 * **Scripting:** Python or Node.js scripts running offline or via cron tasks to clean, categorize, and enrich database records.
-* **Enrichment Logic:** Pass raw records through the Gemini ecosystem (e.g., Gemini 2.5 Flash / Pro) natively inside the Antigravity IDE using your Google AI Ultra subscription. This avoids external token costs and allows full enrichment of the niche's "Top 20 Questions" for all Stage 1 listings.
+* **Enrichment Logic (AI Engine Mechanics):** AI crawlers (like Perplexity and ChatGPT) do not scrape tabular data well; they require direct, conversational, authoritative answers. Pass raw tabular records through the Gemini ecosystem (e.g., Gemini 2.5 Flash / Pro) natively inside the Antigravity IDE to enrich the data into conversational "Top 20 Questions" Q&A blocks. This avoids external token costs and allows full enrichment for all Stage 1 listings.
+* **Programmatic Armor:** To immunize against Google's "thin content" penalties, generate extremely deep schemas per listing (e.g., 93+ distinct data fields), mimicking the depth of an investigative journalist.
 * **JSON Schema Generation:** Programmatically generate structural JSON-LD schema (e.g., `LocalBusiness`, `Product`, `Event`) for every page, ensuring search engine bots and AI scrapers can parse the data perfectly.
 
 ### Component 3: The Front-End (Decoupled & Fast)
