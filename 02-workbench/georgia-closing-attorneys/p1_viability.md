@@ -19,8 +19,8 @@
 
 *Note: ATP queries are currently executing via `fetch-atp.py`. The preliminary search intent map is outlined below.*
 
-**Core Terms Executed (9 Remaining Credits):**
-1. `"investor friendly closing attorney"`
+**Core Terms Executed (0 Remaining Credits):**
+1. `"wholesale real estate attorney"` (National intent, inferring local volume later)
 2. `"double closing attorney georgia"`
 3. `"subject to closing attorney"`
 4. `"clear title defect georgia"`
