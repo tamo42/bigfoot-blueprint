@@ -5,7 +5,7 @@ import sys
 
 # Set up paths for importing general helpers
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'general')))
-import utils
+import p3_utils as utils
 
 url = "https://data.texas.gov/resource/7358-krk7.json"
 

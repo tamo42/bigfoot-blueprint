@@ -9,61 +9,49 @@
 
   <TAB_5_STATE_MACHINE>
     <STATE_MAP>
-      - CURRENT_STATE: STATE_01_IDENTIFY_SCHEMA
+      - CURRENT_STATE: STATE_01_SELECTION_VIABILITY
       - TRANSITION_PATHS:
-          STATE_01_IDENTIFY_SCHEMA -> STATE_02_INGEST_ENRICH
-          STATE_02_INGEST_ENRICH -> STATE_03_BUILD_TEMPLATE
-          STATE_03_BUILD_TEMPLATE -> STATE_04_DEPLOY_MONETIZE
+          STATE_01_SELECTION_VIABILITY -> STATE_02_AGENTIC_DISCOVERY
+          STATE_02_AGENTIC_DISCOVERY -> STATE_03_ENGINEERING_PIPELINE
+          STATE_03_ENGINEERING_PIPELINE -> STATE_04_ANTIGRAVITY_DEPLOYMENT
     </STATE_MAP>
 
-    <STATE_01_IDENTIFY_SCHEMA>
+    <STATE_01_SELECTION_VIABILITY>
       <INSTRUCTIONS>
-        1. Identify fragmented B2B/niche opportunities with public licensing registries (State Bar, EPA, SOS, municipal registers).
-        2. Evaluate the niche against the Directory Viability Scorecard (Demand Concentration, Recurring Need, Expansion Potential).
-        3. Perform keyword research using AnswerThePublic to extract high-volume "head" questions.
-        4. Define the directory's standard schema (e.g. License Number, Status, Coordinates, Phone, Principal Owner, Insurance, Q&A fields).
-        5. Develop a geo-intent multiplexing plan to combine head questions with target geographic variables.
+        1. Identify fragmented B2B/niche opportunities.
+        2. Evaluate the niche against Avatar Adjacency (R-115) and the Scale vs. Frequency Equation (R-116).
+        3. Determine go/no-go based on rapid data availability (can we get 2,000+ centralized records quickly?).
       </INSTRUCTIONS>
-      <TRANSITION_CRITERIA>Target registry is identified, viability scorecard passed, keywords mapped, and database schema is finalized.</TRANSITION_CRITERIA>
-    </STATE_01_IDENTIFY_SCHEMA>
+      <TRANSITION_CRITERIA>Niche passes viability scorecard.</TRANSITION_CRITERIA>
+    </STATE_01_SELECTION_VIABILITY>
 
-    <STATE_02_INGEST_ENRICH>
+    <STATE_02_AGENTIC_DISCOVERY>
       <INSTRUCTIONS>
-        1. Use the Two-Bot approach (Directory Intelligence Architect Bot & Apify Actor Builder Bot) to generate custom Apify Scraper Actors for the target registry. Route seeds and extract raw CSV/JSON data via Apify Key-Value Stores.
-        2. Geocode addresses using a free geocoding API to append Latitude and Longitude coordinates.
-        3. Run programmatic LLM enrichment script (`gabar-enricher.py` or equivalent) inside the Antigravity IDE using Google AI Ultra (Gemini 2.5 Flash / Pro).
-        4. For each business profile, prompt Gemini 2.5 to answer the niche's Top 20 Questions (converting tabular data into conversational AI engine answers).
-        5. Clean and store the enriched profiles inside the local `directory.sqlite` file.
+        1. Run the Architect bot process to define the 7-Layer Hierarchy, target data types, and AEO/SEO structures (geographic/use-case multiplexers).
+        2. Deploy Python scripts and Antigravity Gemini agents to programmatically search, crawl, and scrape (government sources, vendors, GitHub repos, Google Places, Apify).
+        3. Design Hormozi/Cialdini value-adding elements (e.g., ungated calculators, evaluation tools) natively using Antigravity for rapid prototyping.
       </INSTRUCTIONS>
-      <TRANSITION_CRITERIA>The database is 100% enriched, and `directory.sqlite` is saved and committed to Git.</TRANSITION_CRITERIA>
-    </STATE_02_INGEST_ENRICH>
+      <TRANSITION_CRITERIA>Architecture mapped, scrapers built, and reciprocity tools designed.</TRANSITION_CRITERIA>
+    </STATE_02_AGENTIC_DISCOVERY>
 
-    <STATE_03_BUILD_TEMPLATE>
+    <STATE_03_ENGINEERING_PIPELINE>
       <INSTRUCTIONS>
-        1. Inject `directory.sqlite` into the Astro project data layer.
-        2. Configure brand styles (colors, fonts, name) inside Astro token files.
-        3. Build the static site (`npm run build`) generating optimized HTML for every city hub and listing detail page.
-        4. Verify that:
-           - Interactive calculators load and operate correctly in the primary viewport.
-           - Flat URL semantic silo links are present (Pillar <-> Child -> Listings).
-           - JSON-LD schemas (FAQPage speakable selectors, ItemList, LocalBusiness) exist in the head.
+        1. Ingest raw data into local SQLite databases using agentic scrapers.
+        2. Decouple enrichment: Route data to a staging environment and execute Gemini LLM loops (limiting to Phase 1 Tier 1/2 if testing).
+        3. Generate required Q&A blocks and draft final AEO/SEO content.
       </INSTRUCTIONS>
-      <TRANSITION_CRITERIA>Site builds with 0 errors, Lighthouse performance is 100/100, and local validation passes.</TRANSITION_CRITERIA>
-    </STATE_03_BUILD_TEMPLATE>
+      <TRANSITION_CRITERIA>Database is 100% enriched, clean, and stored locally.</TRANSITION_CRITERIA>
+    </STATE_03_ENGINEERING_PIPELINE>
 
-    <STATE_04_DEPLOY_MONETIZE>
+    <STATE_04_ANTIGRAVITY_DEPLOYMENT>
       <INSTRUCTIONS>
-        1. Push the Astro project to a dedicated private GitHub repository and link it to Vercel/Netlify for free hosting.
-        2. Register the domain/subdomain and link it to the GSC (Google Search Console) project board.
-        3. Log the site launch in `/02-workbench/nhq-bigfoot-blueprint/directory-registry.md`.
-        4. Track Stage 1 validation KPIs (Indexing >60%, Impressions >500/week, Clicks >20/week, Claims >2).
-        5. If triggers are met:
-           - Migrate SQLite data to multi-tenant Supabase partitioned by `directory_id`.
-           - Enable dynamic reviews, claims routing, and certificate of insurance (COI) uploads.
-           - Trigger outreach campaigns via GoHighLevel using Cialdini's Persuasion Playbook (Loss Aversion, Conquest Ads, Reciprocity via personalized Loom videos).
+        1. Spin up a dedicated sister folder/repository natively within the Antigravity IDE workspace.
+        2. Implement the frontend framework (Astro or Next.js) and push staging data to Supabase.
+        3. Generate non-user-facing SEO/AEO optimization layers (XML sitemaps, JSON-LD schema, `llms.txt`).
+        4. Hook the repository to Railway through GitHub for immediate live deployment.
       </INSTRUCTIONS>
-      <TRANSITION_CRITERIA>Directory is live, GSC is tracked, and Stage 2 migration is executed once validation triggers fire.</TRANSITION_CRITERIA>
-    </STATE_04_DEPLOY_MONETIZE>
+      <TRANSITION_CRITERIA>Directory is live, optimized, and ready for Stage 1 validation tracking.</TRANSITION_CRITERIA>
+    </STATE_04_ANTIGRAVITY_DEPLOYMENT>
   </TAB_5_STATE_MACHINE>
 
 </LEAP_INSTRUCTION_SET>

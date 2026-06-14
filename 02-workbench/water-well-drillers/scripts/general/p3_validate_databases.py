@@ -4,8 +4,8 @@ import sys
 
 # Set up paths for importing general helpers
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
-import utils
-import schema
+import p3_utils as utils
+import p3_schema as schema
 
 def get_db_columns(db_path):
     conn = sqlite3.connect(db_path)

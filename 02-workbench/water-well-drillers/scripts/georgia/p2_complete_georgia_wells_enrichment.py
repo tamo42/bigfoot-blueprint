@@ -8,8 +8,8 @@ import sys
 
 # Set up paths for importing general helpers
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'general')))
-import utils
-import schema
+import p3_utils as utils
+import p3_schema as schema
 
 # Load API Key
 api_key = utils.load_env_api_key()

@@ -56,3 +56,4 @@ nhq-bigfoot-blueprint/
 3.  **Flat URL Constraint:** Avoid nesting URL slugs beyond 1-level depth (e.g. `site.com/listing-slug` and `site.com/compliance-slug`).
 4.  **Reciprocity Prioritization:** Do not deploy any landing page or listings page without a functional, un-gated calculator or evaluation tool above the fold.
 5.  **Push Boundary:** Whenever committing or pushing code within this workspace, target ONLY the `nhq-bigfoot-blueprint` repository or the specific directory site repository. Do not mix commands with `neal-os`, `tax-sherpa`, or `resilient-roots` repositories.
+6.  **Phase-Prefixed File Organization:** Do not create deeply nested phase folders (e.g., `03-engineering/scripts`). Instead, enforce a flat prefixing system on workspace files (`p1_viability.md`, `p2_scraper.py`, `p3_enrich.py`, `p4_deploy.json`) to map directly to the 4-Phase Agent-Accelerated Factory Workflow.

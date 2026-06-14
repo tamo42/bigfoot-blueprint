@@ -7,8 +7,8 @@ import re
 
 # Add general scripts to path
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "general"))
-from schema import initialize_database
-from utils import get_db_path, slugify, clean_phone_number
+from p3_schema import initialize_database
+from p3_utils import get_db_path, slugify, clean_phone_number
 
 def run_scraper():
     all_records = []

@@ -4,7 +4,7 @@
 This folder contains the extraction and processing script for the North Carolina Department of Health and Human Services (NCDHHS) well contractors registry.
 
 ## Data Source
-- **Primary Source:** CSV export provided by the user (`Current_Certified_Drillers_List.csv`), as the live NCDHHS portals (`ehs.ncpublichealth.com` and `www.ncwelldriller.org`) were returning SSL and timeout errors from automated bots.
+- **Primary Source:** CSV export downloaded from the [Find a Certified Well Contractor](https://www.dph.ncdhhs.gov/programs/environmental-health/north-carolina-well-contractors-certification/find-certified-well-contractor) page. The live NCDHHS portals (`ehs.ncpublichealth.com` and `www.ncwelldriller.org`) were returning SSL and timeout errors from automated bots.
 - **Rules and Statutes Bookmark:** [North Carolina Well Contractors Certification Rules and Statutes](https://www.dph.ncdhhs.gov/programs/environmental-health/north-carolina-well-contractors-certification/rules-and-statutes)
 
 ## Process

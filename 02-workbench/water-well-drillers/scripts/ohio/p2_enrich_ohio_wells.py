@@ -3,8 +3,8 @@ import sys
 
 # Set up paths for importing general helpers
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'general')))
-import utils
-import enrich_places_general
+import p3_utils as utils
+import p3_enrich_places as enrich_places_general
 
 def main():
     db_path = utils.get_db_path("ohio")

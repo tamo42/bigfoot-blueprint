@@ -4,7 +4,7 @@ import sys
 
 # Set up paths for importing general helpers
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'general')))
-import utils
+import p3_utils as utils
 
 pdf_path = utils.resolve_path(r"cache\ohio_registered_pws_contractors.pdf")
 output_path = utils.resolve_path(r"02-workbench\water-well-drillers\ohio_pdf_text_sample.txt")

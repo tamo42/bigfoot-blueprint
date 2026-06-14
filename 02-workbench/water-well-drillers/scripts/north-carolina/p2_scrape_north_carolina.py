@@ -4,10 +4,10 @@ import csv
 import sqlite3
 import json
 
-# Add scripts/general to path to import utils and schema
+# Add scripts/general to path to import p3_utils as utils and schema
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'general'))
-import schema
-import utils
+import p3_schema as schema
+import p3_utils as utils
 
 def main():
     db_path = utils.get_db_path("north_carolina")

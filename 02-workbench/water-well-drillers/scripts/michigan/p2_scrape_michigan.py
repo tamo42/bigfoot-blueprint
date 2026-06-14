@@ -7,8 +7,8 @@ from playwright.async_api import async_playwright
 
 # Set up paths for importing general helpers
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'general')))
-import utils
-import schema
+import p3_utils as utils
+import p3_schema as schema
 
 db_path = utils.get_db_path("michigan")
 

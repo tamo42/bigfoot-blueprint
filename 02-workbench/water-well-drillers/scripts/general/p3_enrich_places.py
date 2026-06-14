@@ -8,8 +8,8 @@ import requests
 
 # Set path for imports
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-import utils
-import schema
+import p3_utils as utils
+import p3_schema as schema
 
 def enrich_state_database(db_path, state_name, max_queries):
     """

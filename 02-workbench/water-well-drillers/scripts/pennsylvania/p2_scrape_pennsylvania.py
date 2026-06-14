@@ -8,8 +8,8 @@ from html.parser import HTMLParser
 
 # Import general helpers
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from general.utils import resolve_path, slugify, clean_phone_number, get_db_path
-from general.schema import initialize_database
+from general.p3_utils import resolve_path, slugify, clean_phone_number, get_db_path
+from general.p3_schema import initialize_database
 
 url = "https://www.iframeapps.dcnr.pa.gov/topogeo/LicensedDriller"
 req = urllib.request.Request(
