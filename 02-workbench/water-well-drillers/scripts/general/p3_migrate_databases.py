@@ -97,14 +97,22 @@ def migrate_and_consolidate():
             conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
             
-            # Check if installers_haulers exists
-            cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='installers_haulers'")
-            if not cursor.fetchone():
-                print(f"    [-] Skipping {filename}: installers_haulers table not found.")
+            # Check if well_contractors or installers_haulers exists
+            source_table = None
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='well_contractors'")
+            if cursor.fetchone():
+                source_table = "well_contractors"
+            else:
+                cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='installers_haulers'")
+                if cursor.fetchone():
+                    source_table = "installers_haulers"
+            
+            if not source_table:
+                print(f"    [-] Skipping {filename}: neither well_contractors nor installers_haulers table found.")
                 conn.close()
                 continue
                 
-            cursor.execute("SELECT * FROM installers_haulers")
+            cursor.execute(f"SELECT * FROM {source_table}")
             rows = cursor.fetchall()
             total_raw_rows += len(rows)
             

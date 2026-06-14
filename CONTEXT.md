@@ -54,5 +54,6 @@ Every directory launched under this framework must adhere to these three core op
 2.  **Zero-Cost Stage 1 Bootstrapping:**
     *   **Hosting:** Deploy 100% static HTML via Astro to Vercel/Netlify for $0/mo hosting costs.
     *   **Database:** Package the dataset in a local SQLite file committed directly to the code repository ($0/mo database cost).
+    *   **Data Extraction:** Scraping Google Places is more cost-efficient using the Apify actor than querying the Google Places API directly.
     *   **Enrichment:** Run full 20-question profile enrichment programmatically using your **Google AI Ultra subscription (Gemini 2.5 Flash / Pro)** natively inside the Antigravity IDE, keeping LLM API billing at $0.
 3.  **Multi-Tenant Stage 2 Consolidation:** When a site meets validation triggers (traffic glimmers or claimed listings), migrate it to a consolidated **Multi-Tenant Supabase Instance** partitioned by a `directory_id` column. This allows you to host up to 10+ validated Stage 2 directories on a single $25/mo Supabase Pro plan.

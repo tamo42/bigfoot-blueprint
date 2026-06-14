@@ -10,14 +10,16 @@ import p3_schema as schema
 def get_db_columns(db_path):
     conn = sqlite3.connect(db_path)
     c = conn.cursor()
-    c.execute("PRAGMA table_info(installers_haulers)")
+    c.execute("PRAGMA table_info(well_contractors)")
     cols = {row[1]: row[2] for row in c.fetchall()}
     conn.close()
     return cols
 
 def main():
-    states = ["georgia", "texas", "ohio", "michigan", "pennsylvania"]
-    db_paths = {state: utils.get_db_path(state) for state in states}
+    data_dir = utils.resolve_path("02-workbench/water-well-drillers/data")
+    db_files = [f for f in os.listdir(data_dir) if f.endswith(".sqlite")]
+    db_paths = {f.split(".")[0]: os.path.join(data_dir, f) for f in db_files}
+
     
     print("[*] Validating SQLite database files schema symmetry...")
     

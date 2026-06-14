@@ -46,8 +46,22 @@ def enrich_state_database(db_path, state_name, max_queries):
     # 4. Query DB for rows needing enrichment
     conn = sqlite3.connect(db_path)
     c = conn.cursor()
-    c.execute("SELECT id, name, city FROM installers_haulers WHERE google_place_id IS NULL OR google_place_id = ''")
+    
+    state_map = {
+        "georgia": "GA", "michigan": "MI", "new york": "NY", "new_york": "NY",
+        "north carolina": "NC", "north_carolina": "NC", "ohio": "OH",
+        "pennsylvania": "PA", "texas": "TX", "virginia": "VA",
+        "ga": "GA", "mi": "MI", "ny": "NY", "nc": "NC", "oh": "OH",
+        "pa": "PA", "tx": "TX", "va": "VA"
+    }
+    state_abbrev = state_map.get(state_name.lower(), state_name.upper()) if state_name else None
+    
+    if state_abbrev:
+        c.execute("SELECT id, name, city FROM well_contractors WHERE (google_place_id IS NULL OR google_place_id = '') AND UPPER(state) = ?", (state_abbrev,))
+    else:
+        c.execute("SELECT id, name, city FROM well_contractors WHERE google_place_id IS NULL OR google_place_id = ''")
     rows = c.fetchall()
+
     print(f"[*] Found {len(rows)} records in database needing enrichment.")
     
     queries_made = 0
@@ -170,7 +184,7 @@ def enrich_state_database(db_path, state_name, max_queries):
                     pass
                     
             c.execute('''
-                UPDATE installers_haulers
+                UPDATE well_contractors
                 SET google_place_id = ?,
                     website_url = ?,
                     google_rating = ?,
@@ -225,7 +239,7 @@ def main():
     if args.db:
         db_path = os.path.abspath(args.db)
     else:
-        db_path = utils.get_db_path(state)
+        db_path = utils.get_unified_db_path()
         
     print(f"[*] Target State: {state.title()}")
     print(f"[*] Target Database Path: {db_path}")

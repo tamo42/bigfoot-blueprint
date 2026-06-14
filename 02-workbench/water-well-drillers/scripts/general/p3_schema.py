@@ -46,6 +46,8 @@ def get_schema_columns():
         ("bonded_insured_details", "TEXT"),
         ("payment_methods_accepted", "TEXT"),
         ("financing_available", "INTEGER DEFAULT 0"),
+        ("handles_new_permits", "INTEGER DEFAULT 0"),
+
 
         # Layer 4: AI Enrichment Layer (Descriptions, Speakables, Quick Facts)
         ("listing_content", "TEXT"),

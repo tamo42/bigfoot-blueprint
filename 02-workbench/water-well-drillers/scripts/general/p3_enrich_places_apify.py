@@ -80,8 +80,8 @@ def enrich_state_apify(db_path, state_name, limit):
         query_to_id[search_query.lower()] = row_id
 
     # 3. Call Apify API to run actor
-    print("[*] Launching apify/google-maps-scraper run...")
-    actor_id = "apify~google-maps-scraper"
+    print("[*] Launching compass/crawler-google-places run...")
+    actor_id = "compass~crawler-google-places"
     run_url = f"https://api.apify.com/v2/acts/{actor_id}/runs?token={token}"
     
     payload = {
