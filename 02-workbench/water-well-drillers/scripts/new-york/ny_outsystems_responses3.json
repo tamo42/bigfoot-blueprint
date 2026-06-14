@@ -1,5 +1,177 @@
 [
   {
+    "url": "https://appfactory.dec.ny.gov/WaterWell/screenservices/WaterWell/ActionSetThemeInputs",
+    "data": {
+      "versionInfo": {
+        "hasModuleVersionChanged": false,
+        "hasApiVersionChanged": false
+      },
+      "data": {
+        "LayoutOptions": {
+          "ApplicationName": "Water Well Search Application",
+          "ShowUserMenu": false,
+          "ShowLanguageSwitcher": true,
+          "ShowNotifications": false,
+          "ShowPrivacyPolicy": true,
+          "ShowTermsOfService": true,
+          "PrivacyPolicyLink": "https://www.dec.ny.gov/about/27720.html",
+          "TermsOfServiceLink": "",
+          "AgencyName": "Department of Environmental Conservation",
+          "ShowBreadcrumbs": false,
+          "ShowTitle": true,
+          "ShowActions": false,
+          "MenuBehavior": "Responsive",
+          "IsAccessibilityEnable": false,
+          "IsuNavEnabled": true
+        }
+      },
+      "rolesInfo": ","
+    }
+  },
+  {
+    "url": "https://appfactory.dec.ny.gov/WaterWell/screenservices/WaterWell/MainFlow/Contractor_Search/ScreenDataSetGetServiceDefinitions",
+    "data": {
+      "versionInfo": {
+        "hasModuleVersionChanged": false,
+        "hasApiVersionChanged": false
+      },
+      "data": {
+        "List": {
+          "List": [
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Residential Wells",
+                "Definitions": "Wells constructed as a source of potable water for individual households"
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Public Wells",
+                "Definitions": "Wells constructed for use as regulated public water supplies."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Commercial Wells",
+                "Definitions": "Wells constructed for use in commercial business activities."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Geothermal Wells",
+                "Definitions": "Wells constructed for use in space heating or cooling, or other applications involving the use or transfer of groundwater heat. For wells greater than 500 feet, refer to\u00a0DEC permitting requirements."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Agricultural Wells",
+                "Definitions": "Wells constructed for irrigation of farmland or as a water supply for livestock."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Environmental Monitoring",
+                "Definitions": "Wells constructed to monitor the physical or chemical character of groundwater."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Geotechnical Wells",
+                "Definitions": "Wells constructed to characterize subsurface geology or for dewatering during construction activity."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Injection Wells",
+                "Definitions": "Wells constructed for the use of placing fluid underground. Permits for injection wells are obtained from the\u00a0US EPA Underground Injection Control\u00a0program."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Irrigation Wells",
+                "Definitions": "Wells constructed for irrigation of properties such as homes and golf courses."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Dewatering Wells",
+                "Definitions": "Wells or boreholes constructed or used for the sole purpose of lowering or controlling the level of groundwater."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Well Deepening",
+                "Definitions": "Drilling an existing well deeper."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Well Decommissioning",
+                "Definitions": "Permanent closure of a well by physically removing the well from service."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Control Overflowing Wells",
+                "Definitions": "Control of a water well such that water no longer flows beyond the well casing."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Pump Installation",
+                "Definitions": "Installation of new water well pumps."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Pump Service",
+                "Definitions": "Service of existing water well pumps."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Disinfection",
+                "Definitions": "Introduction and circulation of a carefully determined amount of an approved disinfection solution to a water well for treatment of bacteria. Additional information is available from your local Health Department."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Hydrofracturing",
+                "Definitions": "The process where fluid is pumped down a well at high pressures to open fractures in adjacent rock to improve water flow to the well."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Cleaning/Redevelopment",
+                "Definitions": "Physical or chemical process intended to removed sediment, scale, or other material that may be interfering with the amount of water available for pumping."
+              }
+            }
+          ]
+        },
+        "Count": -1
+      },
+      "rolesInfo": ","
+    }
+  },
+  {
     "url": "https://appfactory.dec.ny.gov/WaterWell/screenservices/WaterWell/MainFlow/Contractor_Search/ScreenDataSetGetWaterwellActivityTypes",
     "data": {
       "versionInfo": {
@@ -138,35 +310,6 @@
           ]
         },
         "Count": -1
-      },
-      "rolesInfo": ","
-    }
-  },
-  {
-    "url": "https://appfactory.dec.ny.gov/WaterWell/screenservices/WaterWell/ActionSetThemeInputs",
-    "data": {
-      "versionInfo": {
-        "hasModuleVersionChanged": false,
-        "hasApiVersionChanged": false
-      },
-      "data": {
-        "LayoutOptions": {
-          "ApplicationName": "Water Well Search Application",
-          "ShowUserMenu": false,
-          "ShowLanguageSwitcher": true,
-          "ShowNotifications": false,
-          "ShowPrivacyPolicy": true,
-          "ShowTermsOfService": true,
-          "PrivacyPolicyLink": "https://www.dec.ny.gov/about/27720.html",
-          "TermsOfServiceLink": "",
-          "AgencyName": "Department of Environmental Conservation",
-          "ShowBreadcrumbs": false,
-          "ShowTitle": true,
-          "ShowActions": false,
-          "MenuBehavior": "Responsive",
-          "IsAccessibilityEnable": false,
-          "IsuNavEnabled": true
-        }
       },
       "rolesInfo": ","
     }
@@ -623,7 +766,7 @@
     }
   },
   {
-    "url": "https://appfactory.dec.ny.gov/WaterWell/screenservices/WaterWell/MainFlow/Contractor_Search/ScreenDataSetGetServiceDefinitions",
+    "url": "https://appfactory.dec.ny.gov/WaterWell/screenservices/WaterWell/MainFlow/Contractor_Search/ScreenDataSetGetWaterwellDrillingCompaniesByName",
     "data": {
       "versionInfo": {
         "hasModuleVersionChanged": false,
@@ -633,136 +776,709 @@
         "List": {
           "List": [
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Drilling: Residential Wells",
-                "Definitions": "Wells constructed as a source of potable water for individual households"
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10300",
+                "NAME": "Elchert Family Holdings, Inc., DBA Chatfield Drilling, Inc.",
+                "STREET": "854 Mercer Rd",
+                "CITY": "Greenville",
+                "STATE": "PA",
+                "ZIP": "16125-8416",
+                "PHONE": "(724) 588-2652           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Drilling: Public Wells",
-                "Definitions": "Wells constructed for use as regulated public water supplies."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10315",
+                "NAME": "Quackenbush Water Systems Co., Inc.",
+                "STREET": "39 Little Brooklyn Rd",
+                "CITY": "Warwick",
+                "STATE": "NY",
+                "ZIP": "10990-2226",
+                "PHONE": "(845) 986-1900           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Drilling: Commercial Wells",
-                "Definitions": "Wells constructed for use in commercial business activities."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10316",
+                "NAME": "Wragg Brothers of Vermont, Inc.",
+                "STREET": "PO Box 315",
+                "CITY": "Ascutney",
+                "STATE": "VT",
+                "ZIP": "05030-0110",
+                "PHONE": "(802) 674-5890           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Drilling: Geothermal Wells",
-                "Definitions": "Wells constructed for use in space heating or cooling, or other applications involving the use or transfer of groundwater heat. For wells greater than 500 feet, refer to\u00a0DEC permitting requirements."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10332",
+                "NAME": "Patch Well Drilling",
+                "STREET": "PO Box 6",
+                "CITY": "Clayton",
+                "STATE": "NY",
+                "ZIP": "13624-0006",
+                "PHONE": "(315) 686-2706           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Drilling: Agricultural Wells",
-                "Definitions": "Wells constructed for irrigation of farmland or as a water supply for livestock."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10334",
+                "NAME": "Tri-State Well Drilling",
+                "STREET": "9846 Jones Rd",
+                "CITY": "Erie",
+                "STATE": "PA",
+                "ZIP": "16510     ",
+                "PHONE": "(814) 899-5454           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Drilling: Environmental Monitoring",
-                "Definitions": "Wells constructed to monitor the physical or chemical character of groundwater."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10342",
+                "NAME": "Subsurface Technologies, Inc.",
+                "STREET": "40 Stone Castle Rd",
+                "CITY": "Rock Tavern",
+                "STATE": "NY",
+                "ZIP": "12575-5001",
+                "PHONE": "(845) 567-0695           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Drilling: Geotechnical Wells",
-                "Definitions": "Wells constructed to characterize subsurface geology or for dewatering during construction activity."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10345",
+                "NAME": "Scott Miller dba Miller Contracting",
+                "STREET": "51 Transport Lane",
+                "CITY": "Pine Island",
+                "STATE": "NY",
+                "ZIP": "10969     ",
+                "PHONE": "(845) 258-4726           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Drilling: Injection Wells",
-                "Definitions": "Wells constructed for the use of placing fluid underground. Permits for injection wells are obtained from the\u00a0US EPA Underground Injection Control\u00a0program."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10349",
+                "NAME": "Morrison Excavating, Inc. DBA Morrison Geothermal",
+                "STREET": "63 Gambers Corner Rd",
+                "CITY": "Duncannon",
+                "STATE": "PA",
+                "ZIP": "17020-9501",
+                "PHONE": "(717) 834-6499           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Drilling: Irrigation Wells",
-                "Definitions": "Wells constructed for irrigation of properties such as homes and golf courses."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10351",
+                "NAME": "Claverack Well & Pump Service",
+                "STREET": "8960 State Route 22",
+                "CITY": "Hillsdale",
+                "STATE": "NY",
+                "ZIP": "12529     ",
+                "PHONE": "(518) 828-6267           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Drilling: Dewatering Wells",
-                "Definitions": "Wells or boreholes constructed or used for the sole purpose of lowering or controlling the level of groundwater."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10360",
+                "NAME": "Kirke R Henshaw, Inc.",
+                "STREET": "PO Box 117, 130 Cummington Rd",
+                "CITY": "West Chesterfield",
+                "STATE": "MA",
+                "ZIP": "01084     ",
+                "PHONE": "(413) 296-4725           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Well Deepening",
-                "Definitions": "Drilling an existing well deeper."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10363",
+                "NAME": "Fiorilla Well Drilling",
+                "STREET": "1269 Shannon Corners Road",
+                "CITY": "Dundee",
+                "STATE": "NY",
+                "ZIP": "14837     ",
+                "PHONE": "(607) 738-8001           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Well Decommissioning",
-                "Definitions": "Permanent closure of a well by physically removing the well from service."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10370",
+                "NAME": "Better Water Well Systems, Inc.",
+                "STREET": "348 Smith Ridge Rd",
+                "CITY": "South Salem",
+                "STATE": "NY",
+                "ZIP": "10590-2213",
+                "PHONE": "(914) 533-6814           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Control Overflowing Wells",
-                "Definitions": "Control of a water well such that water no longer flows beyond the well casing."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10372",
+                "NAME": "Addy Well Drilling & Pump Service",
+                "STREET": "2507 Mayo Rd",
+                "CITY": "Genoa",
+                "STATE": "NY",
+                "ZIP": "13071-9755",
+                "PHONE": "(315) 364-8444           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Pump Installation",
-                "Definitions": "Installation of new water well pumps."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10391",
+                "NAME": "RK Morgan Enterprises",
+                "STREET": "72 Town Line Rd",
+                "CITY": "Van Etten",
+                "STATE": "NY",
+                "ZIP": "14889     ",
+                "PHONE": "(607) 767-6444           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Pump Service",
-                "Definitions": "Service of existing water well pumps."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10394",
+                "NAME": "CF Baker and Sons Well Drilling",
+                "STREET": "289 Groveside Rd",
+                "CITY": "Hoosick Falls",
+                "STATE": "NY",
+                "ZIP": "12090     ",
+                "PHONE": "(518) 686-3270           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Disinfection",
-                "Definitions": "Introduction and circulation of a carefully determined amount of an approved disinfection solution to a water well for treatment of bacteria. Additional information is available from your local Health Department."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10396",
+                "NAME": "Reliable Sewer & Drain Service Inc.",
+                "STREET": "PO Box 2603 / 664 Brandt Ave",
+                "CITY": "Peekskill",
+                "STATE": "NY",
+                "ZIP": "10566     ",
+                "PHONE": "(914) 739-0060           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Hydrofracturing",
-                "Definitions": "The process where fluid is pumped down a well at high pressures to open fractures in adjacent rock to improve water flow to the well."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10398",
+                "NAME": "Cedar Ridge Well Drilling LLC",
+                "STREET": "172 Gidley Rd/PO Box 253",
+                "CITY": "Esperance",
+                "STATE": "NY",
+                "ZIP": "12066-0253",
+                "PHONE": "(518) 312-5581           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             },
             {
-              "ServiceDefinitions": {
-                "Id": "0",
-                "Service": "Cleaning/Redevelopment",
-                "Definitions": "Physical or chemical process intended to removed sediment, scale, or other material that may be interfering with the amount of water available for pumping."
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10400",
+                "NAME": "R.A. DeGrazia Well Co. Inc.",
+                "STREET": "PO Box 7-15 South End Plaza",
+                "CITY": "New Milford",
+                "STATE": "CT",
+                "ZIP": "06776-0007",
+                "PHONE": "(860) 355-8424           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
+              }
+            },
+            {
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10402",
+                "NAME": "Slater Brothers Well Drilling Inc.",
+                "STREET": "764 High Mountain Rd",
+                "CITY": "North Haledon",
+                "STATE": "NJ",
+                "ZIP": "07508-2722",
+                "PHONE": "(973) 835-3777           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
+              }
+            },
+            {
+              "DRILLING_COMPANY": {
+                "REG_NUM": "NYRD10414",
+                "NAME": "Dave's Plumbing and Heating, Inc.",
+                "STREET": "PO Box 123, 99 Palatine Park Road",
+                "CITY": "Germantown",
+                "STATE": "NY",
+                "ZIP": "12526-0129",
+                "PHONE": "(518) 537-4074           ",
+                "COUNTY_CODE": "",
+                "RESIDENTIAL_WELLS_DRILLED_IND": "",
+                "PUBLIC_WELLS_DRILLED_IND": "",
+                "COMMERCIAL_WELLS_DRILLED_IND": "",
+                "GEOTHERMAL_WELLS_DRILLED_IND": "",
+                "AGRICULTURAL_WELLS_DRILLED_IND": "",
+                "MONITORING_WELLS_DRILLED_IND": "",
+                "GEOTECHNICAL_WELLS_DRILLED_IND": "",
+                "INJECTION_WELLS_DRILLED_IND": "",
+                "DEWATERING_SERVICE_IND": "",
+                "PUMP_INSTALLATION_IND": "",
+                "PUMP_SERVICE_IND": "",
+                "WELL_ABANDONMENT_IND": "",
+                "WELL_DISINFECTION_IND": "",
+                "WELL_DEEPENING_IND": "",
+                "HYDROFRACTURING_IND": "",
+                "CLEANING_REDEVELOPING_IND": "",
+                "IRRIGATION_WELLS_DRILLED_IND": "",
+                "CONTROL_FLOWING_WELLS_IND": ""
+              },
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "",
+                "COUNTY_NAME": "",
+                "STATE": ""
               }
             }
           ]
         },
-        "Count": -1
-      },
-      "rolesInfo": ","
+        "Count": 330
+      }
     }
   }
 ]

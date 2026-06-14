@@ -19,11 +19,12 @@
     <STATE_01_IDENTIFY_SCHEMA>
       <INSTRUCTIONS>
         1. Identify fragmented B2B/niche opportunities with public licensing registries (State Bar, EPA, SOS, municipal registers).
-        2. Perform keyword research using AnswerThePublic to extract high-volume "head" questions.
-        3. Define the directory's standard schema (e.g. License Number, Status, Coordinates, Phone, Principal Owner, Insurance, Q&A fields).
-        4. Develop a geo-intent multiplexing plan to combine head questions with target geographic variables.
+        2. Evaluate the niche against the Directory Viability Scorecard (Demand Concentration, Recurring Need, Expansion Potential).
+        3. Perform keyword research using AnswerThePublic to extract high-volume "head" questions.
+        4. Define the directory's standard schema (e.g. License Number, Status, Coordinates, Phone, Principal Owner, Insurance, Q&A fields).
+        5. Develop a geo-intent multiplexing plan to combine head questions with target geographic variables.
       </INSTRUCTIONS>
-      <TRANSITION_CRITERIA>Target registry is identified, keywords mapped, and database schema is finalized.</TRANSITION_CRITERIA>
+      <TRANSITION_CRITERIA>Target registry is identified, viability scorecard passed, keywords mapped, and database schema is finalized.</TRANSITION_CRITERIA>
     </STATE_01_IDENTIFY_SCHEMA>
 
     <STATE_02_INGEST_ENRICH>

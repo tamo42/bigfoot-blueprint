@@ -55,18 +55,19 @@ def enrich_state_database(db_path, state_name, max_queries):
     
     for row in rows:
         row_id, name, city = row
-        cache_key = f"{name.lower()} | {city.lower()}"
+        safe_city = city if city else ""
+        cache_key = f"{name.lower()} | {safe_city.lower()}"
         
         res = None
         if cache_key in places_cache:
             res = places_cache[cache_key]
-            print(f"[+] Cache hit: {name} in {city}")
+            print(f"[+] Cache hit: {name} in {safe_city}")
         else:
             if queries_made >= max_queries:
                 print("[-] Reached safety query limit for this run.")
                 break
                 
-            search_query = f"{name} {city} {state_name}"
+            search_query = f"{name} {safe_city} {state_name}".strip()
             print(f"[*] Querying Places API ({queries_made + 1}/{max_queries}): '{search_query}'...")
             
             find_url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json"
