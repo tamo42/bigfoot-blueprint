@@ -1,6 +1,6 @@
 import re
 
-path = r"C:\Users\tamo4\git\bigfoot-sites\macongreasetrap.com\src\pages\[slug].astro"
+path = r"C:\Users\tamo4\git\bigfoot-sites\georgiagreasetrap.com\src\pages\[slug].astro"
 with open(path, "r", encoding="utf-8") as f:
     content = f.read()
 

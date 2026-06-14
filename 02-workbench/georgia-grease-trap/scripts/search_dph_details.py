@@ -93,5 +93,5 @@ def search_pdf(path, pdf_name):
                             print(f"{marker}{lines[idx]}")
                         found = True
 
-search_pdf(r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\macon-grease-trap\data\pumpers.pdf", "DPH Pumpers")
-search_pdf(r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\macon-grease-trap\data\installers.pdf", "DPH Installers")
+search_pdf(r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\georgia-grease-trap\data\pumpers.pdf", "DPH Pumpers")
+search_pdf(r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\georgia-grease-trap\data\installers.pdf", "DPH Installers")

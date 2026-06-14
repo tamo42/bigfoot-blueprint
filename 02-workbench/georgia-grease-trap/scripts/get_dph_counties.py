@@ -38,8 +38,8 @@ def get_county_for_match(pdf_path, comp_name):
                 return current_county
     return None
 
-pumper_pdf = r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\macon-grease-trap\data\pumpers.pdf"
-installer_pdf = r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\macon-grease-trap\data\installers.pdf"
+pumper_pdf = r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\georgia-grease-trap\data\pumpers.pdf"
+installer_pdf = r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\georgia-grease-trap\data\installers.pdf"
 
 comps = [
     "Underground Septic Services, LLC",

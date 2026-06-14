@@ -11,7 +11,7 @@ def clean_name(name):
 
 def main():
     # Load listings from DB
-    db_path = r"c:\Users\tamo4\git\bigfoot-sites\macongreasetrap.com\src\data\directory.sqlite"
+    db_path = r"c:\Users\tamo4\git\bigfoot-sites\georgiagreasetrap.com\src\data\directory.sqlite"
     conn = sqlite3.connect(db_path)
     c = conn.cursor()
     c.execute("SELECT id, name FROM installers_haulers")
@@ -19,7 +19,7 @@ def main():
     conn.close()
 
     # Load FOG data
-    fog_path = r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\macon-grease-trap\data\extracted_fog_ids.json"
+    fog_path = r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\georgia-grease-trap\data\extracted_fog_ids.json"
     with open(fog_path, 'r') as f:
         fog_records = json.load(f)
 

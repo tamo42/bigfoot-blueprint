@@ -9,7 +9,7 @@ This registry tracks the status, configuration, domains, and metrics of all nich
 | Directory ID | Name | Target Niche | Region | Domain / URL | Git Repository | Hosting | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **01-GABAR** | Georgia Closing Lawyers | Real Estate Closing Attorneys | GA, USA | *TBD* | `nhq-bigfoot-blueprint` (Scrapers) | Vercel (Edge) | **Stage 1 (Scraping/Enrichment)** |
-| **02-SEPTIC** | Macon Septic & Grease | Septic Pumping & Grease Haulers | Macon, GA | [macongreasetrap.com](https://macongreasetrap.com) | `nhq-bigfoot-blueprint` (Scrapers) | Netlify | **Stage 1 (Scraping/Enrichment)** |
+| **02-SEPTIC** | Georgia Grease Trap | Septic Pumping & Grease Haulers | GA, USA | [georgiagreasetrap.com](https://georgiagreasetrap.com) | `tamo42/georgiagreasetrap.com` | Railway | **Stage 1 (Scraping/Enrichment)** |
 
 ---
 

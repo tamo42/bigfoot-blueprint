@@ -101,7 +101,7 @@ flowchart LR
 ```
 
 ### Component 1: Ingestion & Storage
-* **Source Feeds:** Google Places API, county tax logs, government API directories, or custom scrapers.
+* **Source Feeds:** Google Places API, county tax logs, government API directories, custom HTML/PDF scrapers, or **PowerBI interactive dashboards** (e.g., `app.powerbigov.us` extracted via Playwright DOM scrolling).
   * **Apify Actor Architecture:** When building custom scrapers, use the Two-Bot approach (Bot #1 architects the schema, Bot #2 builds the actor). Ensure the resulting Apify Actor follows standard architecture: `package.json`, `input_schema.json`, `main.js` (orchestration), `validate.js` (data checks), and `transform.js` (formatting). Route seeds and output data through Apify Key-Value Stores.
 * **Database:** **SQLite** for smaller, self-contained niche sites (easy to commit to Git and deploy); **Multi-Tenant Supabase** (PostgreSQL cloud database with directory_id tenant partitioning) for Stage 2 directories requiring parallel write operations or complex relational queries.
 

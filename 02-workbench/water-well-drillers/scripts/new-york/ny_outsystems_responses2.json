@@ -1,0 +1,768 @@
+[
+  {
+    "url": "https://appfactory.dec.ny.gov/WaterWell/screenservices/WaterWell/MainFlow/Contractor_Search/ScreenDataSetGetWaterwellActivityTypes",
+    "data": {
+      "versionInfo": {
+        "hasModuleVersionChanged": false,
+        "hasApiVersionChanged": false
+      },
+      "data": {
+        "List": {
+          "List": [
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 1,
+                "ACTIVITY_TYPE": "Drilling: Residential         ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 2,
+                "ACTIVITY_TYPE": "Drilling: Public              ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 3,
+                "ACTIVITY_TYPE": "Drilling: Commercial          ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 4,
+                "ACTIVITY_TYPE": "Drilling: Geothermal          ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 5,
+                "ACTIVITY_TYPE": "Drilling: Agricultural        ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 6,
+                "ACTIVITY_TYPE": "Drilling: Environmental       ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 7,
+                "ACTIVITY_TYPE": "Drilling: Geotechnical        ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 8,
+                "ACTIVITY_TYPE": "Drilling: Injection/Drainage  ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 9,
+                "ACTIVITY_TYPE": "Driiling: Irrigation          ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 10,
+                "ACTIVITY_TYPE": "Drilling: Dewatering          ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 11,
+                "ACTIVITY_TYPE": "Deepening                     ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 12,
+                "ACTIVITY_TYPE": "Decommissioning               ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 13,
+                "ACTIVITY_TYPE": "Control Overflowing Wells     ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 14,
+                "ACTIVITY_TYPE": "Pump Installation             ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 15,
+                "ACTIVITY_TYPE": "Pump Service                  ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 16,
+                "ACTIVITY_TYPE": "Disinfection                  ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 17,
+                "ACTIVITY_TYPE": "Hydrofracturing               ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            },
+            {
+              "ACTIVITY_TYPE": {
+                "ACTIVITY_CODE": 18,
+                "ACTIVITY_TYPE": "Cleaning/Redeveloping         ",
+                "ACTIVITY_FIELD_NAME": ""
+              }
+            }
+          ]
+        },
+        "Count": -1
+      },
+      "rolesInfo": ","
+    }
+  },
+  {
+    "url": "https://appfactory.dec.ny.gov/WaterWell/screenservices/WaterWell/ActionSetThemeInputs",
+    "data": {
+      "versionInfo": {
+        "hasModuleVersionChanged": false,
+        "hasApiVersionChanged": false
+      },
+      "data": {
+        "LayoutOptions": {
+          "ApplicationName": "Water Well Search Application",
+          "ShowUserMenu": false,
+          "ShowLanguageSwitcher": true,
+          "ShowNotifications": false,
+          "ShowPrivacyPolicy": true,
+          "ShowTermsOfService": true,
+          "PrivacyPolicyLink": "https://www.dec.ny.gov/about/27720.html",
+          "TermsOfServiceLink": "",
+          "AgencyName": "Department of Environmental Conservation",
+          "ShowBreadcrumbs": false,
+          "ShowTitle": true,
+          "ShowActions": false,
+          "MenuBehavior": "Responsive",
+          "IsAccessibilityEnable": false,
+          "IsuNavEnabled": true
+        }
+      },
+      "rolesInfo": ","
+    }
+  },
+  {
+    "url": "https://appfactory.dec.ny.gov/WaterWell/screenservices/WaterWell/MainFlow/Contractor_Search/ScreenDataSetGetServiceDefinitions",
+    "data": {
+      "versionInfo": {
+        "hasModuleVersionChanged": false,
+        "hasApiVersionChanged": false
+      },
+      "data": {
+        "List": {
+          "List": [
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Residential Wells",
+                "Definitions": "Wells constructed as a source of potable water for individual households"
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Public Wells",
+                "Definitions": "Wells constructed for use as regulated public water supplies."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Commercial Wells",
+                "Definitions": "Wells constructed for use in commercial business activities."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Geothermal Wells",
+                "Definitions": "Wells constructed for use in space heating or cooling, or other applications involving the use or transfer of groundwater heat. For wells greater than 500 feet, refer to\u00a0DEC permitting requirements."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Agricultural Wells",
+                "Definitions": "Wells constructed for irrigation of farmland or as a water supply for livestock."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Environmental Monitoring",
+                "Definitions": "Wells constructed to monitor the physical or chemical character of groundwater."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Geotechnical Wells",
+                "Definitions": "Wells constructed to characterize subsurface geology or for dewatering during construction activity."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Injection Wells",
+                "Definitions": "Wells constructed for the use of placing fluid underground. Permits for injection wells are obtained from the\u00a0US EPA Underground Injection Control\u00a0program."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Irrigation Wells",
+                "Definitions": "Wells constructed for irrigation of properties such as homes and golf courses."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Drilling: Dewatering Wells",
+                "Definitions": "Wells or boreholes constructed or used for the sole purpose of lowering or controlling the level of groundwater."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Well Deepening",
+                "Definitions": "Drilling an existing well deeper."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Well Decommissioning",
+                "Definitions": "Permanent closure of a well by physically removing the well from service."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Control Overflowing Wells",
+                "Definitions": "Control of a water well such that water no longer flows beyond the well casing."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Pump Installation",
+                "Definitions": "Installation of new water well pumps."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Pump Service",
+                "Definitions": "Service of existing water well pumps."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Disinfection",
+                "Definitions": "Introduction and circulation of a carefully determined amount of an approved disinfection solution to a water well for treatment of bacteria. Additional information is available from your local Health Department."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Hydrofracturing",
+                "Definitions": "The process where fluid is pumped down a well at high pressures to open fractures in adjacent rock to improve water flow to the well."
+              }
+            },
+            {
+              "ServiceDefinitions": {
+                "Id": "0",
+                "Service": "Cleaning/Redevelopment",
+                "Definitions": "Physical or chemical process intended to removed sediment, scale, or other material that may be interfering with the amount of water available for pumping."
+              }
+            }
+          ]
+        },
+        "Count": -1
+      },
+      "rolesInfo": ","
+    }
+  },
+  {
+    "url": "https://appfactory.dec.ny.gov/WaterWell/screenservices/WaterWell/MainFlow/Contractor_Search/ScreenDataSetGetWaterwellCountyFips",
+    "data": {
+      "versionInfo": {
+        "hasModuleVersionChanged": false,
+        "hasApiVersionChanged": false
+      },
+      "data": {
+        "List": {
+          "List": [
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36001",
+                "COUNTY_NAME": "Albany",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36003",
+                "COUNTY_NAME": "Allegany",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36005",
+                "COUNTY_NAME": "Bronx",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36007",
+                "COUNTY_NAME": "Broome",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36009",
+                "COUNTY_NAME": "Cattaraugus",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36011",
+                "COUNTY_NAME": "Cayuga",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36013",
+                "COUNTY_NAME": "Chautauqua",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36015",
+                "COUNTY_NAME": "Chemung",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36017",
+                "COUNTY_NAME": "Chenango",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36019",
+                "COUNTY_NAME": "Clinton",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36021",
+                "COUNTY_NAME": "Columbia",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36023",
+                "COUNTY_NAME": "Cortland",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36025",
+                "COUNTY_NAME": "Delaware",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36027",
+                "COUNTY_NAME": "Dutchess",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36029",
+                "COUNTY_NAME": "Erie",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36031",
+                "COUNTY_NAME": "Essex",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36033",
+                "COUNTY_NAME": "Franklin",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36035",
+                "COUNTY_NAME": "Fulton",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36037",
+                "COUNTY_NAME": "Genesee",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36039",
+                "COUNTY_NAME": "Greene",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36041",
+                "COUNTY_NAME": "Hamilton",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36043",
+                "COUNTY_NAME": "Herkimer",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36045",
+                "COUNTY_NAME": "Jefferson",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36047",
+                "COUNTY_NAME": "Kings",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36049",
+                "COUNTY_NAME": "Lewis",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36051",
+                "COUNTY_NAME": "Livingston",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36053",
+                "COUNTY_NAME": "Madison",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36055",
+                "COUNTY_NAME": "Monroe",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36057",
+                "COUNTY_NAME": "Montgomery",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36059",
+                "COUNTY_NAME": "Nassau",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36061",
+                "COUNTY_NAME": "New York",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36063",
+                "COUNTY_NAME": "Niagara",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36065",
+                "COUNTY_NAME": "Oneida",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36067",
+                "COUNTY_NAME": "Onondaga",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36069",
+                "COUNTY_NAME": "Ontario",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36071",
+                "COUNTY_NAME": "Orange",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36073",
+                "COUNTY_NAME": "Orleans",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36075",
+                "COUNTY_NAME": "Oswego",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36077",
+                "COUNTY_NAME": "Otsego",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36079",
+                "COUNTY_NAME": "Putnam",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36081",
+                "COUNTY_NAME": "Queens",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36083",
+                "COUNTY_NAME": "Rensselaer",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36085",
+                "COUNTY_NAME": "Richmond",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36087",
+                "COUNTY_NAME": "Rockland",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36091",
+                "COUNTY_NAME": "Saratoga",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36093",
+                "COUNTY_NAME": "Schenectady",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36095",
+                "COUNTY_NAME": "Schoharie",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36097",
+                "COUNTY_NAME": "Schuyler",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36099",
+                "COUNTY_NAME": "Seneca",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36089",
+                "COUNTY_NAME": "St Lawrence",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36101",
+                "COUNTY_NAME": "Steuben",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36103",
+                "COUNTY_NAME": "Suffolk",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36105",
+                "COUNTY_NAME": "Sullivan",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36107",
+                "COUNTY_NAME": "Tioga",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36109",
+                "COUNTY_NAME": "Tompkins",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36111",
+                "COUNTY_NAME": "Ulster",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36113",
+                "COUNTY_NAME": "Warren",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36115",
+                "COUNTY_NAME": "Washington",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36117",
+                "COUNTY_NAME": "Wayne",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36119",
+                "COUNTY_NAME": "Westchester",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36121",
+                "COUNTY_NAME": "Wyoming",
+                "STATE": ""
+              }
+            },
+            {
+              "COUNTY_FIPS": {
+                "FIPS_CODE": "36123",
+                "COUNTY_NAME": "Yates",
+                "STATE": ""
+              }
+            }
+          ]
+        },
+        "Count": -1
+      },
+      "rolesInfo": ","
+    }
+  }
+]

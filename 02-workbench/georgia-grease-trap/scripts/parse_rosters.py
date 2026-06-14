@@ -39,7 +39,7 @@ def main():
     data_dir = os.path.join(os.path.dirname(current_dir), "data")
     
     # Path to site database in user's git workspace
-    db_path = r"C:\Users\tamo4\git\bigfoot-sites\macongreasetrap.com\src\data\directory.sqlite"
+    db_path = r"C:\Users\tamo4\git\bigfoot-sites\georgiagreasetrap.com\src\data\directory.sqlite"
     
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()

@@ -11,6 +11,7 @@ This workspace is the central control plane and prototyping repository for the *
 | **Manage Agent Rules & Blueprints** | `/` (root) | Core BLEEP manifests (`01_intent_manifest.bleep.md` through `04_feedback_loop.bleep.md`). |
 | **Niche Discovery & Keyword Audits** | [Perry's Directory Ideas.md](file:///C:/Users/tamo4/git/nhq-bigfoot-blueprint/references/Perry's%20Directory%20Ideas.md) | Compilation of niche candidate opportunities, Belcher's lists, and keyword resources. |
 | **Execute Scrapers & Data Extraction** | `/scripts/` | Scrapers (e.g. `gabar-scraper.py`) and raw files in `/cache/`. |
+| **Extract PowerBI Grids** | `/scripts/scrape_powerbi_grid_template.py` | Generic Playwright DOM scraper for bypassing Microsoft PowerBI (`app.powerbigov.us`) virtualization. |
 | **Run Programmatic LLM Enrichment** | `/scripts/` | Enrichment scripts (`gabar-enricher.py`) leveraging Gemini 2.5 Flash/Pro. |
 | **Implement Astro + SQLite Frontends** | [bigfoot-blueprint-framework.md](file:///C:/Users/tamo4/git/nhq-bigfoot-blueprint/source/bigfoot-blueprint-framework.md) | Specifications for flat URL semantic silos, Zillow-level listing feeds, and JSON-LD schema layouts. |
 | **Deploy & Onboard Vibe-Coded Sites** | [Setup Guide - BanjoSoft.md](file:///C:/Users/tamo4/git/nhq-bigfoot-blueprint/references/Bigfoot%20BluePrint%20Setup%20Guide%20to%20Vibe%20Coded%20Directories%20BanjoSoft.md) | Onboarding guide, environment setup, and deployment tutorials. |

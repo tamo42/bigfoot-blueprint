@@ -2,7 +2,7 @@ import shutil
 import os
 
 src = r"C:\Users\tamo4\Downloads\2026-approved-commercial-haulers-data-base.pdf"
-dst = r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\macon-grease-trap\data\2026-approved-commercial-haulers-data-base.pdf"
+dst = r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\georgia-grease-trap\data\2026-approved-commercial-haulers-data-base.pdf"
 
 if os.path.exists(src):
     shutil.copy2(src, dst)

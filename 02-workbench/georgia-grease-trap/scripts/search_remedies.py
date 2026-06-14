@@ -1,6 +1,6 @@
 import fitz
 
-doc = fitz.open(r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\macon-grease-trap\data\2026-approved-commercial-haulers-data-base.pdf")
+doc = fitz.open(r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\georgia-grease-trap\data\2026-approved-commercial-haulers-data-base.pdf")
 
 print("Searching for 'remedies'...")
 for page_idx in range(len(doc)):

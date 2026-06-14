@@ -1,6 +1,6 @@
 import json
 
-fog_path = r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\macon-grease-trap\data\extracted_fog_ids.json"
+fog_path = r"c:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\georgia-grease-trap\data\extracted_fog_ids.json"
 with open(fog_path, 'r') as f:
     records = json.load(f)
 

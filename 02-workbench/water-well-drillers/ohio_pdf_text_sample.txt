@@ -1,0 +1,218 @@
+--- PAGE 1 ---
+                                                                    Ohio Department of Health
+                                                                     Contractor Activity Status Report
+
+
+
+
+                                                                                       dEDate                        Well    Spring     Pump     Water     Cistern    Pond     Sealing
+    Allen
+               9999-PWSC-25-000073                   G.H. Bierly, Inc.                 Jeremy Clum                     X                  X                              X         X
+                         2025                        10933 Ada Road                    (419) 649-3991
+                                                     Ada, OH 45810                     December 23, 2025                                          Active
+
+               9999-PWSC-25-000100                   Grothouse Plumbing &              James Grothouse                 X                  X         X
+                         2025                        Heating, Inc.                     (419) 695-3081
+                                                     901 S. Main St.                   December 29, 2025                                          Active
+                                                     Deephos, OH 45833
+               9999-PWSC-25-000144                   Brown's Heating, Cooling,         Joyce Maag                      X                  X         X
+                         2025                        Plumbing & Electrical, LLC        (419) 331-6762
+                                                     414 Brower Rd.                    December 30, 2025                                          Active
+                                                     Lima, OH 45801
+               9999-PWSC-25-000147                   Wellman Services LLC              Amber Mosgrave                  X
+                         2025                        2300 Central Point Parkway        (567) 712-7015
+                                                     Lima, OH 45804                    December 30, 2025                                          Active
+
+               9999-PWSC-26-000004                   Basinger Plumbing & Heating,      Brittany Coats                  X                  X         X                              X
+                         2026                        LLC                               (419) 358-1355
+                                                     131 Cherry St.                    January 02, 2026                                           Active
+                                                     Bluffton, OH 45817
+               9999-PWSC-26-000039                   Allen Hughes Septic Tank          Dale Wilson                     X                  X                                        X
+                         2026                        Service, LLC                      (419) 648-5288
+                                                     6518 HAY RD                       January 05, 2026                                           Active
+                                                     Harrod, OH 45850
+               9999-PWSC-26-000054                   AllTek Plumbing, Heating and      Christine Spicer                X                  X         X
+                         2026                        Air Conditioning Co.              (419) 228-2708
+                                                     3799 N. Grubb Rd.                 January 06, 2026                                           Active
+                                                     Delphos, OH 45833
+
+
+
+05/27/2026                                                                                                                                                                        1 of 104
+--- PAGE 2 ---
+                                                                 Ohio Department of Health
+                                                                  Contractor Activity Status Report
+
+
+
+
+                                                                                   dEDate                       Well    Spring    Pump     Water    Cistern    Pond    Sealing
+              9999-PWSC-26-000068                 Fischer Plumbing & Heating,      Amy Luthman                    X                 X                                      X
+                        2026                      Inc.                             (419) 692-8901
+                                                  7788 German Rd.                  January 07, 2026                                        Active
+                                                  Delphos, OH 45833
+              9999-PWSC-26-000358                 Sandy Point Plumbing             Lance Miller                   X                 X         X
+                        2026                      3530 Bussert Rd.                 (419) 642-2022
+                                                  Elida, OH 45807                  April 09, 2026                                          Active
+
+              9999-PWSC-26-000395                 Matt's Heating and Cooling       Matt Goecke                    X                 X         X
+                        2026                                                       (419) 647-1095
+                                                                                   May 12, 2026                                            Active
+
+    Total for Allen (OH) County: 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+05/27/2026                                                                                                                                                                 2 of 104
+--- PAGE 3 ---
+                                                                Ohio Department of Health
+                                                                 Contractor Activity Status Report
+
+
+
+
+                                                                                   dEDate                      Well    Spring    Pump     Water    Cistern    Pond    Sealing
+    Ashland
+              9999-PWSC-25-000083                 Aqua Ace Drilling, LLC           Brad Schlecthy                X        X        X         X         X        X
+                        2025                      1805 Tonwship Rd 1255            (419) 606-5432
+                                                  Ashland, OH 44805                December 29, 2025                                      Active
+
+              9999-PWSC-26-000074                 Ducan Drilling, LLC              Jenny Duncan                  X                 X         X                            X
+                        2026                      1006 B County Road 2769          (419) 938-7514
+                                                  Perrysville, OH 44864            January 07, 2026                                       Active
+
+              9999-PWSC-26-000346                 Eikleberry & Sons                Cole Eikleberry               X        X        X         X         X        X         X
+                        2026                      2595 County Road 457             (740) 398-5911
+                                                  Loudonville, OH 44842            March 30, 2026                                         Active
+
+              9999-PWSC-26-000375                 RSSERVICES LLC                   Paul Jones                    X        X        X         X         X        X         X
+                        2026                      870 State Route 58               (567) 284-0833
+                                                  Ashland, OH 44805                April 22, 2026                                         Active
+
+    Total for Ashland (OH) County: 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+05/27/2026                                                                                                                                                               3 of 104
+--- PAGE 4 ---
+                                                                  Ohio Department of Health
+                                                                   Contractor Activity Status Report
+
+
+
+
+                                                                                     dEDate                       Well    Spring    Pump     Water     Cistern    Pond     Sealing
+    Ashtabula
+               9999-PWSC-26-000038                 Easton Service Inc                Laura Turk                     X        X                  X         X         X
+                         2026                      1427 State Route 322              (440) 422-3200
+                                                   Orwell, OH 44076                  January 05, 2026                                         Active
+
+               9999-PWSC-26-000099                 MCC DIVERSIEDD LLC                RICK MCCOWIEN                  X
+                         2026                      1007 PENNLINE RD                  (440) 645-3738
+                                                   PIERPONT, OH 44082                January 08, 2026                                         Active
+
+               9999-PWSC-26-000165                 Crystal Clear Water               Richard Machczynski            X        X         X        X         X         X
+                         2026                      895 State Route 46N               (440) 576-5421
+                                                   Jefferson, OH 44047               January 14, 2026                                         Active
+
+               9999-PWSC-26-000219                 John Allen McMillin               John McMillin                  X                  X        X                   X         X
+                         2026                      6926 Summers Rd.                  (440) 474-9057
+                                                   Montville, OH 44064               January 23, 2026                                         Active
+
+               9999-PWSC-26-000237                 Sandella's Water Conditioning     Brenda Sandella                X        X         X        X         X         X
+                         2026                      3500 Plymouth Brown Rd.           (440) 344-1372
+                                                   Ashtabula, OH 44004               January 28, 2026                                         Active
+
+               9999-PWSC-26-000243                 Kapalin, Inc                      Russ Kapalin                   X        X         X        X         X         X         X
+                         2026                      3605 State Route 167              (440) 858-2506
+                                                   Jefferson, OH 44047               January 29, 2026                                         Active
+
+               9999-PWSC-26-000288                 The Potter's Company              Robert Tricamo                 X        X         X        X         X         X         X
+                         2026                      PO Box 291                        (440) 272-5723
+                                                   Jefferson, OH 44047               February 18, 2026                                        Active
+
+
+
+
+
+05/27/2026                                                                                                                                                                    4 of 104
+--- PAGE 5 ---
+                                                                  Ohio Department of Health
+                                                                   Contractor Activity Status Report
+
+
+
+
+                                                                                    dEDate                        Well    Spring    Pump     Water    Cistern    Pond     Sealing
+               9999-PWSC-26-000336                 Don Armstrong Well Drilling      Don Armstrong                  X                  X                                      X
+                        2026                       LLC                              (440) 294-2016
+                                                   2947 Black Sea Road              March 23, 2026                                           Active
+                                                   Jefferson, OH 44047
+               9999-PWSC-26-000349                 G & H Water Well Drilling        Ryan Goff                      X         X        X         X         X        X         X
+                        2026                       234 N SPRUCE ST                  (440) 645-9727
+                                                   Jefferson, OH 44047              April 03, 2026                                           Active
+
+               9999-PWSC-26-000361                 Clearwater Drilling LLC          Mark Byler                     X
+                        2026                       PO Box 728                       (440) 637-7124
+                                                   Middlefield, OH 44062            April 15, 2026                                           Active
+
+               9999-PWSC-26-000376                 Steen Brothers Well Drilling     Michael Steen                  X                  X         X                            X
+                        2026                       LLC                              (800) 800-8000
+                                                   5682 Mayfield Rd.                April 22, 2026                                           Active
+                                                   Windsor, OH 44099
+    Total for Ashtabula (OH) County: 11
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+05/27/2026                                                                                                                                                                   5 of 104

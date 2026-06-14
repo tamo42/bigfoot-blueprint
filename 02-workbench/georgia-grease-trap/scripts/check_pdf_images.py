@@ -1,6 +1,6 @@
 import fitz
 
-doc = fitz.open("02-workbench/macon-grease-trap/data/mwa_haulers.pdf")
+doc = fitz.open("02-workbench/georgia-grease-trap/data/mwa_haulers.pdf")
 page = doc[0]
 il = page.get_images()
 print("Images list:", il)

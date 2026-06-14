@@ -3,7 +3,7 @@ import re
 import sqlite3
 
 # Resolve database path and get valid slugs
-db_path = r"c:\Users\tamo4\git\bigfoot-sites\macongreasetrap.com\src\data\directory.sqlite"
+db_path = r"c:\Users\tamo4\git\bigfoot-sites\georgiagreasetrap.com\src\data\directory.sqlite"
 conn = sqlite3.connect(db_path)
 c = conn.cursor()
 c.execute("SELECT name FROM installers_haulers WHERE post_status = 'publish'")
@@ -42,7 +42,7 @@ valid_routes = {
     "/marlers-plumbing-services-llc",
 }
 
-src_dir = r"C:\Users\tamo4\git\bigfoot-sites\macongreasetrap.com\src"
+src_dir = r"C:\Users\tamo4\git\bigfoot-sites\georgiagreasetrap.com\src"
 astro_files = []
 for root, dirs, files in os.walk(src_dir):
     for f in files:

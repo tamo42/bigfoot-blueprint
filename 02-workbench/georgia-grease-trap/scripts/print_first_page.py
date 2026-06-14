@@ -8,5 +8,5 @@ def dump_page(pdf_path):
     if len(doc) > 0:
         print(doc[0].get_text("text"))
         
-dump_page("02-workbench/macon-grease-trap/data/mwa_haulers.pdf")
-dump_page("02-workbench/macon-grease-trap/data/pumpers.pdf")
+dump_page("02-workbench/georgia-grease-trap/data/mwa_haulers.pdf")
+dump_page("02-workbench/georgia-grease-trap/data/pumpers.pdf")

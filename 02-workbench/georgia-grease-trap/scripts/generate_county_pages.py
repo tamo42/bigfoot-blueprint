@@ -109,8 +109,8 @@ const hubSchema = {
   "@graph": [
     {
       "@type": "CollectionPage",
-      "@id": "https://macongreasetrap.com/__SLUG__#webpage",
-      "url": "https://macongreasetrap.com/__SLUG__",
+      "@id": "https://georgiagreasetrap.com/__SLUG__#webpage",
+      "url": "https://georgiagreasetrap.com/__SLUG__",
       "name": "__TITLE__",
       "description": "__DESC__",
       "speakable": {
@@ -120,18 +120,18 @@ const hubSchema = {
     },
     {
       "@type": "ItemList",
-      "@id": "https://macongreasetrap.com/__SLUG__#itemlist",
+      "@id": "https://georgiagreasetrap.com/__SLUG__#itemlist",
       "name": "__TITLE_COUNTY__ Licensed Liquid Waste Contractors Registry",
       "description": "Comprehensive index of permitted grease haulers servicing __TITLE_COUNTY__, GA.",
       "itemListElement": haulers.map((h, i) => ({
         "@type": "ListItem",
         "position": i + 1,
-        "url": `https://macongreasetrap.com/${h.slug}`
+        "url": `https://georgiagreasetrap.com/${h.slug}`
       }))
     },
     {
       "@type": "FAQPage",
-      "@id": "https://macongreasetrap.com/__SLUG__#faqpage",
+      "@id": "https://georgiagreasetrap.com/__SLUG__#faqpage",
       "mainEntity": [
         {
           "@type": "Question",
@@ -431,7 +431,7 @@ __COUNTIES_LINKS__
 </script>
 """
 
-pages_dir = r"C:\Users\tamo4\git\bigfoot-sites\macongreasetrap.com\src\pages"
+pages_dir = r"C:\Users\tamo4\git\bigfoot-sites\georgiagreasetrap.com\src\pages"
 
 for slug, data in counties.items():
     # Build counties links
