@@ -38,9 +38,9 @@ This workspace is the central control plane and prototyping repository for the *
 ## 🏭 The Agent-Accelerated 4-Phase Factory
 
 Every Bigfoot project operates through a rigid 4-phase assembly line, powered natively by the Antigravity IDE:
-1. **Phase 1: Selection & Viability.** Validating the niche against Avatar Adjacency and Scale vs. Frequency.
-2. **Phase 2: Agentic Discovery (Prototyping).** Architecting the schema and deploying Python/Gemini agents to crawl, scrape, and build Hormozi reciprocity tools in seconds.
-3. **Phase 3: Engineering Pipeline.** Ingesting all raw data into local SQLite and running decoupled Gemini staging enrichments to draft AEO/SEO content.
+1. **Phase 1: Selection & Viability.** Validating the niche against Avatar Adjacency/Scale vs. Frequency, executing AnswerThePublic keyword crawls, and compiling the Search Intent Map.
+2. **Phase 2: Agentic Discovery (Prototyping).** Architecting the schema, configuring scraper schemas from the Intent Map, and designing Hormozi reciprocity calculators.
+3. **Phase 3: Engineering Pipeline.** Deploying scrapers to harvest registries, cleaning/geocoding data with local cache, running Gemini enrichment loops, and compiling a local SQLite database.
 4. **Phase 4: Antigravity Deployment.** Spinning up Astro/Next.js frontend sister-repos within the IDE, generating structural sitemaps/`llms.txt`, and deploying instantly to Railway.
 
 *Note: Workspace files should use phase prefixes (e.g., `p1_viability.md`, `p2_scraper.py`) to map cleanly to this pipeline.*

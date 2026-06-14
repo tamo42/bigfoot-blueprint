@@ -39,14 +39,49 @@ A rural or independent homeowner whose water pressure dropped to zero on a Satur
 ### Layer 2 — Import Requirements (6 fields — fixed)
 `post_status`, `featured`, `admin_category`, `admin_location`, `listing_img`, `date`
 
-### Layer 3 — Domain-Specific Fields (11 fields — unique to niche)
-`license_number`, `license_status`, `drilling_depth_limit`, `service_specialty`, `emergency_repair_247`, `well_casing_materials`, `pump_types_serviced`, `water_testing_offered`, `commercial_capable`, `residential_capable`, `insurance_verified`
+### Layer 3 — Domain-Specific Fields (25 fields — unique to niche)
+`license_number` (State-issued license number),
+`license_type` (Specific contractor designation),
+`license_status` (Active/Expired/Suspended),
+`licensing_agency` (State licensing authority),
+`emergency_repair_247` (Boolean flag),
+`emergency_response_time` (Typical emergency window),
+`emergency_services_offered` (JSON or list of emergency repairs),
+`service_radius_miles` (Max travel distance),
+`served_counties` (Comma-separated list of counties),
+`drilling_depth_limit` (Depth capability),
+`drilling_methods_available` (e.g., Air Rotary, Mud Rotary, Cable Tool),
+`drilling_diameters` (Casing sizes handled),
+`geological_specialties` (Formation expertise),
+`well_rehabilitation_offered` (Yield restoration techniques),
+`pump_types_serviced` (Submersible, Jet, Constant Pressure/VFD, Solar, Hand),
+`pump_brands_serviced` (Grundfos, Franklin Electric, Goulds, Pentair),
+`pressure_tank_services` (Boolean flag),
+`water_testing_offered` (Boolean flag),
+`water_contaminants_tested` (Bacteria, Lead, PFAS, Nitrates, etc.),
+`water_treatment_installed` (Water softeners, UV, RO systems),
+`residential_capable` (Boolean flag),
+`commercial_capable` (Boolean flag),
+`bonded_insured_details` (Liability limits & surety bond info),
+`payment_methods_accepted` (Cash, Check, Credit, Financing),
+`financing_available` (Boolean flag)
 
-### Layer 4 — AI Enrichment Layer (44 fields)
+### Layer 4 — AI Enrichment Layer (28 fields)
 * **4a — listing_content (1 field):** Full HTML description, 200–400 words.
 * **4b — Speakable Fields (3 fields):** `speakable_what_you_find`, `speakable_listing_details`, `speakable_quick_facts`
-* **4c — Quick Facts Block (4 fields):** `quickfact_best_for`, `quickfact_primary_items`, `quickfact_fee_structure`, `quickfact_access`
-* **4d — Q&A Blocks (40 fields):** 20 Q&A pairs (qa_1_question through qa_20_question and qa_1_answer through qa_20_answer) with specific domains for `well-driller` and `pump-specialist`.
+* **4c — Quick Facts Block (4 fields):** `quickfact_best_for`, `quickfact_primary_services`, `quickfact_pricing_guide`, `quickfact_service_area`
+* **4d — Q&A Blocks (20 fields):** 10 Q&A pairs (qa_1_question through qa_10_question and qa_1_answer through qa_10_answer) covering:
+  1. Emergency/Weekend Response Details (urgency/rates)
+  2. Local permit filing and state regulatory procedures (compliance)
+  3. Well casing setback requirements from septic/sewer lines (safety)
+  4. Local groundwater/aquifer depth and water level details (geological context)
+  5. Water testing services and filtration systems offered (health)
+  6. Warranty on pumps, tanks, and labor (financial assurance)
+  7. Well rehabilitation methods for dry/low water yield wells (repaired status)
+  8. Solar/Off-grid pumping capability and battery backup installation (alternate power)
+  9. Well abandonment/decommissioning services (legal closure of old wells)
+  10. Payment terms, credit cards, or financing options available (convenience)
+
 
 ### Layer 5 — Google Places Integration (12 fields — fixed)
 `google_place_id`, `google_rating`, `google_review_count`, `review_1_author`, `review_1_rating`, `review_1_text`, `review_2_author`, `review_2_rating`, `review_2_text`, `review_3_author`, `review_3_rating`, `review_3_text`

@@ -30,11 +30,14 @@ def slugify(text):
     """
     Converts string to a clean slug.
     """
-    text = text.lower().strip()
+    if not text:
+        return ""
+    text = str(text).lower().strip()
     text = re.sub(r'\s+', '-', text)
     text = re.sub(r'[^\w\-]+', '', text)
     text = re.sub(r'\-\-+', '-', text)
     return text.strip('-')
+
 
 def clean_phone_number(phone_number):
     """
@@ -74,3 +77,10 @@ def get_db_path(state):
     """
     db_name = f"{state.lower()}_wells.sqlite"
     return resolve_path(f"02-workbench/water-well-drillers/data/{db_name}")
+
+def get_unified_db_path():
+    """
+    Returns the absolute path to the unified consolidated SQLite database.
+    """
+    return resolve_path("02-workbench/water-well-drillers/data/water_well_directory.sqlite")
+

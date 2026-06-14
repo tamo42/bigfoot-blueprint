@@ -8,10 +8,10 @@ This document tracks the collection, extraction, and enrichment status of water 
 
 *   **Total States:** 50
 *   **Completed:** 6 (Georgia, Michigan, Ohio, Pennsylvania, New York, North Carolina)
-*   **Scraped & Cleaned:** 1 (Texas)
+*   **Scraped & Cleaned:** 2 (Texas, Virginia)
 *   **In Progress:** 2 (Florida, Tennessee)
-*   **Not Started:** 41
-*   **Total Records Collected:** 4,572 (513 MI, 354 GA, 1,740 TX, 497 OH, 201 PA, 454 NY, 813 NC)
+*   **Not Started:** 40
+*   **Total Records Collected:** 5,157 (513 MI, 354 GA, 1,740 TX, 497 OH, 201 PA, 454 NY, 813 NC, 585 VA)
 *   **Enriched Records:** 1,898 (83 MI, 326 GA, 194 OH, 179 PA, 383 NY, 733 NC)
 
 ---
@@ -89,7 +89,7 @@ To maximize the nationwide directory's organic search value and consumer utility
 | **Texas** | Scraped & Cleaned | 1,740 | ~800,000+ | State Open Data API | [Texas Open Data Portal (TDLR)](https://data.texas.gov) | Runbook & scripts in [scripts/texas/](file:///c:/Users/tamo4/git/nhq-bigfoot-blueprint/02-workbench/water-well-drillers/scripts/texas/). SODA API dataset 7358-krk7. 1,740 records in [texas_wells.sqlite](file:///c:/Users/tamo4/git/nhq-bigfoot-blueprint/02-workbench/water-well-drillers/data/texas_wells.sqlite); 1,152 pre-geocoded. |
 | **Utah** | Not Started | - | - | Division of Water Rights | [Utah Division of Water Rights](waterrights.utah.gov) | Maintains list of licensed water well drillers. |
 | **Vermont** | Not Started | - | - | DEC Water Well Advisory | [Vermont DEC Well Driller Program](dec.vermont.gov) | Roster of licensed well drillers. |
-| **Virginia** | Not Started | - | ~1,000,000+ | DPOR License Lookup | [Virginia DPOR Verification](dpor.virginia.gov) | Certified water well system providers under Board for Contractors. |
+| **Virginia** | Scraped & Cleaned | 585 | ~1,000,000+ | DPOR License Lookup | [Virginia DPOR Verification](dpor.virginia.gov) | Runbook & scripts in [scripts/virginia/](file:///c:/Users/tamo4/git/nhq-bigfoot-blueprint/02-workbench/water-well-drillers/scripts/virginia/). Parsed 585 records from DPOR contractor and certification lists. Database at [virginia_wells.sqlite](file:///c:/Users/tamo4/git/nhq-bigfoot-blueprint/02-workbench/water-well-drillers/data/virginia_wells.sqlite). |
 | **Washington** | Not Started | - | - | Ecology Licensure | [Washington Ecology Well Drilling](ecology.wa.gov) | Roster of licensed well operators. |
 | **West Virginia** | Not Started | - | - | DHHR Sanitarians | [WV DHHR Environmental Health](wvdhhr.org) | Certified water well drillers list. |
 | **Wisconsin** | Not Started | - | ~800,000 | DNR Well Drillers | [Wisconsin DNR Well Drillers](dnr.wisconsin.gov) | Online roster of registered well drillers and pump installers. |

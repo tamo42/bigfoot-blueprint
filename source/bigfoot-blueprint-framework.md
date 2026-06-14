@@ -254,31 +254,38 @@ To execute the quantity play successfully, Rodrigo must follow a standardized, f
 
 ```mermaid
 flowchart TD
-    A["Step 1: Niche Discovery & Audit (1 Hour)"] --> B["Step 2: Data Extraction & CSV Clean (3 Hours)"]
-    B --> C["Step 3: Programmatic LLM Enrichment (4 Hours)"]
-    C --> D["Step 4: Next.js + SQLite Git Build (2 Hours)"]
-    D --> E["Step 5: Edge Deploy to Vercel/Netlify (Free)"]
+    A["Step 1: Niche Discovery & Audit (1 Hour)"] --> B["Step 2: Programmatic Keyword Research & Mapping (2 Hours)"]
+    B --> C["Step 3: Target Data Extraction & CSV Clean (3 Hours)"]
+    C --> D["Step 4: Programmatic LLM Enrichment (4 Hours)"]
+    D --> E["Step 5: Next.js + SQLite Git Build (2 Hours)"]
+    E --> F["Step 6: Edge Deploy to Vercel/Netlify (Free)"]
 ```
 
-### Step 1: Niche Discovery, Keyword Audit & Geo-Multiplexing Plan (Time: 1 Hour)
-* **Action**: Identify a fragmented market and map out the core educational topics:
+### Step 1: Niche Discovery & Viability Audit (Time: 1 Hour)
+* **Action**: Identify a fragmented market and assess its commercial viability:
   1. *Registry Audit*: Is there an easily exportable state/county registry of licensed entities? (e.g., HVAC, Closing Attorneys, Septic Haulers).
   2. *Digital Footprint Audit*: Do the local competitors have poor digital footprints? (Average website is outdated or non-existent).
   3. *Viability Scorecard*: Evaluate the niche's commercial viability using these three filters:
      * **Demand Concentration**: Can you easily identify the buyer persona? (e.g., Facility Managers vs. "Everyone"). Highly concentrated B2B buyers make outreach cheaper and faster.
      * **Recurring Need (Scale vs. Frequency Equation)**: Is this service compliance-driven or recurring (e.g., pumping grease traps quarterly)? Recurring need builds recurring traffic and higher LTV. However, a low-frequency need (e.g., a well pump replacement every 15 years) can still be highly viable if offset by massive Geographic Scale (nationwide vs. local). The viability is calculated as: `Sustainable Lead Volume = Purchase Frequency × Geographic Scale`.
-     * **Avatar Adjacency Cluster (Expansion Modifier)**: When evaluating a niche, identify the core buyer persona (the "avatar") and map out their other associated problems. For example, a new restaurant owner (the avatar) needs Grease Trap Pumping, but also needs Fire Suppression Inspections, Hood \u0026 Exhaust Cleaning, and Commercial Pest Control. A niche that forms the foundation of a "Directory Cluster" targeting the exact same avatar receives a massive positive modifier, as you can cross-pollinate traffic and leads across your portfolio.
-  4. *Head-Term Keyword Research*: Run programmatic search queries using the **AnswerThePublic API** via the shared CLI script (`02-workbench/answerthepublic/scripts/fetch-atp.py`) to extract real search queries, questions, and comparisons. These queries are cached locally in `02-workbench/answerthepublic/cache/` to avoid redundant credit consumption (limit to 10 or fewer searches per directory launch to conserve plan credits).
-  5. *Geo-Intent Multiplexing Setup*: Plan the programmatic combination of these broad educational head queries with target geographic locations (e.g., combining *"grease trap requirements"* + *"Macon, Georgia"* into a single, high-intent local educational page: *"What are the requirements for cleaning grease traps in Macon, Georgia?"*).
+     * **Avatar Adjacency Cluster (Expansion Modifier)**: When evaluating a niche, identify the core buyer persona (the "avatar") and map out their other associated problems. For example, a new restaurant owner (the avatar) needs Grease Trap Pumping, but also needs Fire Suppression Inspections, Hood & Exhaust Cleaning, and Commercial Pest Control. A niche that forms the foundation of a "Directory Cluster" targeting the exact same avatar receives a massive positive modifier, as you can cross-pollinate traffic and leads across your portfolio.
 
+### Step 2: Programmatic Keyword Research & Search Intent Mapping (Time: 2 Hours)
+* **Action**: Extract real user queries and document the intent mappings before configuring databases or scrapers:
+  1. *AnswerThePublic Runs*: Run programmatic search queries using the **AnswerThePublic API** via the shared CLI script (`02-workbench/answerthepublic/scripts/fetch-atp.py`) to extract real search queries, questions, and comparisons. These queries are cached locally in `02-workbench/answerthepublic/cache/` to avoid redundant credit consumption (limit to 10 or fewer searches per directory launch to conserve plan credits).
+  2. *Geo-Intent Multiplexing Plan*: Plan the programmatic combination of these broad educational head queries with target geographic locations (e.g., combining *"grease trap requirements"* + *"Macon, Georgia"* into a single, high-intent local educational page: *"What are the requirements for cleaning grease traps in Macon, Georgia?"*).
+  3. *Create Search Intent Map*: Write a **Keyword Research & Search Intent Mapping** document (prefixed `p1_` in the niche's workbench). This document outlines the findings and specifies:
+     * Niche-specific columns to add to the database schema (e.g. `has_24_7_emergency_service` or `services_pressure_tanks` based on high-volume queries).
+     * Exact keywords and service terms the web scraper / LLM crawler should extract from vendor sites.
+     * Tab structures and calculations for the above-the-fold reciprocity calculator.
 
-### Step 2: Data Extraction & Cleaning (Time: 3 Hours)
-* **Action**: Scrape or extract data from public registry directories (e.g., state/county licensing boards, regardless of whether they are formatted as clean CSVs, messy HTML tables, or PDFs).
+### Step 3: Target Data Extraction & Cleaning (Time: 3 Hours)
+* **Action**: Scrape or extract data from public registry directories, customized to capture the intent-specific attributes identified in Step 2.
 * **Execution**: 
-  * Deploy **Antigravity automations or inexpensive Apify actors** to parse and clean the registries. Extract fields like: Business Name, License Number, License Status, Physical Address, Phone, and Principal Owner.
+  * Deploy **Antigravity automations or inexpensive Apify actors** to parse and clean the registries. Extract base details (Business Name, License, Address, Phone) along with custom capability markers (e.g., verifying emergency service or water testing).
   * Format coordinates (Latitude/Longitude) by passing addresses through a free geocoding API.
 
-### Step 3: Programmatic LLM Enrichment (Time: 4 Hours)
+### Step 4: Programmatic LLM Enrichment (Time: 4 Hours)
 * **Action**: Enrich the database with high-value answers to the "Top 20 Questions."
 * **Execution**:
   * Run the enrichment programmatically **inside the Antigravity IDE/environment** using the user's Google AI Ultra subscription (Gemini 2.5 Flash / Pro).

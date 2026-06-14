@@ -31,3 +31,10 @@ build/
 # Ignore cache and scratch data
 cache/
 scratch/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
