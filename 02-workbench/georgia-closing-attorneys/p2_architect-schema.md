@@ -70,12 +70,29 @@ A home buyer, real estate investor, lender, or real estate agent who is actively
 
 ---
 
-### SEO & AEO Flat Site Architecture
+### SEO & AEO Geo-Multiplex Architecture
 
-#### URL Structures
-* **Pillar Page:** `domain.com/georgia-closing-attorney-requirements`
-* **Explicit Geo-Page:** `domain.com/macon-real-estate-attorneys`
-* **Listing Detail Page:** `domain.com/macon-john-doe-law`
+We use programmatic SEO to dynamically generate highly-targeted landing pages across all 159 Georgia counties, split into 4 core "Multiplex Clusters".
+
+#### Cluster A: Distressed / Problem Solving
+* **Title Defects:** `domain.com/quiet-title-attorney-[city]-ga`
+* **FSBO:** `domain.com/for-sale-by-owner-closing-attorney-[city]-ga`
+* **Short Sale:** `domain.com/short-sale-closing-attorney-[county]-ga`
+* **Tax Deeds:** `domain.com/tax-deed-attorney-[city]-ga`
+
+#### Cluster B: Investor / Creative Finance
+* **Wholesale / Double Closings:** `domain.com/wholesale-friendly-real-estate-attorney-[city]-ga`
+* **Subject-To:** `domain.com/subject-to-closing-attorney-[city]-ga`
+* **1031 Exchange:** `domain.com/1031-exchange-closing-attorney-[city]-ga`
+
+#### Cluster C: Consumer / Retail Buyer
+* **Transfer Tax Utility Calculator:** `domain.com/[county]-georgia-real-estate-transfer-tax`
+* **Mobile Closings:** `domain.com/mobile-closing-attorney-[city]-ga`
+* **First-Time Buyers:** `domain.com/first-time-home-buyer-closing-[city]-ga`
+
+#### Cluster D: Commercial / Developer
+* **Builders:** `domain.com/builder-services-title-attorney-[city]-ga`
+* **Zoning:** `domain.com/zoning-land-use-attorney-[city]-ga`
 
 #### Semantic Internal Linking Silo Structure
 A flat, highly relevant contextual hierarchy ensures crawlability. The State hub page links out directly to the County landing hubs. Every County page links to its respective City pages and displays an indexed list of attorney child profiles located within that polygon. Breadcrumb paths link `Home ➔ County ➔ City ➔ Attorney Profile` with contextual reverse-linking enabled so that each profile passes authority back to its parent city and county geo-pages via anchor text like *"Best closing lawyers in Bibb County"*.
@@ -177,6 +194,9 @@ A flat, highly relevant contextual hierarchy ensures crawlability. The State hub
 | `specialty_builder_services` | Tag indicating handling of developer and new construction deals | AI-generated | select |
 | `specialty_investor_wholesale` | Tag indicating double closings, assignments, and creative financing | AI-generated | select |
 | `external_rating_links` | Dynamic linking to primary external reviews feeds | Google Places | text |
+| `languages_spoken` | JSON array of supported languages (e.g., ["Spanish"]) | Scraped cache | text |
+| `trust_signals_json` | JSON object of boolean trust flags | Scraped cache | text |
+| `accepted_payment_methods` | JSON array of escrow payment methods | Scraped cache | text |
 
 ---
 
@@ -198,7 +218,14 @@ A flat, highly relevant contextual hierarchy ensures crawlability. The State hub
 * **`quickfact_fee_structure`**: Clear one-line standard fee summary.
 * **`quickfact_access`**: Clear one-line accessibility summary (e.g., mobile closings available or in-office only).
 
-#### 4d — Q&A Blocks (40 fields)
+#### 4d — Avatar-Specific Q&A Blocks (4 fields)
+Instead of massive generic FAQs, generate tailored intent-specific blocks depending on the detected specialties.
+* **`avatar_investor_faq`**: (e.g. "Do you allow simultaneous closings for wholesalers?")
+* **`avatar_defect_faq`**: (e.g. "How do you handle heir property title clouds?")
+* **`avatar_commercial_faq`**: (e.g. "Do you assist with commercial lease drafting?")
+* **`avatar_buyer_faq`**: (e.g. "What do I need to bring to closing day?")
+
+#### 4e — Q&A Blocks (40 fields)
 
 > **Phase 1 Validation Rule (R-124):** To maximize token efficiency during pipeline development, initial AI enrichments must be limited to exactly 7 questions: 5 universal questions (Hours, Cost, Accepted, Appointment, Location) and 2 niche-specific questions. The remaining questions are deferred to Phase 2.
 

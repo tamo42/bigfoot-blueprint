@@ -49,6 +49,20 @@ LANGUAGES_MAP = {
     "Chinese": [r"mandarin", r"cantonese", r"chinese", r"中文"]
 }
 
+PAYMENT_METHODS_MAP = {
+    "ZOCCAM": [r"zoccam"],
+    "Earnnest App": [r"earnnest"],
+    "Wire Transfer": [r"wire transfer", r"wiring instructions"],
+    "Cashier's Check": [r"cashier's check", r"certified check", r"cashiers check"]
+}
+
+TRUST_SIGNALS_MAP = {
+    "wire_fraud_protocol": [r"wire fraud", r"fraud warning", r"call before wiring", r"never email wiring"],
+    "wheelchair_accessible": [r"wheelchair accessible", r"handicap accessible", r"ada compliant"],
+    "parking_available": [r"free parking", r"parking available", r"parking lot", r"validated parking"],
+    "eo_insurance_verified": [r"e&o insurance", r"errors and omissions", r"errors & omissions", r"liability insurance"]
+}
+
 def compile_regex(keywords):
     return [re.compile(kw, re.IGNORECASE) for kw in keywords]
 
@@ -67,13 +81,20 @@ def detect_languages(text, compiled_languages):
                 break
     return list(set(langs))
 
-def scan_text_for_specialties(text, compiled_wholesale, compiled_creative, compiled_land, compiled_title, compiled_langs):
+def scan_text_for_specialties(text, compiled_wholesale, compiled_creative, compiled_land, compiled_title, compiled_langs, compiled_payments, compiled_trust):
     results = {
         "wholesale": 0,
         "creative_finance": 0,
         "land_deals": 0,
         "title_resolution": 0,
-        "languages": ["English"]
+        "languages": ["English"],
+        "payment_methods": [],
+        "trust_signals": {
+            "wire_fraud_protocol": False,
+            "wheelchair_accessible": False,
+            "parking_available": False,
+            "eo_insurance_verified": False
+        }
     }
     
     if not text:
@@ -83,7 +104,16 @@ def scan_text_for_specialties(text, compiled_wholesale, compiled_creative, compi
     results["creative_finance"] = check_keywords(text, compiled_creative)
     results["land_deals"] = check_keywords(text, compiled_land)
     results["title_resolution"] = check_keywords(text, compiled_title)
+    
     results["languages"] = detect_languages(text, compiled_langs)
+    
+    for method, patterns in compiled_payments.items():
+        if check_keywords(text, patterns):
+            results["payment_methods"].append(method)
+            
+    for signal, patterns in compiled_trust.items():
+        if check_keywords(text, patterns):
+            results["trust_signals"][signal] = True
     
     found_specialties = []
     if results["wholesale"]: found_specialties.append("Wholesale")
@@ -116,6 +146,14 @@ def run_enrichment(limit=50):
     compiled_langs = {}
     for lang, kws in LANGUAGES_MAP.items():
         compiled_langs[lang] = compile_regex(kws)
+        
+    compiled_payments = {}
+    for method, kws in PAYMENT_METHODS_MAP.items():
+        compiled_payments[method] = compile_regex(kws)
+        
+    compiled_trust = {}
+    for signal, kws in TRUST_SIGNALS_MAP.items():
+        compiled_trust[signal] = compile_regex(kws)
     
     c.execute('''
         SELECT id, first_name, last_name, firm_name, city 
@@ -148,14 +186,14 @@ def run_enrichment(limit=50):
         
         if os.path.exists(failed_file):
             print(f"      [-] Crawl failed for this site previously. Marking as scanned.")
-            res = {"wholesale": 0, "creative_finance": 0, "land_deals": 0, "title_resolution": 0, "languages": ["English"]}
+            res = scan_text_for_specialties("", compiled_wholesale, compiled_creative, compiled_land, compiled_title, compiled_langs, compiled_payments, compiled_trust)
         elif os.path.exists(cache_file):
             with open(cache_file, "r", encoding="utf-8") as f:
                 content = f.read()
             res = scan_text_for_specialties(
                 content, 
                 compiled_wholesale, compiled_creative, compiled_land, compiled_title, 
-                compiled_langs
+                compiled_langs, compiled_payments, compiled_trust
             )
         else:
             print(f"      [-] No cache file found. You must run p3_crawl_websites.py first. Skipping.")
@@ -168,6 +206,8 @@ def run_enrichment(limit=50):
                 specialty_land_deals = ?,
                 specialty_title_resolution = ?,
                 languages_spoken = ?,
+                trust_signals_json = ?,
+                accepted_payment_methods = ?,
                 specialties_crawled = 1
             WHERE id = ?
         ''', (
@@ -176,6 +216,8 @@ def run_enrichment(limit=50):
             res["land_deals"],
             res["title_resolution"],
             json.dumps(res["languages"]),
+            json.dumps(res["trust_signals"]),
+            json.dumps(res["payment_methods"]),
             attorney_id
         ))
         
