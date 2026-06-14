@@ -6,7 +6,7 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 DB_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "directory.sqlite"))
-CACHE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "cache", "crawled_text"))
+CACHE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "cache", "crawled_text", "georgia-closing-attorneys"))
 
 def load_gemini_api_key():
     key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
@@ -132,14 +132,13 @@ def main():
         
     print(f"[*] Found {len(records)} records ready for AI enrichment.")
     
-    for row in records:
+    def process_record(row):
         r_id, f_name, l_name, firm, city, w_sale, t_res = row
         name = f"{f_name} {l_name}"
         
         cache_path = os.path.join(CACHE_DIR, f"{r_id}.txt")
         if not os.path.exists(cache_path):
-            print(f"[-] Missing cache for {name} (ID: {r_id})")
-            continue
+            return f"[-] Missing cache for {name} (ID: {r_id})"
             
         with open(cache_path, "r", encoding="utf-8") as f:
             cache_text = f.read()
@@ -147,7 +146,6 @@ def main():
         schema = get_response_schema(bool(w_sale), bool(t_res))
         prompt = get_prompt(name, firm, city, cache_text, bool(w_sale), bool(t_res))
         
-        print(f"[*] Enriching {name}...")
         try:
             result = call_gemini(prompt, schema)
             
@@ -161,12 +159,21 @@ def main():
             values.append(r_id)
             
             query = f"UPDATE attorneys SET {', '.join(updates)} WHERE id = ?"
-            c.execute(query, values)
-            conn.commit()
-            print(f"  [+] Saved {name}")
+            # Connect per thread for sqlite to avoid concurrency locks
+            thread_conn = sqlite3.connect(DB_PATH, timeout=10)
+            thread_c = thread_conn.cursor()
+            thread_c.execute(query, values)
+            thread_conn.commit()
+            thread_conn.close()
+            return f"  [+] Saved {name}"
             
         except Exception as e:
-            print(f"  [-] Failed on {name}: {e}")
+            return f"  [-] Failed on {name}: {e}"
+
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        futures = [executor.submit(process_record, row) for row in records]
+        for future in as_completed(futures):
+            print(future.result())
             
     conn.close()
 

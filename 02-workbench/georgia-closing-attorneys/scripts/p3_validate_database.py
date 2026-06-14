@@ -17,7 +17,7 @@ def validate_records(limit=None):
     
     c.execute('''
         SELECT id, first_name, last_name, city, 
-               bar_license_number, listing_content, 
+               bar_number, listing_content, 
                avatar_investor_faq, avatar_defect_faq, 
                avatar_commercial_faq, avatar_buyer_faq
         FROM attorneys 
