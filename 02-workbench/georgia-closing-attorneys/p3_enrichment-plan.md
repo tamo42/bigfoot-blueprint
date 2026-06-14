@@ -25,8 +25,9 @@ graph TD
     A[Core Seed: 2835 Roster] --> B[Source 1: Google Places Details API]
     B --> C[Source 2: Title Underwriters Locator]
     C --> D[Source 3: GABAR Disciplinary Registry]
-    D --> E[Source 4: Custom Website Scraper]
-    E --> F[Source 5: AI Copywriting & FAQ Engine]
+    D --> E1[Source 4A: Parallel Web Crawler]
+    E1 --> E2[Source 4B: Offline Specialty/Underwriter Parsing]
+    E2 --> F[Source 5: AI Copywriting & FAQ Engine]
 ```
 
 | Sequence | Enrichment Source | Target Data Fields | Primary Key Matcher | Downstream Dependency |
@@ -34,7 +35,8 @@ graph TD
 | **Source 1** | Google Places & Details API | Website URL, coordinates (lat/lng), phone, business hours, rating, reviews | `[Company Name]` or `[First Last] Attorney` + `[City], GA` | Required to obtain the `website_url` for Source 4 crawling. |
 | **Source 2** | Title Underwriters Locator | Appointed title companies (Chicago Title, First American, Old Republic, etc.) | `[Company Name]` or `[Last Name]` + `[County]/[City]` | Directly validates "Active Title Agent" trust tier. |
 | **Source 3** | GABAR Disciplinary Page | Historic regulatory disciplinary cases or "None" | `[bar_number]` (Exact match) | Verified bar standing status check. |
-| **Source 4** | Firm Website Scraper | Specialties keywords (Creative financing, Commercial, Probate, Builder) | `[website_url]` (Scraped in Source 1) | Determines classification category taxonomies. |
+| **Source 4A** | Parallel Web Crawler | Raw, deduplicated text cache of the site | `[website_url]` (Scraped in Source 1) | Caches deduplicated text to prevent duplicate crawls. |
+| **Source 4B** | Offline Cache Extraction | Specialties keywords and Underwriter networks | `[id]` (matches local cache file) | Determines classification category taxonomies offline. |
 | **Source 5** | AI Generation (Antigravity) | Listing content (200-400 words), Speakable blocks, Quick facts, 20 FAQs | `[id]` (Internal DB record) | Final compilation step before rendering Astro markdown templates. |
 
 ---
@@ -60,13 +62,15 @@ graph TD
 - **Data Fields Written:** `disciplinary_history`.
 - **Match Strategy:** Extract the GABAR member page using the GABAR UUID (`gabar_id`) from our seed data and scrape the "Discipline History" section. If no discipline is listed, default to `"None"`.
 
-### Source 4 — Firm Website Scraper (Specialty Detection)
-- **Objective:** Crawl the attorney's official website home and practice area pages to identify transactional categories.
-- **Data Fields Written:** `specialties` (JSON listing of Boolean flags: `specialty_probate`, `specialty_commercial`, `specialty_builder_services`, `specialty_investor_wholesale`).
-- **Match Strategy:** Use `beautifulsoup4` to fetch the homepage. Scan text against keyword matrices:
-  - *Investor/Wholesale:* "double closing", "subject-to", "wholesale", "simultaneous", "assignment".
-  - *Commercial:* "commercial real estate", "lease review", "zoning", "land use".
-  - *Probate:* "probate", "wills", "estate sale", "executor".
+### Source 4A — Parallel Website Crawler
+- **Objective:** Crawl the attorney's official website home and up to 4 interior pages concurrently, extracting content.
+- **Data Fields Written:** Generates an `[id].txt` text cache file locally (`cache/crawled_text/georgia-closing-attorneys/`).
+- **Match Strategy:** Uses `requests` and `BeautifulSoup` concurrently with up to 5 workers. Applies cross-page line frequency filtering ("ddp") to strip repeated boilerplate elements (navigation, footers).
+
+### Source 4B — Offline Extraction (Specialties & Underwriters)
+- **Objective:** Read the fast, local deduplicated `.txt` cache and parse for taxonomy rules and networks.
+- **Data Fields Written:** `specialties` (JSON flags) and `appointments` (Underwriter networks).
+- **Match Strategy:** Use fast offline Regex matches against the text. Since this is fully decoupled from live HTTP fetching, we can adjust keyword arrays and rerun across the 2,800 records instantly.
 
 ### Source 5 — AI Content Ingestion & Quality Gate
 - **Objective:** Generate rich, anti-thin localized content pages for Astro.
