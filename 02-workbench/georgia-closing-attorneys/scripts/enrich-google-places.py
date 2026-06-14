@@ -158,7 +158,7 @@ def get_place_details(place_id, api_key):
 
 def main():
     parser = argparse.ArgumentParser(description="Georgia Closing Attorneys Google Places Enrichment Script")
-    parser.add_argument("--limit", type=int, default=None, help="Limit the number of records to enrich (for testing)")
+    parser.add_argument("--limit", type=int, default=50, help="Limit the number of records to enrich per batch (enforcing R-106)")
     args = parser.parse_args()
     
     print("=========================================================")
