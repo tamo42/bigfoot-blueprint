@@ -51,7 +51,17 @@ def run_loop():
         
         # 2. Crawl
         print("\n[*] 2/3: Running Website Crawler...")
-        subprocess.run(["python", "02-workbench/water-well-drillers/scripts/general/p3_crawl_websites.py", "--state", "all", "--limit", "100", "--workers", "5"], cwd=WORKSPACE)
+        subprocess.run([
+            sys.executable, 
+            r"scripts\p3_crawl_websites.py", 
+            "--db", DB_PATH,
+            "--table", "well_contractors",
+            "--id-column", "slug",
+            "--cache-dir", r"C:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\water-well-drillers\cache\crawled_text\general",
+            "--keywords", "service,about,capability,drilling,pump,contact,water,filter,inspect",
+            "--limit", "100",
+            "--workers", "5"
+        ], cwd=WORKSPACE)
         
         # 3. Gemini
         print("\n[*] 3/3: Running Gemini enrichment...")

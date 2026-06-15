@@ -95,7 +95,16 @@ def run_loop():
         try:
             # 1. Crawl
             print("\n[1/4] Crawling next 100 sites...")
-            subprocess.run([sys.executable, f"{scripts_dir}\\p3_crawl_websites.py", "--limit", str(batch_size)], cwd=WORKSPACE, check=False)
+            subprocess.run([
+                sys.executable, 
+                r"scripts\p3_crawl_websites.py", 
+                "--db", DB_PATH,
+                "--table", "attorneys",
+                "--id-column", "id",
+                "--cache-dir", CACHE_DIR,
+                "--keywords", "service,about,practice,real,estate,closing,contact,attorney,law",
+                "--limit", str(batch_size)
+            ], cwd=WORKSPACE, check=False)
             
             # 2. Extract Specialties offline
             print("\n[2/4] Resetting and extracting offline specialties...")
