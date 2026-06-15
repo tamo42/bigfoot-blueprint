@@ -99,8 +99,23 @@ def is_valid_crawl_link(url):
     if any(path.endswith(ext) for ext in binary_extensions):
         return False
         
-    skip_paths = ["wp-login", "wp-admin", "login", "admin", "checkout", "cart", "account", "signin", "signup"]
+    skip_paths = [
+        # Admin / Auth
+        "wp-login", "wp-admin", "login", "admin", "checkout", "cart", "account", "signin", "signup", "config",
+        # Feeds, Blogs & Pagination
+        "/blog", "/news", "/category", "/tag", "/author", "/archive", "/page/", "comment", "/post/", "/feed/", "/rss/",
+        # Legal / Boilerplate
+        "privacy", "terms", "disclaimer", "cookie",
+        # CMS / API / System
+        "wp-json", "wp-content", "wp-includes", "xmlrpc", "trackback", "_api", "_serverless", "_next", "_nuxt", "cdn-cgi", "replytocom",
+        # Low Value Content
+        "/events/", "/calendar/", "/search", "/collections/", "/products/", "/gallery/", "/portfolio/"
+    ]
     if any(sp in path for sp in skip_paths):
+        return False
+        
+    # Also skip query string pagination like ?page=2 or ?p=123
+    if "page=" in parsed.query.lower() or "p=" in parsed.query.lower():
         return False
         
     return True

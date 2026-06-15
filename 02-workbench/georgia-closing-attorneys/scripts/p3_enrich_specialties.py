@@ -158,7 +158,7 @@ def run_enrichment(limit=50):
     c.execute('''
         SELECT id, first_name, last_name, firm_name, city 
         FROM attorneys 
-        WHERE specialties_crawled = 0 AND website_url IS NOT NULL AND website_url != 'NOT_FOUND'
+        WHERE specialties_crawled = 0 AND faq_enriched IS NULL AND website_url IS NOT NULL AND website_url != 'NOT_FOUND'
         LIMIT ?
     ''', (limit,))
     

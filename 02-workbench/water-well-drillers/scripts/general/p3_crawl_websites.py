@@ -43,8 +43,14 @@ def clean_html_to_text(html_content):
         
     soup = BeautifulSoup(html_content, 'html.parser')
     
-    # 1. Strip boilerplate elements
-    for element in soup(["script", "style", "nav", "footer", "header", "head", "noscript", "iframe", "svg"]):
+    # 1. Strip boilerplate tags
+    for element in soup(["script", "style", "nav", "footer", "header", "head", "noscript", "iframe", "svg", "aside", "form"]):
+        element.decompose()
+        
+    # 1b. Strip boilerplate classes and IDs
+    for element in soup.find_all(class_=re.compile(r'(?i)footer|sidebar|menu|nav|widget|popup|modal|banner|ads')):
+        element.decompose()
+    for element in soup.find_all(id=re.compile(r'(?i)footer|sidebar|menu|nav|widget|popup|modal|banner|ads')):
         element.decompose()
         
     # 2. Extract visible text
@@ -115,9 +121,24 @@ def is_valid_crawl_link(url):
     if any(path.endswith(ext) for ext in binary_extensions):
         return False
         
-    # 4. Skip admin/login/transactional paths
-    skip_paths = ["wp-login", "wp-admin", "login", "admin", "checkout", "cart", "account", "signin", "signup"]
+    # 4. Skip admin/login/transactional and low-value content paths (blogs, tags, pagination, APIs, legal)
+    skip_paths = [
+        # Admin / Auth
+        "wp-login", "wp-admin", "login", "admin", "checkout", "cart", "account", "signin", "signup", "config",
+        # Feeds, Blogs & Pagination
+        "/blog", "/news", "/category", "/tag", "/author", "/archive", "/page/", "comment", "/post/", "/feed/", "/rss/",
+        # Legal / Boilerplate
+        "privacy", "terms", "disclaimer", "cookie",
+        # CMS / API / System
+        "wp-json", "wp-content", "wp-includes", "xmlrpc", "trackback", "_api", "_serverless", "_next", "_nuxt", "cdn-cgi", "replytocom",
+        # Low Value Content
+        "/events/", "/calendar/", "/search", "/collections/", "/products/", "/gallery/", "/portfolio/"
+    ]
     if any(sp in path for sp in skip_paths):
+        return False
+        
+    # Also skip query string pagination like ?page=2 or ?p=123
+    if "page=" in parsed.query.lower() or "p=" in parsed.query.lower():
         return False
         
     return True

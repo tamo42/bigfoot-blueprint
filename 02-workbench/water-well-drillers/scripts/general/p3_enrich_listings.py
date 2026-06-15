@@ -145,6 +145,11 @@ def get_prompt(name, city, state, county, website, crawled_text, num_qa, questio
     """
     q_list_str = "\n".join([f"{i+1}. {q}" for i, q in enumerate(questions[:num_qa])])
     
+    # Truncate text to avoid blowing up the token quota
+    max_chars = 20000
+    if len(crawled_text) > max_chars:
+        crawled_text = crawled_text[:max_chars] + "\n...[TRUNCATED FOR LENGTH]..."
+        
     prompt = f"""
 We are enriching a business listing directory for water well contractors.
 Below is the crawled website text and metadata for a contractor.
