@@ -47,17 +47,20 @@ def run_loop():
         
         # 1. Apify
         print("\n[*] 1/3: Running Apify enrichment...")
-        subprocess.run([
+        res1 = subprocess.run([
             sys.executable, 
             r"scripts\p3_enrich_places_apify.py", 
             "--state", "all", 
             "--limit", "100",
             "--db", DB_PATH
         ], cwd=WORKSPACE)
+        if res1.returncode != 0:
+            print("[-] Apify script failed. Halting loop.")
+            break
         
         # 2. Crawl
         print("\n[*] 2/3: Running Website Crawler...")
-        subprocess.run([
+        res2 = subprocess.run([
             sys.executable, 
             r"scripts\p3_crawl_websites.py", 
             "--db", DB_PATH,
@@ -69,10 +72,16 @@ def run_loop():
             "--workers", "5",
             "--where", "data_freshness IS NULL OR data_freshness != 'enriched'"
         ], cwd=WORKSPACE)
+        if res2.returncode != 0:
+            print("[-] Crawler script failed. Halting loop.")
+            break
         
         # 3. Gemini
         print("\n[*] 3/3: Running Gemini enrichment...")
-        subprocess.run(["python", "02-workbench/water-well-drillers/scripts/general/p3_enrich_listings.py", "--mode", "full", "--state", "all"], cwd=WORKSPACE)
+        res3 = subprocess.run(["python", "02-workbench/water-well-drillers/scripts/general/p3_enrich_listings.py", "--mode", "full", "--state", "all"], cwd=WORKSPACE)
+        if res3.returncode != 0:
+            print("[-] Gemini script failed. Halting loop.")
+            break
         
         # Git Push
         print("\n[*] Saving progress to Git...")
