@@ -265,7 +265,8 @@ flowchart TD
 * **Action**: Identify a fragmented market and assess its commercial viability:
   1. *Registry Audit*: Is there an easily exportable state/county registry of licensed entities? (e.g., HVAC, Closing Attorneys, Septic Haulers).
   2. *Digital Footprint Audit*: Do the local competitors have poor digital footprints? (Average website is outdated or non-existent).
-  3. *Viability Scorecard*: Evaluate the niche's commercial viability using these three filters:
+  3. *Viability Scorecard*: Evaluate the niche's commercial viability using these four filters:
+     * **Multi-Source Data Slicing (The Curated Moat)**: Avoid niches reliant on a single "phonebook" list. How many disparate data feeds (state licensing + federal databases + online reviews + local permits) can be merged to curate a unique profile? The more feeds, the stronger the moat.
      * **Demand Concentration**: Can you easily identify the buyer persona? (e.g., Facility Managers vs. "Everyone"). Highly concentrated B2B buyers make outreach cheaper and faster.
      * **Recurring Need (Scale vs. Frequency Equation)**: Is this service compliance-driven or recurring (e.g., pumping grease traps quarterly)? Recurring need builds recurring traffic and higher LTV. However, a low-frequency need (e.g., a well pump replacement every 15 years) can still be highly viable if offset by massive Geographic Scale (nationwide vs. local). The viability is calculated as: `Sustainable Lead Volume = Purchase Frequency × Geographic Scale`.
      * **Avatar Adjacency Cluster (Expansion Modifier)**: When evaluating a niche, identify the core buyer persona (the "avatar") and map out their other associated problems. For example, a new restaurant owner (the avatar) needs Grease Trap Pumping, but also needs Fire Suppression Inspections, Hood & Exhaust Cleaning, and Commercial Pest Control. A niche that forms the foundation of a "Directory Cluster" targeting the exact same avatar receives a massive positive modifier, as you can cross-pollinate traffic and leads across your portfolio.
@@ -361,6 +362,11 @@ To build a comprehensive semantic map that captures the full spectrum of user be
    * **Target Queries**: Users searching for queries with explicit geo-locators (e.g., *"grease trap cleaning Macon Georgia"* or *"requirements for grease traps in Bibb County"*).
    * **URL Slugs**: Flat, geo-qualified slugs (e.g., `domain.com/macon-grease-trap-requirements`).
    * **The Mechanics**: Programmatically merges the head-term questions with local database variables (State, County, City, local municipal code references).
+
+3. **Avatar-Specific & "Best Of" Programmatic Pages (The Haystack Extension)**:
+   * **Target Queries**: Hyper-specific, long-tail avatar searches (e.g., *"Best closing attorney for real estate investors in Acworth"*).
+   * **URL Slugs**: `domain.com/acworth-best-attorney-for-investors`.
+   * **The Mechanics**: Uses LLM evaluations of aggregated reviews and structured tags to programmatically generate pages tailored to different sub-avatars, expanding the long-tail footprint.
 
 ### The Template Architecture
 Every educational page uses a standardized MDX layout containing:
@@ -486,8 +492,6 @@ The overriding goal of this operating framework is to build, test, and scale a p
 * **Operating Overhead**: Limit total ongoing directory portfolio overhead to **<$100/month** by keeping unvalidated Stage 1 "ships" on free static tiers (Vercel/Netlify).
 * **Launch Velocity**: Deploy **3–5 new Stage 1 directories ("ships") per month** using our standardized Astro template, keeping the bootstrapping cost to **<$50** (domain fees) and **<10 hours** of developer (Rodrigo) time per launch.
 
----
-
 ### B. The Acceleration Engine Loop
 To hit these targets, the portfolio follows a continuous feedback-loop cycle managed by your developer and assistant:
 
@@ -513,7 +517,7 @@ stateDiagram-v2
    * Audit incoming email/GHL notifications for listing claim inquiries.
 
 3. **The Promotion Gate**:
-   * **If the Validation triggers are met**: Immediately migrate the SQLite data to the consolidated multi-tenant Supabase instance (under its corresponding `directory_id`), enable dynamic reviews/COI uploads (using OCR validation within the Gemini ecosystem), and launch the targeted B2B outreach campaign (Phase 2).
+   * **If the Validation triggers are met**: Immediately migrate the SQLite data to the consolidated multi-tenant Supabase instance (under its corresponding `directory_id`), enable dynamic reviews/COI uploads (using OCR validation within the Gemini ecosystem), and launch the targeted B2B outreach campaign (Phase 2). This is also the stage to introduce advanced Phase 2 features like **"Poll of Polls" review aggregation**, an **Awards Engine**, and headless **Newsjacking / Automated Newsletters**.
    * **If the triggers are NOT met**: Keep the site running as a Stage 1 static site at **$0/month**. It remains in the water as a passive asset, gathering search history and building domain age.
 
 ---
