@@ -138,7 +138,14 @@ def main():
         
         cache_path = os.path.join(CACHE_DIR, f"{r_id}.txt")
         if not os.path.exists(cache_path):
-            return f"[-] Missing cache for {name} (ID: {r_id})"
+            try:
+                fail_conn = sqlite3.connect(DB_PATH, timeout=10)
+                fail_c = fail_conn.cursor()
+                fail_c.execute("UPDATE attorneys SET faq_enriched = 'FAILED' WHERE id = ?", (r_id,))
+                fail_conn.commit()
+                fail_conn.close()
+            except: pass
+            return f"[-] Missing cache for {name} (ID: {r_id}). Marked FAILED."
             
         with open(cache_path, "r", encoding="utf-8") as f:
             cache_text = f.read()

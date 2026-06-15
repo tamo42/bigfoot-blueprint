@@ -1,59 +1,127 @@
-import time
 import subprocess
+import time
+import sqlite3
 import os
 import sys
-import sqlite3
 
-def get_pending_count(db_path):
-    conn = sqlite3.connect(db_path)
-    c = conn.cursor()
-    c.execute("SELECT COUNT(*) FROM attorneys WHERE faq_enriched IS NULL AND website_url IS NOT NULL AND website_url != 'NOT_FOUND'")
-    count = c.fetchone()[0]
-    conn.close()
-    return count
+WORKSPACE = r"C:\Users\tamo4\git\nhq-bigfoot-blueprint"
+DB_PATH = r"C:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\georgia-closing-attorneys\data\directory.sqlite"
+CACHE_DIR = r"C:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\georgia-closing-attorneys\cache\crawled_text\georgia-closing-attorneys"
 
-def main():
+def get_pending_count():
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()
+        c.execute("SELECT COUNT(id) FROM attorneys WHERE faq_enriched IS NULL AND website_url IS NOT NULL AND website_url != 'NOT_FOUND'")
+        total = c.fetchone()[0]
+        conn.close()
+        return total
+    except Exception as e:
+        print(f"DB Error: {e}")
+        return 99999
+
+def mark_failed_records():
+    """
+    Error Correction:
+    The crawler creates a .failed file when a website cannot be reached.
+    If we leave them, they stay faq_enriched=NULL forever, stalling the loop.
+    This function updates their status to 'FAILED' so the loop can finish cleanly.
+    """
+    try:
+        if not os.path.exists(CACHE_DIR):
+            return
+            
+        failed_files = [f for f in os.listdir(CACHE_DIR) if f.endswith('.failed')]
+        if not failed_files:
+            return
+            
+        failed_ids = [f.split('.')[0] for f in failed_files]
+        
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()
+        
+        updated = 0
+        chunk_size = 900
+        for i in range(0, len(failed_ids), chunk_size):
+            chunk = failed_ids[i:i+chunk_size]
+            placeholders = ",".join("?" for _ in chunk)
+            c.execute(f"UPDATE attorneys SET faq_enriched = 'FAILED' WHERE id IN ({placeholders}) AND faq_enriched IS NULL", chunk)
+            updated += c.rowcount
+            
+        conn.commit()
+        conn.close()
+        
+        if updated > 0:
+            print(f"[!] Error Correction: Marked {updated} unreachable websites as FAILED in DB.")
+            
+    except Exception as e:
+        print(f"[-] Error marking failed records: {e}")
+
+def run_loop():
+    last_count = -1
+    stagnant_loops = 0
+    batch = 0
+    batch_size = 100
+
     print("==================================================")
     print("Starting Continuous Background Batch Loop")
     print("==================================================")
-    
-    scripts_dir = os.path.dirname(os.path.abspath(__file__))
-    db_path = os.path.abspath(os.path.join(scripts_dir, "..", "data", "directory.sqlite"))
-    
-    batch_size = 100
-    batch_num = 1
-    
+
     while True:
-        pending = get_pending_count(db_path)
-        if pending == 0:
-            print("\n[+] All valid records have been enriched. Background loop complete!")
+        batch += 1
+        mark_failed_records() # Clean up failed records before counting
+        
+        remaining = get_pending_count()
+        print(f"\n======================================")
+        print(f"[*] Batch {batch} | Remaining pending records: {remaining}")
+        print(f"======================================")
+        
+        if remaining <= 0:
+            print("[+] All valid records have been enriched! Stopping the background loop.")
             break
             
-        print(f"\n--- Starting Batch {batch_num} ---")
-        print(f"Remaining pending records: {pending}")
+        if remaining == last_count:
+            stagnant_loops += 1
+            if stagnant_loops >= 3:
+                print("[-] Remaining count hasn't changed for 3 cycles. Breaking to prevent infinite loop.")
+                break
+        else:
+            stagnant_loops = 0
+            
+        last_count = remaining
         
-        start_time = time.time()
+        scripts_dir = r"02-workbench\georgia-closing-attorneys\scripts"
         
-        print(f"[1/4] Crawling next {batch_size} sites...")
-        subprocess.run([sys.executable, os.path.join(scripts_dir, "p3_crawl_websites.py"), "--limit", str(batch_size)], check=False)
+        try:
+            # 1. Crawl
+            print("\n[1/4] Crawling next 100 sites...")
+            subprocess.run([sys.executable, f"{scripts_dir}\\p3_crawl_websites.py", "--limit", str(batch_size)], cwd=WORKSPACE, check=False)
+            
+            # 2. Extract Specialties offline
+            print("\n[2/4] Resetting and extracting offline specialties...")
+            subprocess.run([sys.executable, f"{scripts_dir}\\reset_specialties.py"], cwd=WORKSPACE, check=False)
+            subprocess.run([sys.executable, f"{scripts_dir}\\p3_enrich_specialties.py", "--limit", str(batch_size)], cwd=WORKSPACE, check=False)
+            
+            # 3. AI Enrichment
+            print("\n[3/4] Running Gemini LLM Enrichment Engine...")
+            subprocess.run([sys.executable, f"{scripts_dir}\\p3_enrich_listings.py", "--limit", str(batch_size)], cwd=WORKSPACE, check=False)
+            
+            # 4. Validation Gate
+            print("\n[4/4] Validating records through the Anti-Thin-Content Gate...")
+            subprocess.run([sys.executable, f"{scripts_dir}\\p3_validate_database.py"], cwd=WORKSPACE, check=False)
+            
+            # Git Push
+            print("\n[*] Saving progress to Git...")
+            subprocess.run(["git", "add", r"02-workbench\georgia-closing-attorneys\data\directory.sqlite"], cwd=WORKSPACE, check=False)
+            subprocess.run(["git", "commit", "-m", f"Auto-commit: GA Closing Attorneys enriched data (batch {batch})"], cwd=WORKSPACE, check=False)
+            subprocess.run(["git", "push"], cwd=WORKSPACE, check=False)
+            
+        except Exception as e:
+            print(f"[-] Error during batch {batch} execution: {e}")
         
-        print("[2/4] Resetting and extracting offline specialties...")
-        subprocess.run([sys.executable, os.path.join(scripts_dir, "reset_specialties.py")], check=False)
-        subprocess.run([sys.executable, os.path.join(scripts_dir, "p3_enrich_specialties.py"), "--limit", str(batch_size)], check=False)
-        
-        print("[3/4] Running Gemini LLM Enrichment Engine...")
-        subprocess.run([sys.executable, os.path.join(scripts_dir, "p3_enrich_listings.py"), "--limit", str(batch_size)], check=False)
-        
-        print("[4/4] Validating records through the Anti-Thin-Content Gate...")
-        subprocess.run([sys.executable, os.path.join(scripts_dir, "p3_validate_database.py")], check=False)
-        
-        elapsed = time.time() - start_time
-        print(f"--- Batch {batch_num} complete in {elapsed/60:.1f} minutes ---")
-        
-        batch_num += 1
-        
-        print("Cooling down for 5 seconds before next batch...")
+        print(f"\n[+] Batch {batch} complete. Cooling down for 5 seconds before next cycle...")
         time.sleep(5)
 
 if __name__ == "__main__":
-    main()
+    sys.stdout.reconfigure(line_buffering=True)
+    run_loop()

@@ -16,7 +16,12 @@ The CLI script (`scripts/fetch-atp.py`) interacts with the AnswerThePublic API t
 ### Local Caching & Credit Conservation (Rule R-107)
 * All successful API payloads are cached locally as JSON files inside `cache/<normalized-query>_raw.json`.
 * Subsequent executions with the same query term will load data directly from the cache to prevent redundant credit billing on the API subscription.
-* There is a strict limit of **10 or fewer** API searches per directory launch to conserve overall account credits.
+
+### Strategic Workflow (The 10-Query Budget)
+Due to strict API quotas and Rule R-107, keyword research must be executed in two phases (Max 10 searches per directory):
+1. **Geographic Constraint:** Do NOT use local geographic modifiers in your `--query` (e.g., use `"grease trap"`, NOT `"Atlanta grease trap"`). ATP relies on broad autocomplete data and will return zero results for local tails. You must infer local volume from national broad intent.
+2. **Phase 1 (Head Terms):** Run exactly 3 broad head terms to map the general landscape.
+3. **Phase 2 (Avatar-Fitting):** Analyze the questions generated in Phase 1 to identify high-intent, avatar-specific modifiers. Use these discoveries to select your remaining 7 queries.
 
 ---
 

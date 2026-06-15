@@ -273,7 +273,10 @@ flowchart TD
 
 ### Step 2: Programmatic Keyword Research & Search Intent Mapping (Time: 2 Hours)
 * **Action**: Extract real user queries and document the intent mappings before configuring databases or scrapers:
-  1. *AnswerThePublic Runs*: Run programmatic search queries using the **AnswerThePublic API** via the shared CLI script (`02-workbench/answerthepublic/scripts/fetch-atp.py`) to extract real search queries, questions, and comparisons. These queries are cached locally in `02-workbench/answerthepublic/cache/` to avoid redundant credit consumption (limit to 10 or fewer searches per directory launch to conserve plan credits).
+  1. *AnswerThePublic Runs*: Run programmatic search queries using the **AnswerThePublic API** via the shared CLI script (`02-workbench/answerthepublic/scripts/fetch-atp.py`) to extract real search queries, questions, and comparisons. 
+     * **Geographic Constraint:** Because ATP relies on broad search autocomplete data, do NOT use local geographic modifiers in queries (e.g., use "grease trap" instead of "Atlanta grease trap"). You must infer local volume from national broad intent.
+     * **Two-Phase Budget:** Queries are limited to a max budget of 10 per directory. Execute Phase 1 by pulling 3 likely head terms. Analyze these results to identify high-intent, avatar-fitting modifiers to select the remaining 7 allotted queries for Phase 2.
+     * All queries are cached locally in `02-workbench/answerthepublic/cache/` to avoid redundant credit consumption.
   2. *Geo-Intent Multiplexing Plan*: Plan the programmatic combination of these broad educational head queries with target geographic locations (e.g., combining *"grease trap requirements"* + *"Macon, Georgia"* into a single, high-intent local educational page: *"What are the requirements for cleaning grease traps in Macon, Georgia?"*).
   3. *Create Search Intent Map*: Write a **Keyword Research & Search Intent Mapping** document (prefixed `p1_` in the niche's workbench). This document outlines the findings and specifies:
      * Niche-specific columns to add to the database schema (e.g. `has_24_7_emergency_service` or `services_pressure_tanks` based on high-volume queries).
