@@ -273,16 +273,21 @@ class CrawlProgressTracker:
         except Exception:
             pass
 
-def crawl_websites(db_path, table_name, id_column, cache_dir, keywords, limit, overwrite=False, max_workers=5):
+def crawl_websites(db_path, table_name, id_column, cache_dir, keywords, limit, overwrite=False, max_workers=5, where_clause=None):
     conn = sqlite3.connect(db_path)
     c = conn.cursor()
-    c.execute(f"""
+    
+    query = f"""
         SELECT {id_column}, website_url 
         FROM {table_name} 
         WHERE website_url IS NOT NULL 
           AND website_url != '' 
           AND website_url != 'NOT_FOUND'
-    """)
+    """
+    if where_clause:
+        query += f" AND ({where_clause})"
+        
+    c.execute(query)
     rows = c.fetchall()
     conn.close()
     
@@ -374,6 +379,7 @@ def main():
     parser.add_argument("--limit", type=int, default=50, help="Maximum number of sites to crawl in this batch.")
     parser.add_argument("--overwrite", action="store_true", help="Force crawling and overwrite existing cached files.")
     parser.add_argument("--workers", type=int, default=5, help="Number of concurrent workers for parallel crawls.")
+    parser.add_argument("--where", type=str, default=None, help="Optional SQL WHERE clause to filter records.")
     
     args = parser.parse_args()
     
@@ -387,7 +393,8 @@ def main():
         keywords=keywords,
         limit=args.limit,
         overwrite=args.overwrite,
-        max_workers=args.workers
+        max_workers=args.workers,
+        where_clause=args.where
     )
 
 if __name__ == "__main__":

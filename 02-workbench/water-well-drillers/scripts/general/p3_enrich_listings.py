@@ -219,7 +219,11 @@ def get_pending_records(db_path, state_abbrev):
         state_folder = STATE_TO_FOLDER.get((state or "").upper(), "general")
         
         # Look for crawled text file
-        cache_path = utils.resolve_path(f"cache/crawled_text/{state_folder}/{slug}.txt")
+        cache_path = utils.resolve_path(f"02-workbench/water-well-drillers/cache/crawled_text/general/{slug}.txt")
+        if not os.path.exists(cache_path):
+            # Fallback to state folder if it exists
+            cache_path = utils.resolve_path(f"02-workbench/water-well-drillers/cache/crawled_text/{state_folder}/{slug}.txt")
+            
         if os.path.exists(cache_path):
             # Read text
             with open(cache_path, 'r', encoding='utf-8') as f:

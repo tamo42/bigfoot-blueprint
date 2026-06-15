@@ -47,7 +47,13 @@ def run_loop():
         
         # 1. Apify
         print("\n[*] 1/3: Running Apify enrichment...")
-        subprocess.run(["python", "02-workbench/water-well-drillers/scripts/general/p3_enrich_places_apify.py", "--state", "all", "--limit", "100"], cwd=WORKSPACE)
+        subprocess.run([
+            sys.executable, 
+            r"scripts\p3_enrich_places_apify.py", 
+            "--state", "all", 
+            "--limit", "100",
+            "--db", DB_PATH
+        ], cwd=WORKSPACE)
         
         # 2. Crawl
         print("\n[*] 2/3: Running Website Crawler...")
@@ -60,7 +66,8 @@ def run_loop():
             "--cache-dir", r"C:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\water-well-drillers\cache\crawled_text\general",
             "--keywords", "service,about,capability,drilling,pump,contact,water,filter,inspect",
             "--limit", "100",
-            "--workers", "5"
+            "--workers", "5",
+            "--where", "data_freshness IS NULL OR data_freshness != 'enriched'"
         ], cwd=WORKSPACE)
         
         # 3. Gemini
