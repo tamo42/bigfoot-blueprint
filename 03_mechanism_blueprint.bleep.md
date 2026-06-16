@@ -52,8 +52,9 @@
         2. Implement the frontend framework (Astro or Next.js) and push staging data to Supabase.
         3. Generate non-user-facing SEO/AEO optimization layers (XML sitemaps, JSON-LD schema, `llms.txt`).
         4. Hook the repository to Railway through GitHub for immediate live deployment.
+        5. Run a Lighthouse audit on the production or staging build to ensure Performance, Accessibility, and SEO scores are optimized (>90) before final sign-off.
       </INSTRUCTIONS>
-      <TRANSITION_CRITERIA>Directory is live, optimized, and ready for Stage 1 validation tracking.</TRANSITION_CRITERIA>
+      <TRANSITION_CRITERIA>Directory is live, audited via Lighthouse, optimized, and ready for Stage 1 validation tracking.</TRANSITION_CRITERIA>
     </STATE_04_ANTIGRAVITY_DEPLOYMENT>
   </TAB_5_STATE_MACHINE>
 

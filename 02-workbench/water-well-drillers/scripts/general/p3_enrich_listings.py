@@ -196,18 +196,14 @@ def get_pending_records(db_path, state_abbrev):
         c.execute("""
             SELECT id, name, slug, website_url, city, state, county
             FROM well_contractors
-            WHERE website_url IS NOT NULL 
-              AND website_url != ''
-              AND UPPER(state) = ?
+            WHERE UPPER(state) = ?
               AND (data_freshness IS NULL OR data_freshness != 'enriched')
         """, (state_abbrev,))
     else:
         c.execute("""
             SELECT id, name, slug, website_url, city, state, county
             FROM well_contractors
-            WHERE website_url IS NOT NULL 
-              AND website_url != ''
-              AND (data_freshness IS NULL OR data_freshness != 'enriched')
+            WHERE (data_freshness IS NULL OR data_freshness != 'enriched')
         """)
         
     rows = c.fetchall()
@@ -224,23 +220,26 @@ def get_pending_records(db_path, state_abbrev):
             # Fallback to state folder if it exists
             cache_path = utils.resolve_path(f"02-workbench/water-well-drillers/cache/crawled_text/{state_folder}/{slug}.txt")
             
+        text = ""
         if os.path.exists(cache_path):
             # Read text
             with open(cache_path, 'r', encoding='utf-8') as f:
                 text = f.read().strip()
                 
-            # Ensure it has meaningful text and is not an error log
-            if text and not text.startswith("Crawl Failed"):
-                pending.append({
-                    "id": row_id,
-                    "name": name,
-                    "slug": slug,
-                    "website_url": website_url,
-                    "city": city,
-                    "state": state,
-                    "county": county,
-                    "crawled_text": text
-                })
+            # If it explicitly failed, clear the text
+            if text.startswith("Crawl Failed"):
+                text = ""
+                
+        pending.append({
+            "id": row_id,
+            "name": name,
+            "slug": slug,
+            "website_url": website_url,
+            "city": city,
+            "state": state,
+            "county": county,
+            "crawled_text": text
+        })
                 
     return pending
 
