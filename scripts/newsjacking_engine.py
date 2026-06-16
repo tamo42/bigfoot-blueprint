@@ -77,7 +77,7 @@ def run_editor_prompt(text: str, niche_profile: dict) -> EditorScore:
     data = json.loads(response.text)
     return data
 
-def run_journalist_prompt(text: str, niche_profile: dict, editor_reasoning: str) -> str:
+def run_journalist_prompt(text: str, niche_profile: dict, editor_reasoning: str, source_url: str, source_name: str) -> str:
     """Passes the approved article to Gemini Pro/Flash to write the blog post."""
     prompt = f"""
     You are an expert copywriter for a directory serving:
@@ -91,10 +91,19 @@ def run_journalist_prompt(text: str, niche_profile: dict, editor_reasoning: str)
     
     Requirements:
     1. Do NOT include an introduction like "Here is your blog post." Start directly with the Markdown.
-    2. Write a compelling Title formatted as an H1 (`# `).
-    3. Start with a hook summarizing the core news event briefly.
-    4. Pivot immediately to the 'Newsjacking Angle': Why does the {niche_profile['avatar']} need to care about this right now? What are the implications?
-    5. End with a subtle Call to Action encouraging them to use the {niche_profile['name']} evaluation tools or search for providers.
+    2. Write a compelling Title formatted as an H1 (`# `) after the frontmatter.
+    3. Output valid YAML frontmatter at the very top of the file exactly like this:
+---
+title: "YOUR COMPELLING TITLE"
+pubDate: 2026-06-16T12:00:00Z
+author: "Industry Analyst"
+summary: "YOUR ONE SENTENCE SUMMARY"
+sourceUrl: "{source_url}"
+sourceName: "{source_name}"
+---
+    4. Start with a hook summarizing the core news event briefly.
+    5. Pivot immediately to the 'Newsjacking Angle': Why does the {niche_profile['avatar']} need to care about this right now? What are the implications?
+    6. End with a subtle Call to Action encouraging them to use the {niche_profile['name']} evaluation tools or search for providers.
     
     Article Text:
     {text}
@@ -177,7 +186,8 @@ def main():
                     # Step 4: Journalist Generation
                     if status == "APPROVED":
                         print(f"✍️ Article approved! Sending to LLM Journalist...")
-                        generated_markdown = run_journalist_prompt(full_text, profile, score_json.get("reasoning"))
+                        source_name = getattr(entry, 'source', {}).get('title', 'Google News Source')
+                        generated_markdown = run_journalist_prompt(full_text, profile, score_json.get("reasoning"), actual_url, source_name)
                         print("✅ Generation complete!")
                         
                     # Save to DB
