@@ -8,8 +8,9 @@ import time
 
 try:
     import trafilatura
+    from googlenewsdecoder import new_decoderv1
 except ImportError:
-    print("Please install trafilatura: pip install trafilatura")
+    print("Please install trafilatura and googlenewsdecoder")
     exit(1)
 
 # Define our niches and their targeted queries
@@ -41,8 +42,17 @@ def parse_pubdate(date_str):
 def fetch_article_text(url):
     """Attempt to fetch and extract the main text of the article."""
     try:
+        # Decode the Google News URL first
+        decoded_response = new_decoderv1(url)
+        if decoded_response.get("status"):
+            real_url = decoded_response.get("decoded_url")
+            print(f"      -> Decoded URL: {real_url}")
+        else:
+            print("      [!] Failed to decode URL, falling back to original.")
+            real_url = url
+            
         # trafilatura.fetch_url handles redirects and basic bot evasion automatically
-        downloaded = trafilatura.fetch_url(url)
+        downloaded = trafilatura.fetch_url(real_url)
         if downloaded is None:
             return None
             
