@@ -1,20 +1,22 @@
 {
   "gaclosinglawyers": {
     "name": "Georgia Closing Lawyers",
-    "avatar": "Georgia homebuyers and real estate agents looking for reliable escrow, title insurance, and closing services.",
+    "avatar": "Real estate investors, wholesalers, and developers looking for Georgia closing attorneys who specialize in distressed properties, quiet title actions, double-closes, assignment of contracts, creative finance, and commercial zoning. Also serves consumers seeking mobile closing convenience. When reading national news, they want to know how it impacts the Georgia market or how they can avoid the mistakes made by investors in other states.",
     "tone": "Professional, authoritative, helpful, and legally sound.",
     "queries": [
-      "\"real estate\" AND (\"closing\" OR \"escrow\" OR \"title insurance\")",
-      "\"Georgia\" AND (\"real estate law\" OR \"property tax\")"
+      "\"wholesale real estate\" OR \"quiet title\" OR \"assignment of contract\"",
+      "\"title fraud\" OR \"wire fraud\" AND \"real estate\"",
+      "\"Georgia\" AND (\"commercial zoning\" OR \"tax deed\" OR \"real estate development\")"
     ]
   },
   "georgiagreasetrap": {
     "name": "Georgia Grease Trap Directory",
-    "avatar": "Restaurant owners and commercial kitchen managers in Georgia who need reliable grease trap cleaning and municipal compliance.",
+    "avatar": "Stressed restaurant owners, commercial kitchen managers, and food truck operators across the entire state of Georgia. Their worst nightmares are failing municipal health inspections, dealing with foul odors or plumbing disasters, and facing thousands of dollars in FOG (Fats, Oils, Grease) compliance fines. When reading about restaurant closures or fines in other states, they need the core lesson abstracted so they can avoid the same fate with their local Georgia regulators.",
     "tone": "Direct, practical, compliance-focused, and slightly urgent.",
     "queries": [
-      "\"restaurant\" AND (\"health inspection\" OR \"code violation\")",
-      "\"FOG\" AND \"wastewater\" AND \"compliance\""
+      "\"restaurant\" AND (\"health inspection\" OR \"code violation\" OR \"closure\")",
+      "\"FOG\" AND \"wastewater\" AND \"compliance\" AND \"fines\"",
+      "\"Georgia\" AND (\"restaurant\" OR \"commercial kitchen\") AND (\"sewer backup\" OR \"plumbing emergency\")"
     ]
   }
 }

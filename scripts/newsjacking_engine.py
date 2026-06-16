@@ -47,17 +47,24 @@ class EditorScore(BaseModel):
     reasoning: str = Field(description="A 1-2 sentence explanation of the scoring and the potential newsjacking angle.")
     status: str = Field(description="Must be 'APPROVED' if total_score >= 21, otherwise 'REJECTED'.")
 
-def run_editor_prompt(text: str, niche_profile: dict) -> EditorScore:
+def run_editor_prompt(text: str, niche_profile: dict, recent_titles: list) -> EditorScore:
     """Passes the article and avatar to Gemini Flash for cheap scoring."""
+    recent_titles_str = "\n".join([f"- {t}" for t in recent_titles]) if recent_titles else "None"
+    
     prompt = f"""
     You are the Senior Editor for a business directory serving this niche:
     Niche Name: {niche_profile['name']}
     Target Avatar: {niche_profile['avatar']}
     Tone: {niche_profile['tone']}
     
+    Recently Approved Articles:
+    {recent_titles_str}
+    
     Review the following news article text and score it on a scale of 1-10 for Site Relevance, User Relevance, and Importance.
     A good newsjacking opportunity connects a broad trend to the specific pain points of our Avatar.
     Calculate the total score. If the total score is 21 or higher, set status to 'APPROVED', otherwise 'REJECTED'.
+    
+    CRITICAL DEDUPLICATION RULE: If the core event of this article is the EXACT SAME EVENT covered in any of the 'Recently Approved Articles' listed above, you MUST set status to 'REJECTED' and explain that it is a 'DUPLICATE SUBJECT' in your reasoning.
     
     Article Text:
     {text[:5000]} # Truncate to save tokens, the first 5000 chars are enough for scoring
@@ -77,7 +84,7 @@ def run_editor_prompt(text: str, niche_profile: dict) -> EditorScore:
     data = json.loads(response.text)
     return data
 
-def run_journalist_prompt(text: str, niche_profile: dict, editor_reasoning: str, source_url: str, source_name: str) -> str:
+def run_journalist_prompt(text: str, niche_profile: dict, editor_reasoning: str) -> str:
     """Passes the approved article to Gemini Pro/Flash to write the blog post."""
     prompt = f"""
     You are an expert copywriter for a directory serving:
@@ -98,8 +105,6 @@ title: "YOUR COMPELLING TITLE"
 pubDate: 2026-06-16T12:00:00Z
 author: "Industry Analyst"
 summary: "YOUR ONE SENTENCE SUMMARY"
-sourceUrl: "{source_url}"
-sourceName: "{source_name}"
 ---
     4. Start with a hook summarizing the core news event briefly.
     5. Pivot immediately to the 'Newsjacking Angle': Why does the {niche_profile['avatar']} need to care about this right now? What are the implications?
@@ -126,6 +131,10 @@ def main():
         
     for niche_id, profile in profiles.items():
         print(f"\n--- Processing Niche: {profile['name']} ---")
+        
+        # Fetch recent approved titles for deduplication memory
+        cursor.execute("SELECT original_title FROM articles WHERE niche_id = ? AND status = 'APPROVED' ORDER BY id DESC LIMIT 10", (niche_id,))
+        recent_titles = [row[0] for row in cursor.fetchall()]
         
         for query in profile['queries']:
             print(f"\n🔍 Executing query: {query}")
@@ -174,7 +183,7 @@ def main():
                 
                 try:
                     # Step 3: Editor Scoring
-                    score_json = run_editor_prompt(full_text, profile)
+                    score_json = run_editor_prompt(full_text, profile, recent_titles)
                     
                     status = score_json.get("status", "REJECTED")
                     total_score = score_json.get("total_score", 0)
@@ -186,8 +195,18 @@ def main():
                     # Step 4: Journalist Generation
                     if status == "APPROVED":
                         print(f"✍️ Article approved! Sending to LLM Journalist...")
+                        recent_titles.append(title) # Update memory to prevent dupes in the same run
                         source_name = getattr(entry, 'source', {}).get('title', 'Google News Source')
-                        generated_markdown = run_journalist_prompt(full_text, profile, score_json.get("reasoning"), actual_url, source_name)
+                        generated_markdown = run_journalist_prompt(full_text, profile, score_json.get("reasoning"))
+                        
+                        # Append the source citation data into the frontmatter securely via string manipulation
+                        if "---" in generated_markdown:
+                            parts = generated_markdown.split("---", 2)
+                            if len(parts) >= 3:
+                                frontmatter = parts[1].strip()
+                                frontmatter += f'\nsourceUrl: "{actual_url}"\nsourceName: "{source_name}"\n'
+                                generated_markdown = f"---\n{frontmatter}\n---{parts[2]}"
+                        
                         print("✅ Generation complete!")
                         
                     # Save to DB
