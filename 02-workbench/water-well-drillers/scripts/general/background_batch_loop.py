@@ -78,7 +78,7 @@ def run_loop():
         
         # 3. Gemini
         print("\n[*] 3/3: Running Gemini enrichment...")
-        res3 = subprocess.run(["python", "02-workbench/water-well-drillers/scripts/general/p3_enrich_listings.py", "--mode", "full", "--state", "all"], cwd=WORKSPACE)
+        res3 = subprocess.run(["python", "02-workbench/water-well-drillers/scripts/general/p3_enrich_listings.py", "--mode", "full", "--state", "all", "--limit", "100"], cwd=WORKSPACE)
         if res3.returncode != 0:
             print("[-] Gemini script failed. Halting loop.")
             break
