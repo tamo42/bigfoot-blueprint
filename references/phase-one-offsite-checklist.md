@@ -9,6 +9,7 @@ This reference index documents the off-user-facing infrastructure, tracking mech
 Umami Analytics is integrated to measure user interactions and micro-conversion events without collecting personal data.
 
 - **Umami Snippet**: Ensure the snippet is embedded globally in the page `<head>` via the main layout file (e.g., `Layout.astro`).
+  > **CRITICAL**: The script source must point to the self-hosted Railway instance (`https://umami-production-26bd.up.railway.app/script.js`), not `cloud.umami.is`.
 - **Event Registry** (Customize per project):
   - `click-claim-profile`: Tracks when a business initiates a profile claim request. Pass `{ entity: "Business Name" }` metadata.
   - `click-verify-capability`: Tracks when a user/owner attempts to verify a missing credential (e.g., license status, specific capabilities). Pass `{ entity: "Business Name", field: "field_name" }`.

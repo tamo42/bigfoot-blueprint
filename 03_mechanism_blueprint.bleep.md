@@ -53,6 +53,7 @@
         3. Generate non-user-facing SEO/AEO optimization layers (XML sitemaps, JSON-LD schema, `llms.txt`).
         4. Hook the repository to Railway through GitHub for immediate live deployment.
         5. Run a Lighthouse audit on the production or staging build to ensure Performance, Accessibility, and SEO scores are optimized (>90) before final sign-off.
+        6. Verify Umami Analytics tracking script URL points strictly to the self-hosted Railway instance (`https://umami-production-26bd.up.railway.app/script.js`), not the public Umami cloud, to ensure hits are logged.
       </INSTRUCTIONS>
       <TRANSITION_CRITERIA>Directory is live, audited via Lighthouse, optimized, and ready for Stage 1 validation tracking.</TRANSITION_CRITERIA>
     </STATE_04_ANTIGRAVITY_DEPLOYMENT>
