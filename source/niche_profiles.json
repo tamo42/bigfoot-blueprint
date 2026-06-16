@@ -1,0 +1,20 @@
+{
+  "gaclosinglawyers": {
+    "name": "Georgia Closing Lawyers",
+    "avatar": "Georgia homebuyers and real estate agents looking for reliable escrow, title insurance, and closing services.",
+    "tone": "Professional, authoritative, helpful, and legally sound.",
+    "queries": [
+      "\"real estate\" AND (\"closing\" OR \"escrow\" OR \"title insurance\")",
+      "\"Georgia\" AND (\"real estate law\" OR \"property tax\")"
+    ]
+  },
+  "georgiagreasetrap": {
+    "name": "Georgia Grease Trap Directory",
+    "avatar": "Restaurant owners and commercial kitchen managers in Georgia who need reliable grease trap cleaning and municipal compliance.",
+    "tone": "Direct, practical, compliance-focused, and slightly urgent.",
+    "queries": [
+      "\"restaurant\" AND (\"health inspection\" OR \"code violation\")",
+      "\"FOG\" AND \"wastewater\" AND \"compliance\""
+    ]
+  }
+}
