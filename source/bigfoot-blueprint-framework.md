@@ -320,7 +320,7 @@ To rank for high-intent long-tail search queries and serve as an authoritative s
 
 ### A. The Flat URL Hierarchy
 To maximize crawl efficiency, eliminate crawl-depth penalties, and pass link equity directly, avoid nested directories (like `/articles/grease/georgia-compliance`). All editorial pages use a flat structure:
-* **Pillar URL**: `domain.com/georgia-grease-trap-rules`
+* **Pillar URL**: `domain.com/02-septic-georgia-grease-trap-rules`
 * **Child URL**: `domain.com/macon-grease-trap-frequency`
 * **Listing URL**: `domain.com/macon-septic-pumping`
 

@@ -143,7 +143,7 @@ The programmatic layout of directory pages establishes authority with search eng
 graph TD
     subgraph URL_Structure ["Flat URL Structure (Zero Nested Depth Penalties)"]
         Home["Home Page<br>(domain.com/)"]
-        Pillar["Pillar Page: State-Level Rules<br>(domain.com/georgia-grease-trap-rules)"]
+        Pillar["Pillar Page: State-Level Rules<br>(domain.com/02-septic-georgia-grease-trap-rules)"]
         Child["Child Page: City-Level FAQ<br>(domain.com/macon-grease-trap-frequency)"]
         Listing["Listing Page: Company Detail<br>(domain.com/macon-septic-pumping)"]
     end
@@ -152,7 +152,7 @@ graph TD
         Pillar ---|Bidirectional Silo Link| Child
         Child -->|Authority Funnel| Listing
         Pillar -->|Authority Funnel| Listing
-        Child ---|Lateral In-Silo Link| OtherChild["Other Child Page<br>(domain.com/georgia-grease-trap-fines)"]
+        Child ---|Lateral In-Silo Link| OtherChild["Other Child Page<br>(domain.com/02-septic-georgia-grease-trap-fines)"]
     end
 
     subgraph Schemas ["JSON-LD Schemas"]

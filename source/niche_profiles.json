@@ -18,5 +18,15 @@
       "\"FOG\" AND \"wastewater\" AND \"compliance\" AND \"fines\"",
       "\"Georgia\" AND (\"restaurant\" OR \"commercial kitchen\") AND (\"sewer backup\" OR \"plumbing emergency\")"
     ]
+  },
+  "hvaccommercialhub": {
+    "name": "HVAC Commercial Hub",
+    "avatar": "HVAC Owner-Operators focused on commercial scaling. They need operational agility (sourcing specialty parts, heavy rigging) and B2B growth (securing GC/Property Management leads and learning how to price maintenance contracts). When reading industry news, they care about raw material pricing trends (copper, steel) and major commercial construction developments that signify new contract opportunities.",
+    "tone": "Direct, operational, authoritative, and financial/CFO-focused.",
+    "queries": [
+      "\"HVAC\" AND (\"commercial construction\" OR \"property management\" OR \"facilities management\")",
+      "(\"copper prices\" OR \"steel prices\" OR \"PPI\") AND \"HVAC\"",
+      "\"HVAC\" AND (\"maintenance contract\" OR \"preventative maintenance\")"
+    ]
   }
 }
