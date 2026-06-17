@@ -4,6 +4,27 @@ Automatically generated per Rule R-131 for scripts in `scripts/scripts/`.
 
 ---
 
+## EPA Data Management Workflow
+Because the EPA ECHO/SDWIS databases are massive (4GB+), we use a two-step local preprocessing pipeline to maintain the `local_epa_water_alerts` field on contractor listings. 
+
+### 1. The Update Process
+The EPA ECHO Safe Drinking Water Act (SDWA) dataset is officially updated on a **quarterly** cycle due to state verification periods.
+If you need to refresh the EPA data in the future (we recommend once every 3-6 months):
+1. **Download:** Go to the [EPA ECHO Data Downloads](https://echo.epa.gov/tools/data-downloads) page.
+2. **Extract:** Download the **Drinking Water Data Downloads** zip file. Extract these four specific CSVs into `02-workbench/03-wells-water-well-drillers/cache/epa_sdwis/`:
+   * `SDWA_PUB_WATER_SYSTEMS.csv`
+   * `SDWA_VIOLATIONS_ENFORCEMENT.csv`
+   * `SDWA_GEOGRAPHIC_AREAS.csv`
+   * `SDWA_REF_CODE_VALUES.csv`
+3. **Pre-process:** Run `python p3_prep_epa_data.py`. This reads the 4GB CSVs and builds a highly optimized JSON file (`epa_filtered_alerts.json`) containing only the relevant groundwater health alerts from the last 5 years.
+4. **Enrich:** Run `python p3_enrich_epa.py --db ../../data/water_well_directory.sqlite` to apply the new JSON alerts to all contractor listings.
+
+### 2. Defining New Issues
+The preprocessing script (`p3_prep_epa_data.py`) automatically maps obscure EPA codes to their human-readable contaminant names using `SDWA_REF_CODE_VALUES.csv`.
+Because the script dynamically filters for **any** violation where `IS_HEALTH_BASED_IND == 'Y'`, it automatically future-proofs the pipeline. If the EPA begins enforcing new rules (such as the recent National Primary Drinking Water Regulation for PFAS), those violations will automatically surface in our JSON without requiring script modifications.
+
+---
+
 ### `background_batch_loop.py`
 *   **What it does:** Orchestrates a continuous batch processing loop for data enrichment of `well_contractors` records in an SQLite database. It repeatedly invokes Apify-based enrichment, web crawling, and Gemini AI-based listing enrichment, committing progress to Git after each batch.
 *   **Why it does it:** Automates the multi-stage enrichment pipeline for water well contractor data, ensuring records are consistently processed, updated, and persisted to version control until all eligible records are marked as 'enriched' or no further progress can be made.
@@ -27,6 +48,35 @@ Automatically generated per Rule R-131 for scripts in `scripts/scripts/`.
     2.  **`cleaning_log.txt`**: A new text file created in the script's execution directory. This log file contains a summary of the cleaning operation, including the total number of records updated, and a detailed list showing the original and cleaned names for each modified record.
     3.  **Console Output**: Prints a message indicating the success and the number of records cleaned, directing the user to review `cleaning_log.txt`. Also prints an error message if the database file is not found.
 
+### `p3_enrich_epa.py`
+*   **What it does:** Connects to the SQLite database and reads the highly optimized `epa_filtered_alerts.json` repository. It matches active health violations by State and County against the contractor's `served_counties` array and populates the `local_epa_water_alerts` column.
+*   **Why it does it:** To incredibly quickly enrich contractor listings with hyper-local water quality and contamination alerts, adding high-value, verification-based trust signals for rural homeowners concerned about their water safety. It avoids parsing the massive 4GB raw EPA dataset directly.
+*   **Inputs:**
+    *   Command-line arguments: `--db` (path to SQLite database), `--limit` (optional integer limit for processing batch size), `--state` (optional).
+    *   SQLite database containing the `well_contractors` table, reading `id`, `state`, `county`, and `served_counties`.
+    *   Local JSON repository: `cache/epa_sdwis/epa_filtered_alerts.json`.
+*   **Outputs:**
+    *   **SQLite Database:** The `well_contractors` table is updated; specifically, the `local_epa_water_alerts` column is populated with a JSON string mapping counties to an array of top systems with active health violations.
+    *   **Console Output:** Progress updates and enrichment counts.
+
+### `p3_enrich_counties.py`
+*   **What it does:** Downloads the free US Cities Database from GitHub and performs a 1:1 lookup to backfill missing `county` values in the `well_contractors` table based on a contractor's registered `city` and `state`.
+*   **Why it does it:** Prevents contractors with missing county data from becoming orphaned from the Astro frontend's URL routing hierarchy (which relies on county-level hubs). Crucially, it purposely leaves the `served_counties` array empty to preserve the incentive for businesses to claim their listings.
+*   **Inputs:**
+    *   SQLite database containing the `well_contractors` table.
+    *   External dataset: `https://raw.githubusercontent.com/kelvins/US-Cities-Database/main/csv/us_cities.csv`
+*   **Outputs:**
+    *   **SQLite Database:** Populates the `county` column for orphaned records.
+    *   **Cache:** Saves the downloaded CSV to `cache/us_cities/us_cities.csv`.
+
+### `p3_prep_epa_data.py`
+*   **What it does:** Reads the raw 4GB EPA SDWIS bulk data CSVs and parses them into a lightweight JSON repository. It explicitly maps obscure violation codes to human-readable contaminant names, and forcefully filters the dataset down to: Ground Water (`GW`) systems only, Health-Based Violations only, and violations from the last 5 years only.
+*   **Why it does it:** Prevents the system from having to loop through and parse a 4GB CSV file every time the `p3_enrich_epa.py` script executes. It creates a static, highly optimized reference repository that guarantees fast execution downstream.
+*   **Inputs:**
+    *   Raw EPA CSVs in `cache/epa_sdwis/`: `SDWA_PUB_WATER_SYSTEMS.csv`, `SDWA_VIOLATIONS_ENFORCEMENT.csv`, `SDWA_GEOGRAPHIC_AREAS.csv`, `SDWA_REF_CODE_VALUES.csv`.
+*   **Outputs:**
+    *   **JSON file:** `cache/epa_sdwis/epa_filtered_alerts.json` containing the pre-processed and sorted violation arrays keyed by state and county.
+
 ### `p3_enrich_listings.py`
 *   **What it does:** Enriches water well contractor listings in a SQLite database by analyzing their crawled website text using the Google Gemini AI model. It extracts specific service details (e.g., emergency services, water testing, permitting), generates a detailed HTML description, and creates a set of canonical Q&As, then updates the database.
 *   **Why it does it:** To automate the process of populating a business directory with rich, AI-generated content and structured data, enhancing the utility and completeness of contractor profiles and improving search relevance and user experience.
@@ -39,16 +89,37 @@ Automatically generated per Rule R-131 for scripts in `scripts/scripts/`.
     *   **SQLite Database:** The `well_contractors` table is updated with numerous new AI-generated fields, including: `emergency_repair_247`, `emergency_response_time`, `emergency_services_offered`, `pressure_tank_services`, `water_testing_offered`, `water_treatment_installed`, `handles_new_permits`, `listing_content` (HTML), `speakable_what_you_find`, `speakable_listing_details`, `speakable_quick_facts`, `quickfact_best_for`, `quickfact_primary_services`, `quickfact_pricing_guide`, `quickfact_service_area`, and `qa_X_question`/`qa_X_answer` pairs. It also sets `enriched_at`, `enrichment_source`, and `data_freshness` to 'enriched'.
     *   **Console Output:** Provides progress updates, status messages, and error notifications during the enrichment process.
 
-### `p3_enrich_places.py`
-*   **What it does:** Connects to a specified SQLite database, queries for `well_contractors` records lacking Google Places data for a given state, and enriches these records by making calls to the Google Places API. It retrieves and updates fields such as Google Place ID, website URL, rating, review count, latitude, longitude, and up to three reviews. The script utilizes a local JSON cache to minimize API calls and includes a safety limit for new queries.
-*   **Why it does it:** To enhance the `well_contractors` dataset with external, verified business information from Google Places, providing more comprehensive and accurate details (e.g., official contact info, customer feedback, and precise location data) for further analysis and use.
+### `p3_enrich_places_apify.py` (Global Workspace Script)
+*   **What it does:** Programmatically triggers the `compass~crawler-google-places` Apify actor via the Apify API to fetch business reviews, ratings, and website addresses. It maps the returned JSON dataset back to the `well_contractors` table and updates the SQLite database.
+*   **Why it does it:** To enhance the dataset with verified external business information (e.g., customer feedback and coordinates) using Apify, which is vastly more cost-efficient at scale than querying the direct Google Places API.
 *   **Inputs:**
     *   **Command-line arguments:**
-        *   `--state <state_name>`: The state (e.g., `georgia`, `ohio`) to filter contractors for enrichment. Required.
-        *   `--db <db_path>`: Optional direct path to the SQLite database. If omitted, the database path is resolved automatically using `p3_utils`.
-        *   `--limit <max_queries>`: Optional maximum number of new Google Places API queries to perform during a single run (default: 100).
-    *   **Environment variable:** `GOOGLE_PLACES_API_KEY`: An API key for authenticating with the Google Places API, loaded from a `.env` file at the workspace root.
-    *   **Files:**
+        *   `--state <state_name>`: The state (e.g., `georgia`, `ohio`) to filter contractors for enrichment. Use `all` to target everything.
+        *   `--db <db_path>`: Required direct path to the SQLite database (e.g., `data/water_well_directory.sqlite`).
+        *   `--limit <max_queries>`: Maximum number of listings to enrich in a batch (default: 50).
+    *   **Environment variable:** `APIFY_API_TOKEN`: An API key for authenticating with the Apify Cloud, loaded from a `.env` file at the workspace root.
+*   **Outputs:**
+    *   **Modified SQLite database:** Updates columns (`google_place_id`, `website_url`, `google_rating`, `google_review_count`, `manual_lat`, `manual_lng`, `reviews_json`, `review_1_text`, `review_1_author`, `review_1_rating`, `review_2_text`, `review_2_author`, `review_2_rating`, `review_3_text`, `review_3_author`, `review_3_rating`).
+    *   **Console output:** Real-time polling of Apify actor status, run IDs, and success metrics.
+
+### `p3_enrich_well_logs.py`
+*   **What it does:** Reads the pre-processed `county_groundwater_stats.json` cache and enriches the `well_contractors` table with hyper-local average well depth and yield based on the contractor's `served_counties` or primary `county`.
+*   **Why it does it:** To provide powerful, highly localized trust signals ("Local Groundwater Conditions") for rural homeowners, indicating typical well depths and yields in their specific area.
+*   **Inputs:**
+    *   Command-line arguments: `--db` (path to database), `--limit` (optional integer limit), `--state` (optional filter).
+    *   SQLite database containing the `well_contractors` table.
+    *   Local JSON repository: `cache/well_logs/county_groundwater_stats.json`.
+*   **Outputs:**
+    *   **SQLite Database:** Updates the `local_groundwater_conditions` column with a JSON object containing `avg_depth_ft`, `avg_yield_gpm`, `recent_wells_count`, and a disclaimer.
+    *   **Console Output:** Progress updates and enrichment counts.
+
+### `p3_prep_well_logs.py`
+*   **What it does:** Parses 49 massive state-level CSV files (14.2 million records) from the USGWD dataset. It filters for wells constructed in the last 10 years, groups the records by State and County, and calculates the average depth and yield.
+*   **Why it does it:** To compress gigabytes of raw national well log data into a single, highly optimized, sub-megabyte JSON cache that the enrichment script can query instantly.
+*   **Inputs:**
+    *   USGWD Tabular CSV files in `cache/well_logs/`.
+*   **Outputs:**
+    *   **JSON file:** `cache/well_logs/county_groundwater_stats.json` containing the county-level averages.
         *   An existing SQLite database (e.g., `unified.db`) containing a `well_contractors` table.
         *   A local JSON cache file (e.g., `data/cache/places/places_cache.json`) storing previously fetched Google Places API responses.
 *   **Outputs:**
@@ -103,17 +174,10 @@ Automatically generated per Rule R-131 for scripts in `scripts/scripts/`.
     *   **Exit status**: The script exits with status `0` if all database schemas are symmetric and consistent, and `1` if any schema mismatches are found.
     *   **Modified databases (potential)**: The `p3_schema.initialize_database()` function might alter the schema of the input SQLite databases to bring them in line with the canonical definition before validation occurs.
 
-### `test_batch.py`
-* **What it does:** Orchestrates a three-step data enrichment pipeline—Apify place enrichment, website crawling, and Gemini listing enrichment—on a limited dataset, then commits and pushes the results to a Git repository.
-* **Why it does it:** Automates a sequence of data processing tasks, primarily for testing the end-to-end enrichment workflow on a subset of data (e.g., 100 records), and ensures that the processing results are version-controlled via Git.
-* **Inputs:**
-    * Hardcoded `WORKSPACE` and `DB_PATH` directory/file paths.
-    * Configuration parameters passed as command-line arguments to the subprocesses (e.g., `--state all`, `--limit 100`, `--keywords`, `--workers`).
-    * An existing SQLite database (`water_well_directory.sqlite`) containing contractor data.
-    * Data from external APIs (Apify, Gemini) and websites accessed during crawling.
-    * An initialized Git repository at the `WORKSPACE` path.
-* **Outputs:**
-    * Standard output messages indicating progress and completion.
-    * Modified `water_well_directory.sqlite` database with enriched data.
-    * Cached website content files stored in the specified `cache-dir`.
-    * Updates to the Git repository (staged, committed, and pushed changes).
+
+---
+
+## Data Sources & Citations
+*   **United States Groundwater Well Database (USGWD):** Well completion records and geological data are sourced from the USGWD under the Creative Commons CC BY 4.0 license. 
+    * *Citation:* Lin, C., A. Miller, M. Waqar, L. Marston (2024). A Database of Groundwater Wells in the United States, HydroShare, [https://doi.org/10.4211/hs.8b02895f02c14dd1a749bcc5584a5c55](https://doi.org/10.4211/hs.8b02895f02c14dd1a749bcc5584a5c55)
+    * *Future Roadmap:* For Stage 2, review the [HydroShare GitHub Organization](https://github.com/hydroshare/) to explore building automated REST API pipelines instead of static CSV downloads.

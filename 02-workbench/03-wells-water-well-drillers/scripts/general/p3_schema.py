@@ -46,7 +46,13 @@ def get_schema_columns():
         ("bonded_insured_details", "TEXT"),
         ("payment_methods_accepted", "TEXT"),
         ("financing_available", "INTEGER DEFAULT 0"),
+        ("accepts_usda_rural_grants", "INTEGER DEFAULT 0"),
         ("handles_new_permits", "INTEGER DEFAULT 0"),
+        ("wells_drilled_last_5_years", "INTEGER"),
+        ("average_well_depth_ft", "INTEGER"),
+        ("average_yield_gpm", "INTEGER"),
+        ("local_epa_water_alerts", "TEXT"),
+        ("local_groundwater_conditions", "TEXT"),
 
 
         # Layer 4: AI Enrichment Layer (Descriptions, Speakables, Quick Facts)

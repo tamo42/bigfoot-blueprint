@@ -28,5 +28,15 @@
       "(\"copper prices\" OR \"steel prices\" OR \"PPI\") AND \"HVAC\"",
       "\"HVAC\" AND (\"maintenance contract\" OR \"preventative maintenance\")"
     ]
+  },
+  "waterwelldrillers": {
+    "name": "Water Well Drillers Directory",
+    "avatar": "Rural and independent homeowners who are off the municipal water grid and act as their own 'municipal utility managers.' Their biggest pain points are inevitable, high-stress emergencies like well pump failures, sudden loss of water pressure, and water quality degradation (like sulfur smells or contamination). When reading news, they are looking for practical advice on maintaining their private water infrastructure, testing for groundwater contamination, and understanding the costs of major equipment replacements or new well drilling.",
+    "tone": "Practical, reassuring, educational, and urgency-aware.",
+    "queries": [
+      "\"well pump\" AND (\"troubleshooting\" OR \"repair\" OR \"emergency\" OR \"failure\")",
+      "\"well water\" AND (\"testing\" OR \"contamination\" OR \"quality\" OR \"smell\")",
+      "\"water well\" AND (\"drilling\" OR \"dry well\" OR \"groundwater depletion\")"
+    ]
   }
 }

@@ -46,6 +46,7 @@ Directories listed below are in Stage 1 (Static SQLite + Astro) and are being tr
 
 | Target Niche | Region | Priority | Notes |
 | :--- | :--- | :--- | :--- |
+| Disaster Events | *TBD* | *TBD* | Uses data sources to populate disaster events as listings. Custom architecture (not typical zero-code version). |
 | *TBD* | *TBD* | *TBD* | *Add ideas here...* |
 
 ---

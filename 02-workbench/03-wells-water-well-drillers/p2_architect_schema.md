@@ -39,7 +39,7 @@ A rural or independent homeowner whose water pressure dropped to zero on a Satur
 ### Layer 2 — Import Requirements (6 fields — fixed)
 `post_status`, `featured`, `admin_category`, `admin_location`, `listing_img`, `date`
 
-### Layer 3 — Domain-Specific Fields (25 fields — unique to niche)
+### Layer 3 — Domain-Specific Fields (30 fields — unique to niche)
 `license_number` (State-issued license number),
 `license_type` (Specific contractor designation),
 `license_status` (Active/Expired/Suspended),
@@ -64,7 +64,12 @@ A rural or independent homeowner whose water pressure dropped to zero on a Satur
 `commercial_capable` (Boolean flag),
 `bonded_insured_details` (Liability limits & surety bond info),
 `payment_methods_accepted` (Cash, Check, Credit, Financing),
-`financing_available` (Boolean flag)
+`financing_available` (Boolean flag),
+`accepts_usda_rural_grants` (Boolean flag for Section 504),
+`wells_drilled_last_5_years` (Verified count from state well logs),
+`average_well_depth_ft` (Derived from well logs),
+`average_yield_gpm` (Derived from well logs),
+`local_epa_water_alerts` (JSON/List of EPA contamination alerts in service area)
 
 ### Layer 4 — AI Enrichment Layer (28 fields)
 * **4a — listing_content (1 field):** Full HTML description, 200–400 words.
