@@ -18,6 +18,12 @@ As per System Rule **R-131**, every script is documented below.
 * **Inputs:** Configuration from `source/niche_profiles.json` and live Google News RSS XML endpoints.
 * **Outputs:** Rewritten, approved articles inserted into `cache/content_queue.db`.
 
+### `distribute_news.py`
+* **What it does:** Distributes all approved newsjacking articles from the unified SQLite database (`cache/content_queue.db`) and saves them as Markdown files into the correct content directory for each active Astro site.
+* **Why it does it:** To automate the final publishing step in the newsjacking pipeline, pushing generated content to their respective directory site repositories for static deployment.
+* **Inputs:** Approved articles in `cache/content_queue.db`.
+* **Outputs:** Markdown files with YAML frontmatter written to `gaclosinglawyers.com`, `georgiagreasetrap.com`, and `uswelldrillers.com` news content collections.
+
 ### `p3_crawl_websites.py`
 * **What it does:** A multithreaded web scraper utilizing BeautifulSoup and requests that crawls a list of URLs to extract and save raw text.
 * **Why it does it:** Required for Phase 3 LLM enrichment; it gathers the raw, on-page context of a business's website so that Gemini can process and structure the data.
