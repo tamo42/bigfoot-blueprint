@@ -103,7 +103,7 @@ REVIEWS:
             err_msg += f"\nResponse: {response.text}"
         return cid, name, None, f"Gemini API/Parse Error: {err_msg}"
 
-def run_enrichment(db_path, dimensions, limit=None):
+def run_enrichment(db_path, dimensions, limit=None, state=None):
     client = genai.Client()
     
     conn = sqlite3.connect(db_path)
@@ -115,6 +115,8 @@ def run_enrichment(db_path, dimensions, limit=None):
         WHERE reviews_json IS NOT NULL AND reviews_json != '[]' AND reviews_json != ''
         AND review_analysis_json IS NULL
     """
+    if state:
+        query += f" AND state = '{state}'"
     if limit:
         query += f" LIMIT {limit}"
         
@@ -168,6 +170,7 @@ if __name__ == "__main__":
     parser.add_argument('--dim2', default="Speed")
     parser.add_argument('--dim3', default="Cost")
     parser.add_argument('--dim4', default="Work Quality")
+    parser.add_argument('--state', default=None)
     args = parser.parse_args()
     
-    run_enrichment(args.db, [args.dim1, args.dim2, args.dim3, args.dim4], args.limit)
+    run_enrichment(args.db, [args.dim1, args.dim2, args.dim3, args.dim4], args.limit, args.state)

@@ -42,7 +42,7 @@ Because the script dynamically filters for **any** violation where `IS_HEALTH_BA
 * **What it does:** Cleans and standardizes contractor names stored in the `well_contractors` table of a specified SQLite database. It removes various noisy patterns such as trailing single letters, content within parentheses, area codes, dates, PO Box information, and address fragments from the `name` column.
 * **Why it does it:** To improve the consistency and quality of contractor name data by eliminating irrelevant or inconsistent details, making the data more uniform and suitable for analysis, display, or integration purposes.
 * **Inputs:**
-    1.  **`water_well_directory.sqlite`**: An SQLite database file expected at `C:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\03-wells-water-well-drillers\data\water_well_directory.sqlite`. The script reads the `id` and `name` columns from the `well_contractors` table within this database.
+    1.  **Command-line argument:** `--db <db_path>`: Optional path to the SQLite database. If omitted, defaults to the unified database at `C:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\03-wells-water-well-drillers\data\water_well_directory.sqlite`. The script reads the `id` and `name` columns from the `well_contractors` table within the specified database.
 * **Outputs:**
     1.  **Modified `water_well_directory.sqlite`**: The input SQLite database is updated, specifically the `name` column in the `well_contractors` table, with the cleaned name values.
     2.  **`cleaning_log.txt`**: A new text file created in the script's execution directory. This log file contains a summary of the cleaning operation, including the total number of records updated, and a detailed list showing the original and cleaned names for each modified record.
@@ -174,6 +174,18 @@ Because the script dynamically filters for **any** violation where `IS_HEALTH_BA
     *   **Exit status**: The script exits with status `0` if all database schemas are symmetric and consistent, and `1` if any schema mismatches are found.
     *   **Modified databases (potential)**: The `p3_schema.initialize_database()` function might alter the schema of the input SQLite databases to bring them in line with the canonical definition before validation occurs.
 
+
+### `ag_scout.py`
+*   **What it does:** An automated scouting process to identify bulk data sources or API endpoints for water well drilling contractors across various US states. It parses the state tracker file and systematically iterates through incomplete entries.
+*   **Why it does it:** To accelerate the discovery phase of new states for the directory blueprint by automating data source identification while adhering to ethical scraping practices.
+
+### `find_tier2.py`
+*   **What it does:** Analyzes state metrics and well counts to identify and prioritize "Tier 2" target states for the next rollout phases.
+*   **Why it does it:** Helps strategically plan which states to tackle next in the data sourcing pipeline.
+
+### `update_well_counts.py`
+*   **What it does:** Programmatically updates the estimated private water well counts per state in the master tracker logs.
+*   **Why it does it:** Keeps the strategic planning documents up-to-date with accurate market sizes to estimate directory value.
 
 ---
 

@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<table cellspacing="0" border="0" id="ctl00_ContentPlaceHolder1_rgDrillersList_ctl01" style="width:100%;border-collapse:collapse;empty-cells:show;">
+	<thead>
+		<tr>
+			<th scope="col">NUM</th><th scope="col">COMPANY</th><th scope="col">ADDRESS1</th><th scope="col">ADDRESS2</th><th scope="col">CITY</th><th scope="col">STATE</th><th scope="col">ZIP</th><th scope="col">PHONE</th><th scope="col">ROC_LICENSES</th><th scope="col">QUALIFYING_PARTY</th><th scope="col">LICENSE_CURRENTLY_ACTIVE</th>
+		</tr><tr>
+			<td style="white-space:nowrap;"></td><td style="white-space:nowrap;"></td><td style="white-space:nowrap;"></td><td style="white-space:nowrap;"></td><td style="white-space:nowrap;"></td><td style="white-space:nowrap;"></td><td style="white-space:nowrap;"></td><td style="white-space:nowrap;"></td><td style="white-space:nowrap;"></td><td style="white-space:nowrap;"></td><td style="white-space:nowrap;"></td>
+		</tr>
+	</thead><tbody>
+	<tr>
+		<td>12</td><td>A TO Z DRILLING & PUMP SERVICE, LLC</td><td>PO BOX 519</td><td>&nbsp;</td><td>TAYLOR</td><td>AZ</td><td>85939-0519</td><td>(928) 358-0324</td><td>CR-53 </td><td>TERRANCE R. MCCRAY SR.</td><td>A</td>
+	</tr><tr>
+		<td>854</td><td>ACS SERVICES, LLC</td><td>2235 W BROADWAY RD</td><td>&nbsp;</td><td>MESA</td><td>AZ</td><td>85202-1003</td><td>(480) 968-0190</td><td>"A"</td><td>ANNEMARIE HAENFLER</td><td>A</td>
+	</tr><tr>
+		<td>963</td><td>ALASKA MIDNIGHT SUN DRILLING, INC.</td><td>413-108 ELLIOTT STREET</td><td>&nbsp;</td><td>Whitehorse</td><td>YT</td><td>Y1A6C4</td><td>&nbsp;</td><td>963</td><td>TRENT JAMIESON</td><td>A</td>
+	</tr><tr>
+		<td>900</td><td>ALFORD DRILLING, LLC</td><td>PO BOX 2142</td><td>&nbsp;</td><td>ELKO</td><td>NV</td><td>89803-2142</td><td>(775) 299-5635</td><td>A-4</td><td>STEVE ALFORD & CLAYTON WHITE</td><td>A</td>
+	</tr><tr>
+		<td>13</td><td>ALLEN PUMP COMPANY, INC.</td><td>4206 W US HIGHWAY 70</td><td>&nbsp;</td><td>THATCHER</td><td>AZ</td><td>85552-5624</td><td>(928) 428-3273</td><td>CR-53 </td><td>STEVE ALLEN</td><td>A</td>
+	</tr><tr>
+		<td>14</td><td>ALLEN'S WELL SERVICE, LLC</td><td>5509 W GLEESON RD</td><td>&nbsp;</td><td>ELFRIDA</td><td>AZ</td><td>85610-9050</td><td>(520) 642-3775</td><td>C-53 & R-53</td><td>HARVEY ALLEN</td><td>A</td>
+	</tr><tr>
+		<td>822</td><td>ALPINE REMEDIATION, INC.</td><td>14252 W 44TH AVE STE G</td><td>&nbsp;</td><td>GOLDEN</td><td>CO</td><td>80403-1800</td><td>303-277-0857</td><td>A-4</td><td>MATTHEW W. STEERE</td><td>A</td>
+	</tr><tr>
+		<td>784</td><td>ALTAR DRILLING, INC.</td><td>PO BOX 42831</td><td>&nbsp;</td><td>TUCSON</td><td>AZ</td><td>85733-2831</td><td>520-289-4741</td><td>A-4</td><td>DANIEL J. LAJACK</td><td>A</td>
+	</tr><tr>
+		<td>921</td><td>AMERICAN DRILLING CORPORATION</td><td>11707 EAST SPRAGUE</td><td>&nbsp;</td><td>SPOKANE VALLEY</td><td>WA</td><td>99206</td><td>(509) 921-7836</td><td>A-4</td><td>AUSTIN AUGARE</td><td>A</td>
+	</tr><tr>
+		<td>936</td><td>AQUA 2000 WATER WELL & DRILLING SERVICES, LLC</td><td>1931 S ARIZONA AVE</td><td>&nbsp;</td><td>YUMA</td><td>AZ</td><td>85364</td><td>(928) 246-9213</td><td>CR-53</td><td>RICHARD MARTINEZ</td><td>A</td>
+	</tr><tr>
+		<td>360</td><td>ARIZONA BEEMAN DRILLING DBA MOREX INVESTMENTS LLC</td><td>15563 E US HIGHWAY 60</td><td>&nbsp;</td><td>GOLD CANYON</td><td>AZ</td><td>85118-7410</td><td>(480) 983-2542</td><td>R-53 & A-4</td><td>NATE LITTLE</td><td>A</td>
+	</tr><tr>
+		<td>619</td><td>ARIZONA PRESTON DRILLING, LLC</td><td>7902 E MCDOWELL RD</td><td>&nbsp;</td><td>MESA</td><td>AZ</td><td>85207-1227</td><td>(480) 984-4747</td><td>R-53 & A-4</td><td>BILL "TREY" PRESTON</td><td>A</td>
+	</tr><tr>
+		<td>918</td><td>ASSOCIATED ENVIRONMENTAL INDUSTRIES CORP</td><td>PO BOX 5300</td><td>&nbsp;</td><td>NORMAN </td><td>OK</td><td>73070</td><td>405-360-1480</td><td>CR-53</td><td>ROBERT KEYES</td><td>A</td>
+	</tr><tr>
+		<td>909</td><td>AUTHENTIC DRILLING</td><td>33555 COUNTY ROAD 37</td><td>&nbsp;</td><td>KIOWA</td><td>CO</td><td>80117-0087</td><td>(303) 351-3581</td><td>C-53 , A-4</td><td>MARC HAES</td><td>A</td>
+	</tr><tr>
+		<td>621</td><td>AZCA DRILLING & PUMP, INC.</td><td>PO BOX 570</td><td>&nbsp;</td><td>EHRENBERG</td><td>AZ</td><td>85334-0570</td><td>(928) 923-9118</td><td>R-53 & "A"</td><td>LARRY J. SIDDALL</td><td>A</td>
+	</tr><tr>
+		<td>25</td><td>B-J DRILLING COMPANY, INC.</td><td>PO BOX 815</td><td>&nbsp;</td><td>BENSON</td><td>AZ</td><td>85602-0815</td><td>(520) 623-1010</td><td>R-53 & A-4</td><td>ZANE RITENOUR</td><td>A</td>
+	</tr><tr>
+		<td>960</td><td>BALOW'S BLACK ROCK DRILLING LLC</td><td>11775 TONTO SCHOOL RD</td><td>&nbsp;</td><td>SKULL VALLEY</td><td>AZ</td><td>86338</td><td>&nbsp;</td><td>960</td><td>&nbsp;</td><td>A</td>
+	</tr><tr>
+		<td>368</td><td>BALOW'S WINDMILL, PUMP SERVICE & WELL DRILLING, LLC</td><td>PO BOX 140</td><td>&nbsp;</td><td>SKULL VALLEY</td><td>AZ</td><td>86338-0140</td><td>(928) 442-3240</td><td>CR-53</td><td>DALE H. & DALE (BUDDY) BALOW</td><td>A</td>
+	</tr><tr>
+		<td>505</td><td>BARBIE  DRILLING, INC.</td><td>PO BOX 205</td><td>&nbsp;</td><td>WILLIAMS</td><td>AZ</td><td>86046-0205</td><td>(928) 699-1080</td><td>R-53 & "A"</td><td>RANGER "PATCH" KARR</td><td>A</td>
+	</tr><tr>
+		<td>577</td><td>BEAVER DAM DRILLING & CONSTRUCTION, LLC</td><td>PO BOX 549</td><td>&nbsp;</td><td>LITTLEFIELD</td><td>AZ</td><td>86432-0549</td><td>(928) 347-5589</td><td>CR-53</td><td>BILL EVANS</td><td>A</td>
+	</tr><tr>
+		<td>830</td><td>BEEMAN DRILLING SERVICES DBA T B DRLG SVCS</td><td>3400 S. HWY 191</td><td>&nbsp;</td><td>MOAB</td><td>UT</td><td>84532-3680</td><td>435-259-7281</td><td>R-53</td><td>TODD B. BEEMAN</td><td>A</td>
+	</tr><tr>
+		<td>572</td><td>BEEMAN PUMP COMPANY, INC.</td><td>1341 E OLD WEST HWY</td><td>&nbsp;</td><td>APACHE JUNCTION</td><td>AZ</td><td>85119-6551</td><td>(480) 983-1104</td><td>CR-53</td><td>BOBBY & ROBERT BEEMAN</td><td>A</td>
+	</tr><tr>
+		<td>635</td><td>BERTRAM DRILLING, INC.</td><td>PO BOX 2053</td><td>&nbsp;</td><td>BILLINGS</td><td>MT</td><td>59103-2053</td><td>(406) 259-2532</td><td>A-4</td><td>DICK DECKER</td><td>A</td>
+	</tr><tr>
+		<td>937</td><td>BIG SKY EXPLORATION</td><td>PO BOX 90324</td><td>&nbsp;</td><td>RALEIGH</td><td>NC</td><td>27675-0324</td><td>(602) 329-6330</td><td>A-4</td><td>BIG SKY EXPLORATION</td><td>A</td>
+	</tr><tr>
+		<td>83</td><td>BOART LONGYEAR COMPANY</td><td>7103 W AUGUSTA AVE</td><td>&nbsp;</td><td>GLENDALE</td><td>AZ</td><td>85303-1215</td><td>(623) 889-7523</td><td>A-4</td><td>ROBERT SAWREY</td><td>A</td>
+	</tr><tr>
+		<td>197</td><td>BOTA COMPANY</td><td>PO BOX 687</td><td>&nbsp;</td><td>FLORENCE</td><td>AZ</td><td>85132-3013</td><td>(520) 868-5289</td><td>R-53</td><td>ROBERT L. KELM</td><td>A</td>
+	</tr><tr>
+		<td>941</td><td>BRAYTON LEASING LLC</td><td>1326 N 361ST AVE</td><td>&nbsp;</td><td>TONOPAH</td><td>AZ</td><td>85354-8762</td><td>(928) 851-5157</td><td>R-53</td><td>HAL PURCELL III</td><td>A</td>
+	</tr><tr>
+		<td>550</td><td>BRINER DRILLING, INC.</td><td>3901 E SUNHAVEN LN</td><td>&nbsp;</td><td>KINGMAN</td><td>AZ</td><td>86409-2301</td><td>(928) 757-3434</td><td>R-53 </td><td>MICHAEL BRINER </td><td>A</td>
+	</tr><tr>
+		<td>331</td><td>C.E.T., INC.</td><td>3119 ANGUS DRIVE</td><td>&nbsp;</td><td>Prescott</td><td>AZ</td><td>86305</td><td>(928) 925-0533</td><td>&nbsp;</td><td>CHARLES EDWARD TISCHLER</td><td>A</td>
+	</tr><tr>
+		<td>226</td><td>CASCADE DRILLING, LP</td><td>7773 W SELDON LN</td><td>&nbsp;</td><td>PEORIA</td><td>AZ</td><td>85345-7973</td><td>(623) 935-0124</td><td>A-4 </td><td>SHAWN CAIN, ANDREW WHITSELL</td><td>A</td>
+	</tr><tr>
+		<td>946</td><td>CASNER DRILLING & PUMP LLC</td><td>PO BOX 345</td><td>&nbsp;</td><td>RIMROCK</td><td>AZ</td><td>86335</td><td>(928) 821-8161</td><td>CR-53</td><td>MATTHEW HOUSE</td><td>A</td>
+	</tr><tr>
+		<td>667</td><td>CATALINA WELL & PUMP, LLC</td><td>5328 E EDWIN RD</td><td>&nbsp;</td><td>TUCSON</td><td>AZ</td><td>85739-9789</td><td>(520) 818-9053</td><td>CR-53</td><td>DONALD E. TEWART, JR.</td><td>A</td>
+	</tr><tr>
+		<td>776</td><td>CENTRAL ARIZONA PUMP, LLC</td><td>141 S OLDHAM RD</td><td>&nbsp;</td><td>PAYSON</td><td>AZ</td><td>85541-2758</td><td>(928) 476-5440</td><td>CR-53</td><td>BRANDON  MOORE</td><td>A</td>
+	</tr><tr>
+		<td>929</td><td>CHAMBERS CHOICE DRILLING </td><td>PO BOX 1815</td><td>&nbsp;</td><td>TWENTYNINE PALMS</td><td>CA</td><td>92277</td><td>760-401-7232</td><td>CR-53, A-4</td><td>CHANCEY CHAMBERS</td><td>A</td>
+	</tr><tr>
+		<td>817</td><td>CHAMPION CORROSION PRODUCTS, INC.</td><td>PO BOX 7847</td><td>&nbsp;</td><td>MIDLAND</td><td>TX</td><td>79708-7847</td><td>(432) 682-8343</td><td>A-4</td><td>MICHAEL STEPHEN LOFTIS</td><td>A</td>
+	</tr><tr>
+		<td>932</td><td>CLUFF BROTHERS DRILLING</td><td>PO BOX 261</td><td>&nbsp;</td><td>Rodeo</td><td>NM</td><td>88056</td><td>(435) 625-1126</td><td>CR-53</td><td>JOSHUA CLUFF</td><td>A</td>
+	</tr><tr>
+		<td>255</td><td>CLUFF DRILLING & PUMP, INC.</td><td>HC 65 BOX 455</td><td>&nbsp;</td><td>FREDONIA</td><td>AZ</td><td>86022-9608</td><td>(928) 640-7656</td><td> A-4, R-53</td><td>JOE BISTLINE</td><td>A</td>
+	</tr><tr>
+		<td>674</td><td>COLLUM DRILLING, INC.</td><td>35190 W OLESEN RD</td><td>&nbsp;</td><td>WICKENBURG</td><td>AZ</td><td>85390-3112</td><td>(602) 677-6408</td><td>R-53</td><td>JAMES W. COLLUM</td><td>A</td>
+	</tr><tr>
+		<td>891</td><td>CONE TEC, INC.</td><td>3750 W 500 S</td><td>&nbsp;</td><td>SALT LAKE CITY</td><td>UT</td><td>84104-4410</td><td>(801) 973-3801</td><td>A-4</td><td>SHAWN STEINER</td><td>A</td>
+	</tr><tr>
+		<td>41</td><td>COPPERSTATE DRILLING & SUPPLY, INC.</td><td>PO BOX 190</td><td>&nbsp;</td><td>SNOWFLAKE</td><td>AZ</td><td>85937-0190</td><td>(928) 536-4447</td><td>R-53 & A-4</td><td>JEFF MCCRAY</td><td>A</td>
+	</tr><tr>
+		<td>628</td><td>CRUX SUBSURFACE, INC.</td><td>4308 N BARKER RD</td><td>&nbsp;</td><td>SPOKANE VALLEY</td><td>WA</td><td>99027-9600</td><td>(509) 892-9409</td><td>A-4</td><td>SCOTT TUNISON, STEVE WILSON</td><td>A</td>
+	</tr><tr>
+		<td>895</td><td>D AND M WELL SERVICE, LLC</td><td>1958 W. ROCHIN RD.</td><td>&nbsp;</td><td>DOUGLAS</td><td>AZ</td><td>85607</td><td>(520) 364-2261</td><td>CR-53</td><td>RANDY CURETON</td><td>A</td>
+	</tr><tr>
+		<td>530</td><td>DEL RIO DRILLING & PUMP, INC.</td><td>360 INDUSTRIAL DR</td><td>&nbsp;</td><td>CHINO VALLEY</td><td>AZ</td><td>86323-5360</td><td>(928) 636-4272</td><td>R-53 & A-4</td><td>ERIC OWENS & BEN MARLEY</td><td>A</td>
+	</tr><tr>
+		<td>641</td><td>DESERT ENGINE & PUMP, LLC</td><td>12628 S 177TH LN</td><td>&nbsp;</td><td>GOODYEAR</td><td>AZ</td><td>85338-5774</td><td>(602) 757-5002</td><td>CR-53</td><td>GENE SHELTON II</td><td>A</td>
+	</tr><tr>
+		<td>893</td><td>DESERT MOUNTAIN DRILLING & PUMP SERVICE, LLC</td><td>9272 S PLACITA SAGUARO SOLITARIO</td><td>&nbsp;</td><td>VAIL</td><td>AZ</td><td>85641-1414</td><td>(928) 242-6329</td><td>CR-53</td><td>TYLER PAUL RIES</td><td>A</td>
+	</tr><tr>
+		<td>670</td><td>DEWEY DRILLING & PUMP, INC.</td><td>PO BOX 131</td><td>&nbsp;</td><td>DEWEY</td><td>AZ</td><td>86327-0131</td><td>(928) 632-7687</td><td>C-53 & R-53</td><td>GREG ROSKOPF</td><td>A</td>
+	</tr><tr>
+		<td>497</td><td>DOUBLE F CONTRACTING, INC.</td><td>2426 W. GUNNISON HILLS RD.</td><td>&nbsp;</td><td>COCHISE</td><td>AZ</td><td>85606</td><td>(520) 507-2481</td><td> "A"</td><td>FRANK FLANDERS</td><td>A</td>
+	</tr><tr>
+		<td>239</td><td>DRILL-TECH, INC.</td><td>3320 N STATE ROUTE 89</td><td>&nbsp;</td><td>CHINO VALLEY</td><td>AZ</td><td>86323-5155</td><td>(928) 636-8006</td><td>R-53, A-4</td><td>GARTH OWENS</td><td>A</td>
+	</tr><tr>
+		<td>676</td><td>ELBROCK DRILLING, LLC</td><td>PO BOX 67</td><td>&nbsp;</td><td>ANIMAS</td><td>NM</td><td>88020-0067</td><td>(575) 534-7820</td><td>R-53</td><td>WM. "BUNCH" SWIFT</td><td>A</td>
+	</tr><tr>
+		<td>927</td><td>ELLINGSON DRAINAGE INC</td><td>56113 STATE HIGHWAY 56</td><td>&nbsp;</td><td>WEST CONCORD</td><td>MN</td><td>55985-6066</td><td>(507) 527-2294</td><td>C-53</td><td>DAVID BARDSLEY</td><td>A</td>
+	</tr><tr>
+		<td>779</td><td>EMPIRE PUMP CORPORATION</td><td>2849 S 49TH AVE</td><td>&nbsp;</td><td>PHOENIX</td><td>AZ</td><td>85043-6104</td><td>(602) 403-0007</td><td>CR-53</td><td>SCOTT CAMPBELL</td><td>A</td>
+	</tr><tr>
+		<td>842</td><td>ENERGY SERVICES, LLC</td><td>PO BOX 2175</td><td>&nbsp;</td><td>COLORADO CITY</td><td>AZ</td><td>86021-2175</td><td>435-619-4652</td><td>CR-53, A-4</td><td>GARY K. SMITH</td><td>A</td>
+	</tr><tr>
+		<td>943</td><td>ENVIROTECH DRILLING LLC</td><td>900 E 4TH STREET</td><td>&nbsp;</td><td>WINNEMUCCA</td><td>NV</td><td>89445</td><td>(775) 421-0481</td><td>A-4</td><td>BRIAN MIKELSON</td><td>A</td>
+	</tr><tr>
+		<td>771</td><td>EXCEL PUMP AND WELL SERVICE, LLC</td><td>8861 S SIX SHOOTER CANYON RD</td><td>&nbsp;</td><td>GLOBE</td><td>AZ</td><td>85501-5087</td><td>(928) 812-7520</td><td>A-4 & CR-53</td><td>DAVID T. RUIZ</td><td>A</td>
+	</tr><tr>
+		<td>925</td><td>FALCON DRILLING INC</td><td>1 CARRY WAY</td><td>&nbsp;</td><td>MOUND HOUSE</td><td>NV</td><td>89706-7777</td><td>(775) 246-0720</td><td>A-4</td><td>LEIF PAULSON</td><td>A</td>
+	</tr><tr>
+		<td>903</td><td>FUGRO USA LAND INC</td><td>6105 ROOKIN ST</td><td>&nbsp;</td><td>HOUSTON</td><td>TX</td><td>77074-3700</td><td>(713) 346-4002</td><td>A-4</td><td>STEPHEN(STEVE) BUTREJ</td><td>A</td>
+	</tr><tr>
+		<td>498</td><td>GEOMECHANICS SOUTHWEST, INC.</td><td>5839 S BELVEDERE AVE</td><td>&nbsp;</td><td>TUCSON</td><td>AZ</td><td>85706-4909</td><td>(520) 889-7787</td><td>A-4</td><td>STEVEN BRADSHAW & MIKE SHELQUIST</td><td>A</td>
+	</tr><tr>
+		<td>956</td><td>GILA PUMP LLC</td><td>PO BOX 562</td><td>&nbsp;</td><td>YOUNG</td><td>AZ</td><td>85554</td><td>&nbsp;</td><td>956</td><td>GILA PUMP LLC</td><td>A</td>
+	</tr><tr>
+		<td>230</td><td>GODBE DRILLING, LLC</td><td>62802 OHLM RD</td><td>&nbsp;</td><td>MONTROSE</td><td>CO</td><td>81403-7811</td><td>(970) 209-1164</td><td>A-4</td><td>JOHN GODBE</td><td>A</td>
+	</tr><tr>
+		<td>890</td><td>GRANILLO CONSTRUCTION, INC.</td><td>19613 E JAVELINA DR</td><td>&nbsp;</td><td>FLORENCE</td><td>AZ</td><td>85132-8092</td><td>(520) 709-4180</td><td>CR-53</td><td>ZACH LANE</td><td>A</td>
+	</tr><tr>
+		<td>191</td><td>GREGG DRILLING LLC</td><td>2726 WALNUT AVE</td><td>&nbsp;</td><td>SIGNAL HILL</td><td>CA</td><td>90755-1832</td><td>(562) 427-6899</td><td>A-4</td><td>&nbsp;</td><td>A</td>
+	</tr><tr>
+		<td>453</td><td>H. E. BEEMAN WELL DRILLING DBA WYATT DRILLING, INC.</td><td>PO BOX 1498</td><td>&nbsp;</td><td>SHOW LOW</td><td>AZ</td><td>85902-1498</td><td>(928) 537-1031</td><td>R-53 & A-4</td><td>PAUL & VINCENT WYATT</td><td>A</td>
+	</tr><tr>
+		<td>205</td><td>HARRIS EXPLORATION DRILLING & ASSOCIATES, INC.</td><td>PO BOX 5579</td><td>&nbsp;</td><td>FALLON</td><td>NV</td><td>89407-5579</td><td>(760) 822-7886</td><td>A-4</td><td>PATRICK HARRIS</td><td>A</td>
+	</tr><tr>
+		<td>898</td><td>HOLT SERVICES, INC.</td><td>P.O. BOX 1659</td><td>&nbsp;</td><td>MILTON</td><td>WA</td><td>98354-1659</td><td>253-604-4878</td><td> A-4</td><td>ROBERT STADELI</td><td>A</td>
+	</tr><tr>
+		<td>871</td><td>HOOVER DRILLING COMPANY, LLC</td><td>PO BOX 10369</td><td>&nbsp;</td><td>CASA GRANDE</td><td>AZ</td><td>85130-0057</td><td>(520) 251-1449</td><td>CR-53</td><td>TOMMY HOOVER</td><td>A</td>
+	</tr><tr>
+		<td>733</td><td>HYDER DRILLING, LLC</td><td>54020 S AGUA CALIENTE RD</td><td>&nbsp;</td><td>DATELAND</td><td>AZ</td><td>85333-5561</td><td>602-918-3651</td><td>CR-53</td><td>GARY E. JOHN</td><td>A</td>
+	</tr><tr>
+		<td>816</td><td>HYDRO RESOURCES - ROCKY MOUNTAIN, INC.</td><td>13027 COUNTY ROAD 18</td><td>&nbsp;</td><td>FORT LUPTON</td><td>CO</td><td>80621</td><td>(970) 381-3788</td><td>A-4</td><td>FRED ROTHAUGE</td><td>A</td>
+	</tr><tr>
+		<td>847</td><td>HYDRO-SOLUTIONS PUMP & WELL SERVICE</td><td>2773 E LINES LN</td><td>&nbsp;</td><td>GILBERT</td><td>AZ</td><td>85297-8135</td><td>480-277-7849</td><td>CR-53</td><td>BRIAN KELLY WEST</td><td>A</td>
+	</tr><tr>
+		<td>70</td><td>INGLE WELL & PUMP, LLC</td><td>6274 E HIGHWAY 181</td><td>&nbsp;</td><td>PEARCE</td><td>AZ</td><td>85625-6037</td><td>(520) 824-3574</td><td>CR-53</td><td>GARY L. INGLE</td><td>A</td>
+	</tr><tr>
+		<td>904</td><td>INTEGRITY DRILLING SERVICES</td><td>19227 E INDIANA AVE</td><td>&nbsp;</td><td>QUEEN CREEK</td><td>AZ</td><td>85142-8574</td><td>(928) 300-2093</td><td>A-4, R-53</td><td>MITCHELL FERGUSON</td><td>A</td>
+	</tr><tr>
+		<td>73</td><td>JENSEN DRILLING COMPANY</td><td>1775 HENDERSON AVE</td><td>&nbsp;</td><td>EUGENE</td><td>OR</td><td>97403-2399</td><td>(541) 726-7435</td><td>A-4</td><td>JERRY J. JENSEN</td><td>A</td>
+	</tr><tr>
+		<td>866</td><td>JNJ WELL SERVICE, LLC</td><td>11154 E VALLEJO ST</td><td>&nbsp;</td><td>CHANDLER</td><td>AZ</td><td>85248-7805</td><td>(480) 603-7083</td><td>CR-53, A-4</td><td>NATHANAEL REVELES</td><td>A</td>
+	</tr><tr>
+		<td>77</td><td>JOHN HOOVER WELL SERVICE & REPAIR</td><td>PO BOX 11330</td><td>&nbsp;</td><td>CASA GRANDE</td><td>AZ</td><td>85130-0167</td><td>(520) 518-0012</td><td>C-53</td><td>JOHN & TOMMY HOOVER</td><td>A</td>
+	</tr><tr>
+		<td>922</td><td>JRGO, LLC DBA INTEGRITY ASSESSMENT GROUP LLC</td><td>105 W 4TH ST</td><td>&nbsp;</td><td>CLARE</td><td>MI</td><td>48617</td><td>(830) 279-1915</td><td>A-4 CATH PROT*</td><td>CHADD LOOMIS</td><td>A</td>
+	</tr><tr>
+		<td>350</td><td>K. D. HUEY COMPANY, LLC</td><td>PO BOX 488</td><td>&nbsp;</td><td>CAPITAN</td><td>NM</td><td>88316-0488</td><td>575-354-2246</td><td>C-53</td><td>KENNETH & HEATH HUEY</td><td>A</td>
+	</tr><tr>
+		<td>562</td><td>K. P. VENTURES WELL DRILLING & PUMP CO., LLC</td><td>PO BOX 2411</td><td>&nbsp;</td><td>COTTONWOOD</td><td>AZ</td><td>86326-2371</td><td>(928) 639-1709</td><td>R-53 & A-4</td><td>KENNY PORTER AND CLAYTON THAYER</td><td>A</td>
+	</tr><tr>
+		<td>757</td><td>K.R. WELL DRILLING, LLC</td><td>PO BOX 1072</td><td>&nbsp;</td><td>BOUSE</td><td>AZ</td><td>85325-1072</td><td>(928) 851-2975</td><td>CR-53</td><td>KEITH REFFETT</td><td>A</td>
+	</tr><tr>
+		<td>400</td><td>KAUFMAN CORP DBA BROWN DRILLING</td><td>3375 N BANK ST</td><td>&nbsp;</td><td>KINGMAN</td><td>AZ</td><td>86409-3605</td><td>(928) 757-1920</td><td>CR-53 & A-4</td><td>JONATHAN KAUFMAN, AMANDA KAUFMAN</td><td>A</td>
+	</tr><tr>
+		<td>394</td><td>KM DRILLING, INC.</td><td>PO BOX 1738</td><td>&nbsp;</td><td>CAMP VERDE</td><td>AZ</td><td>86322-1738</td><td>(928) 567-3633</td><td>R-53 & A-4</td><td>KENNETH E. MYERS</td><td>A</td>
+	</tr><tr>
+		<td>924</td><td>LAMB DRILLING LLC</td><td>10521 S. HIDDEN HAVEN COURT</td><td>&nbsp;</td><td>SOUTH JORDAN</td><td>UT</td><td>84095</td><td>801-834-9495</td><td>A-4</td><td>JASON LAMB</td><td>A</td>
+	</tr><tr>
+		<td>859</td><td>LAST DROP DRILLING & PUMP SERVICES, LLC</td><td>2642 S 11900 W</td><td>&nbsp;</td><td>CEDAR CITY</td><td>UT</td><td>84720-6800</td><td>(435) 559-9357</td><td>R-53 & A-4</td><td>RICHARD R. PETERSEN</td><td>A</td>
+	</tr><tr>
+		<td>7</td><td>LAYNE CHRISTENSEN COMPANY</td><td>12030 E RIGGS RD</td><td>&nbsp;</td><td>CHANDLER</td><td>AZ</td><td>85249-3701</td><td>(480) 416-0035</td><td>R-53 & A-4</td><td>JAMES HAUSLADEN,CODY LOTZE, JASON MCKINNEY</td><td>A</td>
+	</tr><tr>
+		<td>461</td><td>LEON ROSS DRILLING & PUMP SERVICE</td><td>PO BOX 757</td><td>&nbsp;</td><td>ROOSEVELT</td><td>UT</td><td>84066-0757</td><td>(435) 722-4469</td><td>CR-53</td><td>MAX LEON ROSS</td><td>A</td>
+	</tr><tr>
+		<td>863</td><td>LONGMIRE WELL SERVICE, INC.</td><td>PO BOX 759</td><td>&nbsp;</td><td>WILLCOX</td><td>AZ</td><td>85644-0759</td><td>(602) 531-3660</td><td>CR-53</td><td>MICHAEL W. LONGMIRE</td><td>A</td>
+	</tr><tr>
+		<td>608</td><td>LORIMOR ENTERPRISES, INC. DBA RAINBOW DRILLING</td><td>PO BOX 6177</td><td>&nbsp;</td><td>GLENDALE</td><td>AZ</td><td>85312-6177</td><td>&nbsp;</td><td>KA</td><td>ELLIS LORIMOR</td><td>A</td>
+	</tr><tr>
+		<td>897</td><td>MACY'S WELL & PUMP</td><td>24390 E PEACE LN</td><td>&nbsp;</td><td>FLORENCE</td><td>AZ</td><td>85132-8090</td><td>(480) 848-8233</td><td>CR-53</td><td>DANIEL MICHAEL MACY</td><td>A</td>
+	</tr><tr>
+		<td>769</td><td>MAJOR DRILLING AMERICA, INC.</td><td>2200 S 4000 W</td><td>&nbsp;</td><td>SALT LAKE CITY</td><td>UT</td><td>84120-1292</td><td>(801) 974-0645</td><td>A-4</td><td>JOEL CARR, JOEL CAMPBELL </td><td>A</td>
+	</tr><tr>
+		<td>931</td><td>MALCOLM DRILLING COMPANY</td><td>92 NATOMA ST STE 400</td><td>&nbsp;</td><td>SAN FRANCISCO</td><td>CA</td><td>94105-2685</td><td>(415) 901-4421</td><td>A-4</td><td>THOMAS MORELAND </td><td>A</td>
+	</tr><tr>
+		<td>880</td><td>MATCOR, INC.</td><td>&nbsp;</td><td>&nbsp;</td><td>COMMERCE CITY</td><td>CO</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>JASON MCKINNEY</td><td>A</td>
+	</tr><tr>
+		<td>91</td><td>MCGEE WELL DRILLING & PUMP SERVICE, LLC</td><td>PO BOX 2939</td><td>&nbsp;</td><td>CHINO VALLEY</td><td>AZ</td><td>86323-2704</td><td>(928) 636-4576</td><td>R-53 & A-4</td><td>MCGEE WELL DRILLING & PUMP SERVICE, LLC</td><td>A</td>
+	</tr><tr>
+		<td>836</td><td>MEINZER WELL SERVICE, LLC</td><td>PO BOX 491</td><td>&nbsp;</td><td>ELOY</td><td>AZ</td><td>85131-0018</td><td>(520) 705-9502</td><td>CR-53, A-4</td><td>BRAD MEINZER</td><td>A</td>
+	</tr><tr>
+		<td>939</td><td>MERSINO DEWATERING LLC</td><td>900 N. SQUIRREL ROAD</td><td>&nbsp;</td><td>AUBURN HILLS</td><td>MI</td><td>48326</td><td>(810) 730-1122</td><td>C-53 DEWATERING</td><td>DAVID TERSIGNI</td><td>A</td>
+	</tr><tr>
+		<td>798</td><td>MIKE'S DRILLING, LLC</td><td>3755 E WETSTONES RD</td><td>&nbsp;</td><td>VAIL</td><td>AZ</td><td>85641-9472</td><td>(520) 490-0399</td><td>CR-53, A-4</td><td>MICHAEL RAY LISTER</td><td>A</td>
+	</tr><tr>
+		<td>838</td><td>MOHAVE SERVICE LLC</td><td>&nbsp;</td><td>&nbsp;</td><td>COLORADO CITY</td><td>AZ</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>MOHAVE SERVICE LLC</td><td>A</td>
+	</tr><tr>
+		<td>715</td><td>MOORHEAD DRILLING DBA MOORHEAD PUMP SERVICE</td><td>5052 W HORSESHOE LN</td><td>&nbsp;</td><td>MC NEAL</td><td>AZ</td><td>85617-9654</td><td>(520) 234-5983</td><td>CR-53</td><td>THOMAS O. MOORHEAD</td><td>A</td>
+	</tr><tr>
+		<td>99</td><td>MYERS DRILLING COMPANY</td><td>13962 E RACE HORSE PL</td><td>&nbsp;</td><td>VAIL</td><td>AZ</td><td>85641-9056</td><td>(520) 762-9438</td><td>R-53</td><td>JOHN WILLIAM MYERS, II</td><td>A</td>
+	</tr><tr>
+		<td>377</td><td>NAPCO DRILLING DBA NORTHERN ARIZONA PUMP, INC.</td><td>PO BOX 252</td><td>&nbsp;</td><td>CORNVILLE</td><td>AZ</td><td>86325-0252</td><td>(928) 634-4978</td><td>R-53 & A-4</td><td>NATHAN S. WHITE</td><td>A</td>
+	</tr><tr>
+		<td>823</td><td>NATIONAL EWP, INC.</td><td>3707 MANZANITA LN</td><td>&nbsp;</td><td>ELKO</td><td>NV</td><td>89801-2606</td><td>(775) 753-7355</td><td>A-4</td><td> TJ GREEN, & JEFF HACKING</td><td>A</td>
+	</tr><tr>
+		<td>587</td><td>NELSON DRILLING</td><td>7850 N SILVERBELL RD STE 114 PMB 304</td><td>&nbsp;</td><td>TUCSON</td><td>AZ</td><td>85743-8270</td><td>(520) 682-8592</td><td>R-53 & A-4</td><td>RICHARD  NELSON</td><td>A</td>
+	</tr><tr>
+		<td>917</td><td>NEXTGEN WATER WELL SERVICE LLC</td><td>300 E 7TH AVE</td><td>&nbsp;</td><td>EAGAR</td><td>AZ</td><td>85925-9793</td><td>(432) 813-8704</td><td>CR-53</td><td>CODY MYERS</td><td>A</td>
+	</tr><tr>
+		<td>644</td><td>NICKLAUS ENGINEERING, INC.</td><td>1851 W 24TH ST STE 101</td><td>&nbsp;</td><td>YUMA</td><td>AZ</td><td>85364-6104</td><td>(928) 344-8374</td><td>"A"</td><td>MICHAEL L. DANIEL</td><td>A</td>
+	</tr><tr>
+		<td>583</td><td>NIELSEN WELL DRILLING & SERVICE, LLC</td><td>PO BOX 2819</td><td>&nbsp;</td><td>ST. JOHNS</td><td>AZ</td><td>85936-2819</td><td>(928) 337-4553</td><td>R-53 & A-4</td><td>FRED NIELSEN</td><td>A</td>
+	</tr><tr>
+		<td>953</td><td>O'KEEFE DRILLING COMPANY, INC.</td><td>PO BOX 3810</td><td>&nbsp;</td><td>BUTTE</td><td>MT</td><td>59702-3810</td><td>(406) 494-3310</td><td>&nbsp;</td><td>O'KEEFE DRILLING COMPANY, INC.</td><td>A</td>
+	</tr><tr>
+		<td>4</td><td>ODOM'S,  INC.</td><td>8405 S 274TH AVE</td><td>&nbsp;</td><td>BUCKEYE</td><td>AZ</td><td>85326-5237</td><td>(623) 386-3618</td><td>A-16</td><td>ERNEST R. PARKER</td><td>A</td>
+	</tr><tr>
+		<td>860</td><td>PACIFIC COAST WELL DRILLING, INC.</td><td>3880 RUTH WAY</td><td>&nbsp;</td><td>PASO ROBLES</td><td>CA</td><td>93446-5974</td><td>(805) 434-5543</td><td>A-4</td><td>TYSON DAVIS</td><td>A</td>
+	</tr><tr>
+		<td>843</td><td>PALOMA IRRIGATION & DRAINAGE DISTRICT</td><td>38401 WEST I-8, BOX 175</td><td>&nbsp;</td><td>GILA BEND</td><td>AZ</td><td>85337</td><td>602-819-0344</td><td>EXEMPT</td><td>KENNETH M. PORTER</td><td>A</td>
+	</tr><tr>
+		<td>888</td><td>PANTERRA ENERGY, LLC</td><td>632 CHERRY ST</td><td>&nbsp;</td><td>FORT MORGAN</td><td>CO</td><td>80701-3894</td><td>(970) 420-1210</td><td>A-4</td><td>SKYLER WILSON</td><td>A</td>
+	</tr><tr>
+		<td>841</td><td>PATAGONIA TRADING COMPANY, LLC</td><td>PO BOX 232</td><td>&nbsp;</td><td>SONOITA</td><td>AZ</td><td>85637-0232</td><td>(520) 455-5099</td><td>CR-53</td><td>DENNY HUBBELL</td><td>A</td>
+	</tr><tr>
+		<td>933</td><td>PREMIER DRILLING</td><td>2021 MEADOW RIDGE DR</td><td>&nbsp;</td><td>ELKO</td><td>NV</td><td>89801</td><td>(208) 520-4451</td><td>A-4</td><td>MATTHEW CHARLES FISHER</td><td>A</td>
+	</tr><tr>
+		<td>869</td><td>PRIDE DRILLING, LLC</td><td>1210 E. MORRIS LANE</td><td>&nbsp;</td><td>BENSON</td><td>AZ</td><td>85602</td><td>(520) 250-0078</td><td>R-53 &  A-4</td><td>DAVID E. BROTT</td><td>A</td>
+	</tr><tr>
+		<td>947</td><td>PRISBREY DRILLING LLC</td><td>PO BOX 911145</td><td>&nbsp;</td><td>ST. GEORGE</td><td>UT</td><td>84791</td><td>(435) 632-1340</td><td>CR-53</td><td>CHRIS PRISBREY</td><td>A</td>
+	</tr><tr>
+		<td>374</td><td>Q MOUNTAIN DRILLING</td><td>PO BOX 491</td><td>&nbsp;</td><td>BOUSE</td><td>AZ</td><td>85325-0491</td><td>(928) 851-2537</td><td>R-53 & A-4</td><td>CURTIS COOPER</td><td>A</td>
+	</tr><tr>
+		<td>689</td><td>R. DAVIS DRILLING, LLC</td><td>PO BOX 1427</td><td>&nbsp;</td><td>SPRINGERVILLE</td><td>AZ</td><td>85938-1427</td><td>(928) 245-0230</td><td>C-53, R-53,A-16</td><td>RICHIE DAVIS</td><td>A</td>
+	</tr><tr>
+		<td>913</td><td>RCS DRILLING LLC</td><td>1565 E OXFORD LN</td><td>&nbsp;</td><td>GILBERT</td><td>AZ</td><td>85295</td><td>480-540-2485</td><td>A-4</td><td>ROBERT COLBATH</td><td>A</td>
+	</tr><tr>
+		<td>914</td><td>REI DRILLING</td><td>250 W BERGER LN</td><td>&nbsp;</td><td>SALT LAKE CITY</td><td>UT</td><td>84107-4770</td><td>(801) 281-2880</td><td>A-4 </td><td>ROBERT HOGG</td><td>A</td>
+	</tr><tr>
+		<td>944</td><td>RELIABLE WATER WELL SERVICES LLC</td><td>1973 E. SAN PEDRO STREET</td><td>&nbsp;</td><td>SAN LUIS</td><td>AZ</td><td>85349</td><td>(928) 919-0173</td><td>R-53</td><td>ERICK LOPEZ NUNEZ</td><td>A</td>
+	</tr><tr>
+		<td>867</td><td>RELIANT WELL DRILLING & PUMP CORP., INC.</td><td>6341 W TRAILS END RD</td><td>&nbsp;</td><td>TUCSON</td><td>AZ</td><td>85745-9636</td><td>(520) 276-0913</td><td>CR-53 & A-4</td><td>CLARK P. VAUGHT</td><td>A</td>
+	</tr><tr>
+		<td>855</td><td>RESILIENT DRILLING SERVICES, LLC</td><td>2615 S 40TH ST STE B</td><td>&nbsp;</td><td>PHOENIX</td><td>AZ</td><td>85034-7205</td><td>(602) 218-8848</td><td>A-4</td><td>GREG JONES</td><td>A</td>
+	</tr><tr>
+		<td>659</td><td>RUEN DRILLING, INC.</td><td>PO BOX 267</td><td>&nbsp;</td><td>CLARK FORK</td><td>ID</td><td>83811-0267</td><td>(208) 266-1151</td><td>A-4</td><td>JAMES ERDMAN & TOM VESETH</td><td>A</td>
+	</tr><tr>
+		<td>251</td><td>SALISBURY & ASSOCIATES, INC.</td><td>PO BOX 3525</td><td>&nbsp;</td><td>SPOKANE</td><td>WA</td><td>99220-3525</td><td>(509) 935-0720</td><td>A-4</td><td>RON PATTERSON</td><td>A</td>
+	</tr><tr>
+		<td>298</td><td>SALT RIVER PROJECT DBA S.R.P.</td><td>PO BOX 52025</td><td>&nbsp;</td><td>PHOENIX</td><td>AZ</td><td>85072-2025</td><td>(602) 809-0695</td><td>EXEMPT</td><td>JEFF DADOW & NATHANAEL REVELES</td><td>A</td>
+	</tr><tr>
+		<td>244</td><td>SHUCK DRILLING COMPANY, LLC</td><td>18927 S AVENUE 3 E</td><td>&nbsp;</td><td>YUMA</td><td>AZ</td><td>85365-4718</td><td>(928) 726-5153</td><td>R-53 & A-4</td><td>D. SHUCK & D. HOFSTETTER</td><td>A</td>
+	</tr><tr>
+		<td>796</td><td>SHUMWAY EXPLORATION, LLC</td><td>1331 S 5425 W</td><td>&nbsp;</td><td>CEDAR CITY</td><td>UT</td><td>84720-9270</td><td>(435) 590-1912</td><td>R-53 & A-4</td><td>GARY SHUMWAY</td><td>A</td>
+	</tr><tr>
+		<td>195</td><td>SIMMONS DRILLING, INC.</td><td>PO BOX 2011</td><td>&nbsp;</td><td>COTTONWOOD</td><td>AZ</td><td>86326-2011</td><td>(928) 646-0371</td><td>R-53</td><td>WILLIAM S. SIMMONS</td><td>A</td>
+	</tr><tr>
+		<td>643</td><td>SKYTECH DRILLING</td><td>PO BOX 41881</td><td>&nbsp;</td><td>PHOENIX</td><td>AZ</td><td>85080-1881</td><td>(623) 580-4984</td><td>R-53 & A-4</td><td>B.J. & DUSTIN WASHBURN</td><td>A</td>
+	</tr><tr>
+		<td>852</td><td>SMYTH INDUSTRIES, INC.</td><td>4010 E ILLINOIS ST</td><td>&nbsp;</td><td>TUCSON</td><td>AZ</td><td>85714-2170</td><td>(520) 750-8719</td><td>"A" </td><td>DON SAWADE</td><td>A</td>
+	</tr><tr>
+		<td>872</td><td>SOUTH BOUND DRILLING, LLC</td><td>18250 W INDIGO BRUSH RD</td><td>&nbsp;</td><td>GOODYEAR</td><td>AZ</td><td>85338-3661</td><td>(623) 693-4142</td><td>CR-53, A-16</td><td>JOHN W. SHELTON</td><td>A</td>
+	</tr><tr>
+		<td>200</td><td>SOUTHLAND WELL DRILLING</td><td>38916 W SALOME HWY</td><td>&nbsp;</td><td>TONOPAH</td><td>AZ</td><td>85354-7344</td><td>(623) 386-3550</td><td>R-53, A-4</td><td>BILL SCHAUT</td><td>A</td>
+	</tr><tr>
+		<td>845</td><td>SOUTHLANDS ENGINEERING, LLC</td><td>PO BOX 65017</td><td>&nbsp;</td><td>TUCSON</td><td>AZ</td><td>85728-5017</td><td>(520) 940-0472</td><td>A-4</td><td>DAVID MWEWA</td><td>A</td>
+	</tr><tr>
+		<td>731</td><td>SOUTHWEST REMEDIATION DBA DDC, LLC</td><td>10777 E ACOMA DR</td><td>&nbsp;</td><td>SCOTTSDALE</td><td>AZ</td><td>85255-8599</td><td>(602) 549-0925</td><td>A-4</td><td>DAN BLAES</td><td>A</td>
+	</tr><tr>
+		<td>945</td><td>ST JOHNS WELL DRILLING COMPANY LLP</td><td>4334 N. WILDWOOD ROAD</td><td>&nbsp;</td><td>FLORENCE</td><td>AZ</td><td>85132</td><td>(520) 840-3274</td><td>&nbsp;</td><td>SAMUAL MIXIS</td><td>A</td>
+	</tr><tr>
+		<td>725</td><td>ST. CLAIR DRILLING AND PUMP SERVICE</td><td>PO BOX 1078</td><td>&nbsp;</td><td>COCHISE</td><td>AZ</td><td>85606-1078</td><td>(520) 400-0738</td><td>R-53 & A-4</td><td>RON ST. CLAIR</td><td>A</td>
+	</tr><tr>
+		<td>892</td><td>STAR WATER TECHNOLOGIES, LLC</td><td>9155 S WOODWALKER LN</td><td>&nbsp;</td><td>TUCSON</td><td>AZ</td><td>85736-2106</td><td>(520) 649-5213</td><td>CR-53</td><td>JOE CLEMENTS</td><td>A</td>
+	</tr><tr>
+		<td>314</td><td>STEWART BROS DRILLING CO DBA SBQ2 LLC</td><td>PO BOX 2067</td><td>&nbsp;</td><td>MILAN</td><td>NM</td><td>87021-2067</td><td>(505) 287-2986</td><td>A-4</td><td>RANDAL STEWART</td><td>A</td>
+	</tr><tr>
+		<td>701</td><td>SUNBELT DRILLING, LLC</td><td>1341 E OLD WEST HWY</td><td>&nbsp;</td><td>APACHE JUNCTION</td><td>AZ</td><td>85119-6551</td><td>(602) 376-1123</td><td>R-53 & A-4</td><td>ROD BEEMAN, SERGIO CONTRERAS</td><td>A</td>
+	</tr><tr>
+		<td>883</td><td>SUPERIOR DRILLING LLC</td><td>19445 W INDIAN SCHOOL RD STE 102 PMB 218</td><td>&nbsp;</td><td>LITCHFIELD PARK</td><td>AZ</td><td>85340-4670</td><td>(602) 290-7332</td><td>A-4, CR-53</td><td>BRYCE WALLACE</td><td>A</td>
+	</tr><tr>
+		<td>133</td><td>TANNER WELL SERVICE, LLC</td><td>PO BOX 2234</td><td>&nbsp;</td><td>SIERRA VISTA</td><td>AZ</td><td>85636-2234</td><td>(520) 378-1606</td><td>R-53 & A-4</td><td>MATT TANNER</td><td>A</td>
+	</tr><tr>
+		<td>885</td><td>THE WELL GUYS, LLC</td><td>PO 1422</td><td>&nbsp;</td><td>DEWEY</td><td>AZ</td><td>86327</td><td>(480) 536-5828</td><td>CR-53</td><td>MARTIN J. CRAVEN, JR.</td><td>A</td>
+	</tr><tr>
+		<td>850</td><td>TIMBERLINE DRILLING, INC.</td><td>11784 N REED RD</td><td>&nbsp;</td><td>HAYDEN</td><td>ID</td><td>83835-8306</td><td>(208) 818-0588</td><td>A-4 & C-53</td><td>THOMAS RICHARDSON, JULIAN COLLINS </td><td>A</td>
+	</tr><tr>
+		<td>915</td><td>TISCHLER INVESTMENTS LLC DBA: CET WELL DRILLING</td><td>PO BOX 268</td><td>&nbsp;</td><td>CHINO VALLEY</td><td>AZ</td><td>86323-0268</td><td>(928) 420-6639</td><td>CR-53</td><td>JACOB TISCHLER</td><td>A</td>
+	</tr><tr>
+		<td>137</td><td>TITAN DRILLING, LLC</td><td>PO BOX 1912</td><td>&nbsp;</td><td>BENSON</td><td>AZ</td><td>85602-1912</td><td>(520) 603-1161</td><td>R-53 & A-4</td><td>JOHN COKELY</td><td>A</td>
+	</tr><tr>
+		<td>792</td><td>TONATEC EXPLORATION,  LLC</td><td>1323 SOUTH 250 EAST</td><td>&nbsp;</td><td>MAPLETON</td><td>UT</td><td>84664-3521</td><td>801-310-1628</td><td>A-4</td><td>STEPHEN R. BILLS AND PAUL HORSHEL </td><td>A</td>
+	</tr><tr>
+		<td>363</td><td>TORRENT RESOURCES, INC.</td><td>1509 E ELWOOD ST</td><td>&nbsp;</td><td>PHOENIX</td><td>AZ</td><td>85040-1330</td><td>(602) 268-0785</td><td>B-4  &  "A"</td><td>DUSTIN M. REYNOLDS</td><td>A</td>
+	</tr><tr>
+		<td>919</td><td>TRIPLE L WELL AND PUMP SERVICE</td><td>2566 N CALLE PRIMERO</td><td>&nbsp;</td><td>HUACHUCA CITY</td><td>AZ</td><td>85616-8214</td><td>(520) 456-9377</td><td>CR-53</td><td>CODY MITCHELL LOHSE</td><td>A</td>
+	</tr><tr>
+		<td>938</td><td>TRUE NORTH DRILLING LLC</td><td>29059 N CALCITE WAY</td><td>&nbsp;</td><td>SAN TAN VALLEY</td><td>AZ</td><td>85143</td><td>(435) 572-5098</td><td>A-4</td><td>JOHNNIE NOBLE</td><td>A</td>
+	</tr><tr>
+		<td>367</td><td>U.S. BUREAU OF RECLAMATION - YUMA</td><td>7301 S CALLE AGUA SALADA</td><td>&nbsp;</td><td>YUMA</td><td>AZ</td><td>85364-9763</td><td>(928) 503-3072</td><td>EXEMPT</td><td> FIRASEK, TELLEZ & NELSON</td><td>A</td>
+	</tr><tr>
+		<td>238</td><td>U.S. GEOLOGICAL SURVEY - LAS VEGAS</td><td>3595 E PATRICK LN STE 100</td><td>&nbsp;</td><td>LAS VEGAS</td><td>NV</td><td>89120-6220</td><td>(720) 272-6676</td><td>EXEMPT</td><td>ROBERT LEININGER</td><td>A</td>
+	</tr><tr>
+		<td>181</td><td>UNITED DRILLING, INC.</td><td>2521 ELFEGO RD NW</td><td>&nbsp;</td><td>ALBUQUERQUE</td><td>NM</td><td>87107-3010</td><td>(505) 232-7730</td><td>A-4 </td><td>UNITED DRILLING, INC.</td><td>A</td>
+	</tr><tr>
+		<td>141</td><td>UNIVERSAL DRILLING, INC.</td><td>PO BOX 1027</td><td>&nbsp;</td><td>WICKENBURG</td><td>AZ</td><td>85358-1027</td><td>(928) 684-2886</td><td>R-53 &  A-4</td><td>DOUG ROBERTS</td><td>A</td>
+	</tr><tr>
+		<td>341</td><td>VALLEY WELL DRILLING</td><td>PO BOX 637</td><td>&nbsp;</td><td>TOPOCK</td><td>AZ</td><td>86436-0637</td><td>(928) 768-7111</td><td>R-53 & C-53</td><td>MICHAEL H. EXSTED, SR.</td><td>A</td>
+	</tr><tr>
+		<td>877</td><td>VERDAD GROUP, LLC</td><td>PO BOX 85033</td><td>&nbsp;</td><td>TUCSON</td><td>AZ</td><td>85754-5033</td><td>(520) 743-8553</td><td>A-4</td><td>RUSSELL HUNTER</td><td>A</td>
+	</tr><tr>
+		<td>868</td><td>W/W SERVICES, LLC</td><td>1282 N FORT GRANT RD</td><td>&nbsp;</td><td>WILLCOX</td><td>AZ</td><td>85643-3175</td><td>(928) 651-0147</td><td>CR-53</td><td>KYLE LEE WORTMAN</td><td>A</td>
+	</tr><tr>
+		<td>283</td><td>WAY'S DRILLING, INC.</td><td>PO BOX 130</td><td>&nbsp;</td><td>MORRISTOWN</td><td>AZ</td><td>85342-0130</td><td>(602) 397-3745</td><td>R-53 & A-4</td><td>BOB WAY & ROBERT WAY</td><td>A</td>
+	</tr><tr>
+		<td>949</td><td>WAYFINDER DRILLING LTD</td><td>121 WOODLAND AVENUE , SUITE140</td><td>&nbsp;</td><td>RENO</td><td>NV</td><td>89523</td><td>(604) 629-9427</td><td>A-4</td><td>TRUDI WHITE </td><td>A</td>
+	</tr><tr>
+		<td>272</td><td>WEBER DRILLING, INC.</td><td>PO BOX 1419</td><td>&nbsp;</td><td>BENSON</td><td>AZ</td><td>85602-1419</td><td>(520) 720-4800</td><td>R-53 & A-4</td><td>DONALD E. WEBER, JASON MANGUM </td><td>A</td>
+	</tr><tr>
+		<td>215</td><td>WEBER WATER RESOURCES, LLC</td><td>7551 S ATWOOD</td><td>&nbsp;</td><td>MESA</td><td>AZ</td><td>85212-5528</td><td>(480) 961-1141</td><td>KA</td><td>MARTY WEBER </td><td>A</td>
+	</tr><tr>
+		<td>889</td><td>WELL INDUSTRIES, INC.</td><td>3282 STATE HIGHWAY 32</td><td>&nbsp;</td><td>CHICO</td><td>CA</td><td>95973-8735</td><td>(530) 891-5545</td><td>CR-53</td><td>CODY STILWELL</td><td>A</td>
+	</tr><tr>
+		<td>480</td><td>WELLTON-MOHAWK IRRIGATION AND DRAINAGE DISTRICT</td><td>30570 E WELLTON MOHAWK DR</td><td>&nbsp;</td><td>WELLTON</td><td>AZ</td><td>85356-6500</td><td>(928) 785-3351</td><td>EXEMPT</td><td>JOE JIMENEZ</td><td>A</td>
+	</tr><tr>
+		<td>655</td><td>WESTERN DRILLING COMPANY, LLC</td><td>327 N 1ST ST</td><td>&nbsp;</td><td>BUCKEYE</td><td>AZ</td><td>85326-2303</td><td>(623) 327-1200</td><td>A-4, CR-53,R-53</td><td>WILLIAM  WOOD, CHAD CAHILL</td><td>A</td>
+	</tr><tr>
+		<td>884</td><td>WESTERN HYDRO ENGINEERING, LLC</td><td>3005 N COCHISE STRONGHOLD RD</td><td>&nbsp;</td><td>COCHISE</td><td>AZ</td><td>85606-8738</td><td>(520) 826-1164</td><td>CR-53</td><td>BUDDY RATLIFF, JOSH MCMANUS</td><td>A</td>
+	</tr><tr>
+		<td>857</td><td>WILDCAT DRILLING, INC.</td><td>4020 E MADISON ST</td><td>&nbsp;</td><td>PHOENIX</td><td>AZ</td><td>85034-3028</td><td>(602) 689-0228</td><td>A-4</td><td>DUSTIN MILLER</td><td>A</td>
+	</tr><tr>
+		<td>780</td><td>WILLIS MANAGEMENT ENTERPRISES, INC DBA WILLIS DRLG & PUMP</td><td>1351 S MAIN ST</td><td>&nbsp;</td><td>SNOWFLAKE</td><td>AZ</td><td>85937-5617</td><td>(928) 536-4414</td><td>CR-53 & A-4</td><td>CHRISTOPHER WILLIS</td><td>A</td>
+	</tr><tr>
+		<td>741</td><td>WISDOM  DRILLING, LLC</td><td>PO BOX 392</td><td>&nbsp;</td><td>YOUNG</td><td>AZ</td><td>85554-0392</td><td>(928) 978-0252</td><td>R-53</td><td>EDWARD E. WISDOM</td><td>A</td>
+	</tr><tr>
+		<td>78</td><td>YELLOW JACKET DRILLING SERVICES, LLC</td><td>3922 E UNIVERSITY DR STE 1</td><td>&nbsp;</td><td>PHOENIX</td><td>AZ</td><td>85034-2208</td><td>(602) 453-3252</td><td>R-53 & A-4</td><td>R LEBLANC, D TRUAX , E BRUE, D MESSINA </td><td>A</td>
+	</tr><tr>
+		<td>151</td><td>YUMA PUMP & DRILLING COMPANY</td><td>PO BOX 728</td><td>&nbsp;</td><td>YUMA</td><td>AZ</td><td>85366-2332</td><td>(928) 341-1446</td><td>R-53 & A-4</td><td>CHUCK. POORBAUGH</td><td>A</td>
+	</tr><tr>
+		<td>185</td><td>ZIM INDUSTRIES, INC. DBA BAKERSFIELD WELL & PUMP CO</td><td>4532 E JEFFERSON AVE</td><td>&nbsp;</td><td>FRESNO</td><td>CA</td><td>93725-9807</td><td>(559) 834-1551</td><td>"A"</td><td>ROBERT ZIMMERER</td><td>A</td>
+	</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr>
+	</tfoot>
+</table></body></html>

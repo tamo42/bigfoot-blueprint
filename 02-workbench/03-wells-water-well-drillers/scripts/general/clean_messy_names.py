@@ -32,10 +32,16 @@ def clean_name(original_name):
     
     return name
 
+import argparse
+
 def main():
-    db_path = r'C:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\03-wells-water-well-drillers\data\water_well_directory.sqlite'
+    parser = argparse.ArgumentParser(description="Clean messy names in the database.")
+    parser.add_argument('--db', type=str, default=r'C:\Users\tamo4\git\nhq-bigfoot-blueprint\02-workbench\03-wells-water-well-drillers\data\water_well_directory.sqlite', help="Path to SQLite DB")
+    args = parser.parse_args()
+    
+    db_path = args.db
     if not os.path.exists(db_path):
-        print("Database not found!")
+        print(f"Database not found at: {db_path}")
         return
         
     conn = sqlite3.connect(db_path)

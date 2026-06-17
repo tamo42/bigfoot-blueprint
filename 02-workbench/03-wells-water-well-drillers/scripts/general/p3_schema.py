@@ -72,6 +72,7 @@ def get_schema_columns():
         ("manual_lat", "REAL"),
         ("manual_lng", "REAL"),
         ("reviews_json", "TEXT"),
+        ("review_analysis_json", "TEXT"),
 
         # Layer 6: Data Freshness & Source Tracking
         ("data_freshness", "TEXT"),

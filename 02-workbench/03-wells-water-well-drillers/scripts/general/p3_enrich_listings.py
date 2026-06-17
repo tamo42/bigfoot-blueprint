@@ -311,8 +311,9 @@ def main():
             "georgia": "GA", "michigan": "MI", "new york": "NY", "new_york": "NY",
             "north carolina": "NC", "north_carolina": "NC", "ohio": "OH",
             "pennsylvania": "PA", "texas": "TX", "virginia": "VA",
+            "arizona": "AZ",
             "ga": "GA", "mi": "MI", "ny": "NY", "nc": "NC", "oh": "OH",
-            "pa": "PA", "tx": "TX", "va": "VA"
+            "pa": "PA", "tx": "TX", "va": "VA", "az": "AZ"
         }
         state_abbrev = state_map.get(state.lower(), state.upper())
         
