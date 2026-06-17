@@ -12,12 +12,6 @@ As per System Rule **R-131**, every script is documented below.
 * **Inputs:** Domain name strings (passed via CLI arguments).
 * **Outputs:** Availability status printed to the console (e.g., `TAKEN`, `AVAILABLE`, `RATE_LIMITED`).
 
-### `export_sample.py`
-* **What it does:** Database exporter that pulls a single `APPROVED` article from the local queue database and dumps it into a sample Markdown file with frontmatter.
-* **Why it does it:** Allows for quick, manual inspection of the LLM-generated article's format and quality without having to push it fully to an Astro directory repository.
-* **Inputs:** Local SQLite database (`cache/content_queue.db`).
-* **Outputs:** Markdown file saved locally at `cache/sample_post.md`.
-
 ### `newsjacking_engine.py`
 * **What it does:** The core LLM content engine. It fetches Google News RSS feeds, extracts the raw HTML content using Trafilatura, and uses the Gemini API to rewrite the articles for niche directory blogs.
 * **Why it does it:** To automatically generate high-quality, topical "thin-content armor" and blog posts for the directory sites to improve SEO.
@@ -36,14 +30,20 @@ As per System Rule **R-131**, every script is documented below.
 * **Inputs:** Seed listings (from CSV or KV store) and the `APIFY_API_TOKEN`.
 * **Outputs:** Enriched JSON/CSV datasets returned from the Apify cloud.
 
+### `p4_enrich_reviews_gemini.py`
+* **What it does:** An advanced LLM batch enrichment script that fetches unrated directory contractors from an SQLite database, sends their raw Google Reviews text to the Gemini Flash 2.5 API for structured sentiment analysis, and assigns 1-10 "Driller Scores" across multiple dimensions.
+* **Why it does it:** To programmatically transform raw, unstructured text reviews into actionable, numeric data points to populate directory scorecards and rank businesses.
+* **Inputs:** Target SQLite database containing raw contractor reviews.
+* **Outputs:** JSON-structured analysis payloads inserted directly back into the SQLite database.
+
 ### `scrape_powerbi_grid_template.py`
 * **What it does:** A generic Playwright async script template used as a starter file for scraping virtualized, client-rendered PowerBI dashboards.
 * **Why it does it:** Saved as a potential large resource template for multiple future Bigfoot projects, as many state regulatory agencies embed public registries inside PowerBI grids which defeat standard HTTP request scrapers.
 * **Inputs:** A target `POWERBI_EMBED_URL`.
 * **Outputs:** Extracted text arrays mapped into a programmatic dataset.
 
-### `test_news_rss_pull.py`
-* **What it does:** A localized testing sandbox to verify the RSS XML extraction and decoding logic.
-* **Why it does it:** To safely test Python dependencies (like `trafilatura` and `googlenewsdecoder`) and specific Boolean search queries before committing them to the heavy, token-consuming `newsjacking_engine.py`.
-* **Inputs:** Hardcoded niches and targeted Boolean Google News queries.
-* **Outputs:** Console prints containing the parsed article titles, original links, and raw extracted text.
+### `supervisor.py`
+* **What it does:** A Python-based process watchdog that autonomously manages long-running scripts (like `p4_enrich_reviews_gemini.py`) in batched intervals. It captures real-time stdout streams, enforces strict process execution timeouts, and gracefully auto-kills and restarts child processes if they hang on network retry loops.
+* **Why it does it:** To fully automate overnight/unattended pipeline execution by bypassing terminal security confirmations and silently healing transient network errors (e.g. Google SDK 503 errors).
+* **Inputs:** A target Python script and batch limits.
+* **Outputs:** Real-time terminal streams and automated process recovery.

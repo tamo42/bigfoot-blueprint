@@ -50,9 +50,9 @@ def enrich_state_apify(db_path, state_name, limit):
         state_abbrev = state_map.get(state_name.lower(), state_name.upper())
         
     if state_abbrev:
-        c.execute("SELECT id, name, city, state FROM well_contractors WHERE (google_place_id IS NULL OR google_place_id = '') AND UPPER(state) = ?", (state_abbrev,))
+        c.execute("SELECT id, name, city, state FROM well_contractors WHERE (google_place_id IS NULL OR google_place_id = '' OR phone_number IS NULL OR phone_number = '') AND UPPER(state) = ?", (state_abbrev,))
     else:
-        c.execute("SELECT id, name, city, state FROM well_contractors WHERE google_place_id IS NULL OR google_place_id = ''")
+        c.execute("SELECT id, name, city, state FROM well_contractors WHERE (google_place_id IS NULL OR google_place_id = '' OR phone_number IS NULL OR phone_number = '')")
         
     rows = c.fetchall()
     conn.close()
@@ -145,6 +145,15 @@ def enrich_state_apify(db_path, state_name, limit):
     try:
         items = requests.get(dataset_url, timeout=30).json()
         print(f"[+] Retrieved {len(items)} items from Apify dataset.")
+        
+        # Save raw extraction payload to cache for data engineering best practices
+        cache_dir = os.path.join(workspace_root, "cache")
+        os.makedirs(cache_dir, exist_ok=True)
+        raw_cache_path = os.path.join(cache_dir, f"apify_raw_dataset_{dataset_id}.json")
+        with open(raw_cache_path, 'w', encoding='utf-8') as f:
+            json.dump(items, f, indent=4)
+        print(f"[*] Saved raw Apify dataset payload to {raw_cache_path}")
+        
     except Exception as e:
         print(f"[-] Failed to download dataset items: {e}")
         return
@@ -183,6 +192,7 @@ def enrich_state_apify(db_path, state_name, limit):
         # Extract fields
         place_id = item.get("placeId")
         website = item.get("website")
+        phone = item.get("phoneUnformatted") or item.get("phone")
         rating = item.get("totalScore") or item.get("stars") or 0.0
         reviews_count = item.get("reviewsCount") or 0
         
@@ -217,6 +227,7 @@ def enrich_state_apify(db_path, state_name, limit):
             UPDATE well_contractors
             SET google_place_id = ?,
                 website_url = ?,
+                phone_number = ?,
                 google_rating = ?,
                 google_review_count = ?,
                 manual_lat = ?,
@@ -235,6 +246,7 @@ def enrich_state_apify(db_path, state_name, limit):
         ''', (
             place_id,
             website,
+            phone,
             rating,
             reviews_count,
             lat,
