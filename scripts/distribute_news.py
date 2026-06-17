@@ -86,6 +86,41 @@ def main():
             filepath = os.path.join(target_dir, f"{slug}.md")
             
             try:
+                # Update/ensure YAML frontmatter with the actual distribution date/time
+                import datetime
+                current_time = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+                
+                # Check if frontmatter exists and construct if missing
+                if not markdown.strip().startswith("---"):
+                    # Extract title from the first H1 if present
+                    h1_match = re.search(r"^#\s+(.+)$", markdown, re.MULTILINE)
+                    title_val = h1_match.group(1).strip() if h1_match else title
+                    title_val = title_val.strip('"\'')
+                    
+                    # Try to get reasoning from score_json for a summary
+                    summary_val = "Stay informed with the latest updates and critical insights for your industry."
+                    try:
+                        cursor.execute("SELECT editor_score_json FROM articles WHERE id = ?", (db_id,))
+                        score_row = cursor.fetchone()
+                        if score_row and score_row[0]:
+                            score_data = json.loads(score_row[0])
+                            summary_val = score_data.get("reasoning", summary_val)
+                    except Exception:
+                        pass
+                    
+                    frontmatter = f"---\ntitle: {json.dumps(title_val)}\npubDate: {current_time}\nauthor: \"Industry Analyst\"\nsummary: {json.dumps(summary_val)}\n---\n\n"
+                    markdown = frontmatter + markdown
+                else:
+                    # Frontmatter exists. Ensure pubDate is set to current time.
+                    if "pubDate:" in markdown:
+                        markdown = re.sub(r"pubDate:\s*[^\n]+", f"pubDate: {current_time}", markdown)
+                    else:
+                        parts = markdown.split("---", 2)
+                        if len(parts) >= 3:
+                            frontmatter = parts[1]
+                            frontmatter += f"\npubDate: {current_time}\n"
+                            markdown = f"---\n{frontmatter}---{parts[2]}"
+                
                 with open(filepath, "w", encoding="utf-8") as f:
                     f.write(markdown)
                 print(f"[DISTRIBUTE] Pushed article (Score: {max_score}) to: {filepath}")
