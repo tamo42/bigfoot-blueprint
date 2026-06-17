@@ -10,6 +10,7 @@ This registry tracks the status, configuration, domains, and metrics of all nich
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **01-GABAR** | Georgia Closing Lawyers | Real Estate Closing Attorneys | GA, USA | [gaclosinglawyers.com](https://gaclosinglawyers.com) | `tamo42/gaclosinglawyers.com` | Railway | **Stage 1** |
 | **02-SEPTIC** | Georgia Grease Trap | Septic Pumping & Grease Haulers | GA, USA | [georgiagreasetrap.com](https://georgiagreasetrap.com) | `tamo42/georgiagreasetrap.com` | Railway (Auto Deploy) | **Stage 1** |
+| **03-WELLS** | US Well Drillers | Water Well Drillers | USA | [uswelldrillers.com](https://uswelldrillers.com) | `tamo42/uswelldrillers.com` | Railway | **Stage 1** |
 
 ---
 
@@ -23,7 +24,6 @@ Development follows the **4-Phase Agent-Accelerated Factory Workflow**:
 
 | Directory ID | Name | Target Niche | Region | Current Phase | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **03-WELLS** | *TBD* | Water Well Drillers | GA, USA | **Phase 2 (Scraping)** | Located in `02-workbench/03-wells-water-well-drillers/` |
 | **04-HVAC-HUB** | *TBD* | HVAC Commercial Hub | Atlanta, GA | **Phase 2 (Prototyping)** | Located in `02-workbench/04-hvac-hub-hvac-commercial-hub/` |
 | **05-NOTARIES** | *TBD* | Mobile Notaries & Loan Signing Agents | TBD | **Phase 1 (Intent Mapping)** | Located in `02-workbench/05-notaries-mobile-notaries/`. Managed by Rodrigo. |
 
@@ -39,6 +39,7 @@ Directories listed below are in Stage 1 (Static SQLite + Astro) and are being tr
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **01-GABAR** | 6/14/26 | 5438 | 0.0% | 0 | 0 | 0 | **No** |
 | **02-SEPTIC** | 6/13/26 | 714 | 0.0% | 0 | 0 | 0 | **No** |
+| **03-WELLS** | 6/16/26 | TBD | 0.0% | 0 | 0 | 0 | **No** |
 
 ---
 
