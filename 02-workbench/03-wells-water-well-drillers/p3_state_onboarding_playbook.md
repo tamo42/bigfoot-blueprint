@@ -33,3 +33,30 @@ Perform all enrichment tasks directly on the isolated state database (`{state}_w
 3. **Automated Content Audit**: Run `verify_pages.py` to sample 10 counties per state and confirm all features (JSON-LD schema, listings, Driller Scores, EPA data, and map iframes) are rendering correctly.
 4. **Git Commit & Push**: Stage, commit, and push changes in both repositories to finalize tracking.
 
+---
+
+## ⏱️ Time to Completion (TTC) Benchmarking & Active Monitoring
+
+Before launching the enrichment pipeline, calculate the expected execution baseline using the formulas below. Use this baseline to configure automated monitors and trigger active overrides if performance deviates.
+
+### 1. Baseline Projection Formula
+Map the workload using the primary variables from the state dataset:
+* $R$: Number of raw regulatory database/completion log records.
+* $V$: Number of target drilling vendors (companies).
+* $W$: Crawlable website ratio (percentage of vendors with crawlable sites; baseline $\approx 50\%$ or $0.5$).
+* $K$: Review scorecard ratio (percentage of vendors with Google reviews; baseline $\approx 30\%$ or $0.3$).
+
+$$\text{Projected TTC (seconds)} = (R \times 0.001) + V \times [0.5 + 1.25W + 1.0K] + T_{\text{build}} + 145$$
+
+*Note: $T_{\text{build}} \approx 15\text{s} + (\text{Total Pages} / 600)$.*
+
+### 2. Monitoring & Override Thresholds
+Set timers at **50%, 100%, and 125%** of the calculated TTC. If execution logs diverge from these benchmarks, execute the corresponding action:
+
+| Benchmark | Expected Milestone | Status Check / Override Actions |
+| :--- | :--- | :--- |
+| **50% of TTC** | Apify Places search completed; crawled text files cached; Gemini Q&A loops initiated. | **Verify Logs**: Confirm `apify_raw_dataset_*.json` is created in `/cache` and `crawled_text/` has file updates. If 0 crawls are cached, check network settings. |
+| **100% of TTC** | Gemini listing enrichment complete; Gemini review scorecards (Driller Scores) complete. | **Verify DB**: Open the state SQLite database. If `qa_1_question` count is $< 80\%$ of expected website-eligible records, the Gemini worker pool has stalled. |
+| **125% of TTC** | Database consolidated, appended, build complete, sitemap generated. | **Hard Stop / Manual Override**: If the script has not exited, **something is wrong** (e.g., SQLite connection lock, API quota soft block, or infinite retry loops). **Kill the process immediately**, review the logs, and rerun in a smaller batch size (`--limit`). |
+
+
