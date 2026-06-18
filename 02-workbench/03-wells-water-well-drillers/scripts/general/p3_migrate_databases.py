@@ -97,21 +97,41 @@ def migrate_and_consolidate():
             conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
             
-            # Check if well_contractors or installers_haulers exists
+            # Check if well_contractors or installers_haulers exists and has data
             source_table = None
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='installers_haulers'")
+            has_haulers = cursor.fetchone() is not None
             cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='well_contractors'")
-            if cursor.fetchone():
-                source_table = "well_contractors"
-            else:
-                cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='installers_haulers'")
-                if cursor.fetchone():
+            has_contractors = cursor.fetchone() is not None
+            
+            if has_haulers:
+                cursor.execute("SELECT COUNT(*) FROM installers_haulers")
+                if cursor.fetchone()[0] > 0:
                     source_table = "installers_haulers"
+                    
+            if not source_table and has_contractors:
+                source_table = "well_contractors"
+            elif not source_table and has_haulers:
+                source_table = "installers_haulers"
             
             if not source_table:
                 print(f"    [-] Skipping {filename}: neither well_contractors nor installers_haulers table found.")
                 conn.close()
                 continue
                 
+            # Check for source technician_licenses table
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='technician_licenses'")
+            has_licenses_table = cursor.fetchone() is not None
+            
+            source_licenses = {}
+            if has_licenses_table:
+                cursor.execute("SELECT * FROM technician_licenses")
+                for lr in cursor.fetchall():
+                    comp_id = lr["company_id"]
+                    if comp_id not in source_licenses:
+                        source_licenses[comp_id] = []
+                    source_licenses[comp_id].append(dict(lr))
+
             cursor.execute(f"SELECT * FROM {source_table}")
             rows = cursor.fetchall()
             total_raw_rows += len(rows)
@@ -119,6 +139,7 @@ def migrate_and_consolidate():
             for row in rows:
                 row_dict = dict(row)
                 row_dict["_state_prefix"] = state_prefix
+                row_dict["_source_licenses"] = source_licenses.get(row_dict["id"], [])
                 
                 # Determine grouping key
                 website = clean_website(row_dict.get("website_url"))
@@ -230,28 +251,38 @@ def migrate_and_consolidate():
             
             # Insert child licenses for all rows in the group
             for r in rows_list:
-                # Parse license number & type
-                cert_val = r.get("pumper_certification_level") or r.get("license_number") or ""
-                license_num, license_type = parse_license_details(cert_val)
-                
-                # License holder name:
-                # If name looks like a company name, holder might be empty or company name
-                # If it looks like a person's name, it's the license holder.
-                # To be safe and preserve original names, we insert the row's name as holder
-                license_holder = r.get("name") or ""
-                
-                license_status = r.get("license_status") or "Active"
-                licensing_agency = r.get("licensing_agency") or "State Health Dept"
-                
-                cursor_unified.execute(insert_license_query, (
-                    company_id,
-                    license_holder,
-                    license_num,
-                    license_type,
-                    license_status,
-                    licensing_agency
-                ))
-                inserted_licenses += 1
+                src_lics = r.get("_source_licenses", [])
+                if src_lics:
+                    for sl in src_lics:
+                        cursor_unified.execute(insert_license_query, (
+                            company_id,
+                            sl.get("license_holder") or "",
+                            sl.get("license_number") or "",
+                            sl.get("license_type") or "CONTRACTOR",
+                            sl.get("license_status") or "Active",
+                            sl.get("licensing_agency") or "State Agency"
+                        ))
+                        inserted_licenses += 1
+                else:
+                    # Parse license number & type fallback
+                    cert_val = r.get("pumper_certification_level") or r.get("license_number") or ""
+                    license_num, license_type = parse_license_details(cert_val)
+                    
+                    # License holder name:
+                    license_holder = r.get("name") or ""
+                    
+                    license_status = r.get("license_status") or "Active"
+                    licensing_agency = r.get("licensing_agency") or "State Health Dept"
+                    
+                    cursor_unified.execute(insert_license_query, (
+                        company_id,
+                        license_holder,
+                        license_num,
+                        license_type,
+                        license_status,
+                        licensing_agency
+                    ))
+                    inserted_licenses += 1
                 
         cursor_unified.execute("COMMIT")
         print(f"\n[+] Unified database successfully consolidated and populated:")

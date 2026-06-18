@@ -4,7 +4,13 @@ import json
 import sqlite3
 import argparse
 import datetime
+import threading
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
+
+# Rate limiting locks and tracking
+rate_limit_lock = threading.Lock()
+last_request_time = 0.0
 
 # Set path for imports
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +26,8 @@ STATE_TO_FOLDER = {
     "OH": "ohio",
     "PA": "pennsylvania",
     "TX": "texas",
-    "VA": "virginia"
+    "VA": "virginia",
+    "FL": "florida"
 }
 
 # The canonical 10 questions for Water Well Drillers directory
@@ -219,6 +226,9 @@ def get_pending_records(db_path, state_abbrev):
         if not os.path.exists(cache_path):
             # Fallback to state folder if it exists
             cache_path = utils.resolve_path(f"02-workbench/03-wells-water-well-drillers/cache/crawled_text/{state_folder}/{slug}.txt")
+        if not os.path.exists(cache_path):
+            # Fallback to id.txt if it exists
+            cache_path = utils.resolve_path(f"02-workbench/03-wells-water-well-drillers/cache/crawled_text/{state_folder}/{row_id}.txt")
             
         text = ""
         if os.path.exists(cache_path):
@@ -311,9 +321,9 @@ def main():
             "georgia": "GA", "michigan": "MI", "new york": "NY", "new_york": "NY",
             "north carolina": "NC", "north_carolina": "NC", "ohio": "OH",
             "pennsylvania": "PA", "texas": "TX", "virginia": "VA",
-            "arizona": "AZ",
+            "arizona": "AZ", "florida": "FL",
             "ga": "GA", "mi": "MI", "ny": "NY", "nc": "NC", "oh": "OH",
-            "pa": "PA", "tx": "TX", "va": "VA", "az": "AZ"
+            "pa": "PA", "tx": "TX", "va": "VA", "az": "AZ", "fl": "FL"
         }
         state_abbrev = state_map.get(state.lower(), state.upper())
         
@@ -353,12 +363,20 @@ def main():
             questions=CANONICAL_QUESTIONS
         )
         try:
+            global last_request_time
+            with rate_limit_lock:
+                now = time.time()
+                elapsed = now - last_request_time
+                if elapsed < 1.0:
+                    time.sleep(1.0 - elapsed)
+                last_request_time = time.time()
+                
             result_json = call_gemini(prompt, response_schema)
             return record, result_json, None
         except Exception as e:
             return record, None, e
 
-    with ThreadPoolExecutor(max_workers=5) as executor:
+    with ThreadPoolExecutor(max_workers=20) as executor:
         futures = {executor.submit(process_record, record): record for record in pending_records}
         
         for idx, future in enumerate(as_completed(futures)):

@@ -44,9 +44,9 @@ def enrich_state_apify(db_path, state_name, limit):
             "georgia": "GA", "michigan": "MI", "new york": "NY", "new_york": "NY",
             "north carolina": "NC", "north_carolina": "NC", "ohio": "OH",
             "pennsylvania": "PA", "texas": "TX", "virginia": "VA",
-            "arizona": "AZ",
+            "arizona": "AZ", "florida": "FL",
             "ga": "GA", "mi": "MI", "ny": "NY", "nc": "NC", "oh": "OH",
-            "pa": "PA", "tx": "TX", "va": "VA", "az": "AZ"
+            "pa": "PA", "tx": "TX", "va": "VA", "az": "AZ", "fl": "FL"
         }
         state_abbrev = state_map.get(state_name.lower(), state_name.upper())
         
