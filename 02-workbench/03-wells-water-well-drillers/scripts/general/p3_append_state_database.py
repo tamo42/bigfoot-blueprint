@@ -49,6 +49,17 @@ def append_state_database(state_db_path, master_db_path):
     try:
         c_master.execute("BEGIN TRANSACTION")
         
+        # Clean up records marked for deletion to prevent duplicate slug conflicts
+        c_master.execute("SELECT id FROM well_contractors WHERE listing_tier = 'marked_for_deletion'")
+        marked_ids = [r[0] for r in c_master.fetchall()]
+        if marked_ids:
+            print(f"[*] Found {len(marked_ids)} records marked for deletion in master DB. Cleaning them up...")
+            # Delete child licenses first
+            placeholders = ", ".join(["?"] * len(marked_ids))
+            c_master.execute(f"DELETE FROM technician_licenses WHERE company_id IN ({placeholders})", marked_ids)
+            c_master.execute(f"DELETE FROM well_contractors WHERE id IN ({placeholders})", marked_ids)
+            print(f"[+] Cleaned up marked records and matching child licenses.")
+            
         for comp in state_contractors:
             slug = comp['slug']
             old_id = comp['id']

@@ -14,8 +14,8 @@ def calculate_projections(records, vendors, website_ratio=0.5, review_ratio=0.3)
     t_parse = records * 0.001
     t_apify = 120 + (vendors * 0.5)
     t_crawl = vendors * website_ratio * 0.25
-    t_listings = vendors * website_ratio * 1.0
-    t_scorecards = vendors * review_ratio * 1.0
+    t_listings = vendors * 1.5  # Adjust: Gemini processes ~1-2 records/sec due to rate limiting
+    t_scorecards = vendors * 1.5
     t_county = 10
     t_append = 10
     t_build = 45 # Approximate build time
@@ -151,8 +151,13 @@ def main():
     # 3. Stage 2: Website Crawling
     cmd_crawl = [
         "python",
-        os.path.join(workspace, "02-workbench", "03-wells-water-well-drillers", "scripts", "general", "p3_crawl_websites.py"),
-        "--db", state_db
+        os.path.join(workspace, "scripts", "p3_crawl_websites.py"),
+        "--db", state_db,
+        "--table", "well_contractors",
+        "--id-column", "id",
+        "--cache-dir", os.path.join(workspace, "02-workbench", "03-wells-water-well-drillers", "cache", "crawled_text", "arizona"),
+        "--keywords", "drilling,well,pump,repair,service,contact",
+        "--limit", str(args.vendors)
     ]
     if not run_stage(cmd_crawl, workspace, projections["stages"]["crawl"], "Website Crawling"):
         print("[-] Pipeline halted due to failure in Website Crawl.")
