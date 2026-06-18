@@ -139,6 +139,16 @@ Because the script dynamically filters for **any** violation where `IS_HEALTH_BA
         *   `02-workbench/03-wells-water-well-drillers/data/backup/water_well_directory.sqlite.bak`: A backup of the previous `water_well_directory.sqlite` file, created if one existed before migration.
     *   **Console Output:** Detailed logging of the migration process, including the number of source files processed, total raw records, unique companies identified, and records inserted into the unified database.
 
+### `p3_append_state_database.py`
+*   **What it does:** Relational appender that copies fully completed, enriched contractor profiles and mapped technician licenses from an isolated state database (e.g., `florida_wells.sqlite`) directly into the unified master database (`water_well_directory.sqlite`).
+*   **Why it does it:** Safely merges newly completed state datasets into production without rebuilding the entire database from scratch or wiping out historical reviews, ratings, and Gemini scorecards from other states.
+*   **Inputs:**
+    *   `--state-db`: Path to the local enriched state database (defaults to `florida_wells.sqlite`).
+    *   `--master-db`: Path to the unified production database (defaults to `water_well_directory.sqlite`).
+*   **Outputs:**
+    *   **Modified SQLite database:** Appends non-duplicate contractors to `well_contractors` and maps their child licenses to `technician_licenses` with new auto-incremented company IDs.
+    *   **Console Output:** Displays counts of successfully appended companies, skipped duplicates, and inserted licenses.
+
 ### `p3_schema.py`
 *   **What it does:** Defines the canonical SQLite database schemas for two tables, `well_contractors` and `technician_licenses`, and provides a function to create or incrementally migrate these tables in a specified SQLite database file.
 *   **Why it does it:** This script establishes and maintains the core data model for storing well contractor information and their associated technician licenses, ensuring data consistency and enabling future schema evolution through additive migrations.
