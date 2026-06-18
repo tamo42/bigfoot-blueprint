@@ -21,7 +21,10 @@ Perform all enrichment tasks directly on the isolated state database (`{state}_w
 5. **Active Monitoring**: During enrichment runs, monitor timestamped progress logs. Set monitors at **50%, 100%, and 125%** of the expected execution time to handle API stalls or retry loops.
 
 ### Phase C: Append to Unified Database
-1. **Append State Table**: Run a migration script to copy and append the completed, fully enriched records from the state database (`{state}_wells.sqlite`) directly into the master `water_well_directory.sqlite`.
+1. **Append State Table**: Run the database append script to relationally merge the completed, fully enriched records and technician licenses from the state database (`{state}_wells.sqlite`) directly into the master `water_well_directory.sqlite`:
+   ```bash
+   python 02-workbench/03-wells-water-well-drillers/scripts/general/p3_append_state_database.py --state-db 02-workbench/03-wells-water-well-drillers/data/{state}_wells.sqlite
+   ```
 2. **Verify Masters**: Assert that the main database has not modified or lost any pre-existing records for other states, and that the new state records are fully appended with their reviews, scorecards, and Q&As intact.
 
 ### Phase D: Deployment & Build Verification
