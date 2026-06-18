@@ -13,12 +13,29 @@ When onboarding a new state to the water well directory, execute these phases in
 2. **Schema Alignment**: Verify that the columns and table casing in `{state}_wells.sqlite` match the target `well_contractors` database schema exactly (using lower-case column names) so it can be appended later without mapping errors.
 
 ### Phase B: Local Enrichment & County Mapping (In Isolation)
-Perform all enrichment tasks directly on the isolated state database (`{state}_wells.sqlite`) first:
-1. **Google Places & Reviews**: Run `p3_enrich_places_apify.py` targeting `{state}_wells.sqlite` to pull reviews, ratings, lat/lng coordinates, and address info.
-2. **Website Crawling & Content Enrichment**: Crawl websites, then run `p3_enrich_listings.py` (with thread-locked rate limit pacing) on the state database to generate custom descriptions and Q&As.
-3. **Gemini Review Analysis**: Run `p4_enrich_reviews_gemini.py` on the state database to calculate the Driller Scores from Google reviews.
-4. **Local County Resolution**: Run `p3_enrich_counties.py` targeting `{state}_wells.sqlite` to map cities to counties before merging, preventing dynamic route generation failures.
-5. **Active Monitoring**: During enrichment runs, monitor timestamped progress logs. Set monitors at **50%, 100%, and 125%** of the expected execution time to handle API stalls or retry loops.
+Perform all enrichment tasks directly on the isolated state database (`{state}_wells.sqlite`) first, invoking the scripts from the repository root:
+1. **Google Places & Reviews**: Run the Apify Place matching script to pull reviews, ratings, lat/lng coordinates, and website URLs:
+   ```bash
+   python scripts/p3_enrich_places_apify.py --db 02-workbench/03-wells-water-well-drillers/data/{state}_wells.sqlite --state {state}
+   ```
+2. **Website Crawling**: Run the local crawl script to download and cache text content from the matched website URLs:
+   ```bash
+   python 02-workbench/03-wells-water-well-drillers/scripts/general/p3_crawl_websites.py --db 02-workbench/03-wells-water-well-drillers/data/{state}_wells.sqlite
+   ```
+3. **Gemini Listing Enrichment**: Run the Gemini listing enricher to parse cached crawled text and populate custom HTML descriptions and Q&As:
+   ```bash
+   python 02-workbench/03-wells-water-well-drillers/scripts/general/p3_enrich_listings.py --db 02-workbench/03-wells-water-well-drillers/data/{state}_wells.sqlite --mode full
+   ```
+4. **Gemini Review Analysis**: Run the scorecard generator to calculate overall Driller Scores from Google reviews:
+   ```bash
+   python scripts/p4_enrich_reviews_gemini.py --db 02-workbench/03-wells-water-well-drillers/data/{state}_wells.sqlite
+   ```
+5. **Local County Resolution**: Run the county backfiller to resolve city-to-county mappings before merging:
+   ```bash
+   python 02-workbench/03-wells-water-well-drillers/scripts/general/p3_enrich_counties.py --db 02-workbench/03-wells-water-well-drillers/data/{state}_wells.sqlite
+   ```
+6. **Active Monitoring**: During enrichment runs, monitor timestamped progress logs. Set monitors at **50%, 100%, and 125%** of the expected execution time to handle API stalls or retry loops.
+
 
 ### Phase C: Append to Unified Database
 1. **Append State Table**: Run the database append script to relationally merge the completed, fully enriched records and technician licenses from the state database (`{state}_wells.sqlite`) directly into the master `water_well_directory.sqlite`:
