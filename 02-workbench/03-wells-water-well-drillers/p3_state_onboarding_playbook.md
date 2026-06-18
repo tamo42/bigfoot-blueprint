@@ -1,6 +1,10 @@
 # Phase 3: State Ingestion & Enrichment Playbook (03-Wells Project)
 
+> [!IMPORTANT]
+> **Operating Assumption**: This playbook assumes that the raw state contractor data has already been successfully harvested (scraped, parsed, or downloaded) and exists in the target schema structure. It details the process starting from the raw dataset through places/Gemini enrichment to final master database consolidation and production deployment.
+
 This playbook outlines the step-by-step pipeline for onboarding new states, consolidating them into the unified national database, enriching them using Google Places and Gemini, and deploying them to the production site.
+
 
 ---
 
