@@ -50,13 +50,23 @@ $$\text{Projected TTC (seconds)} = (R \times 0.001) + V \times [0.5 + 1.25W + 1.
 
 *Note: $T_{\text{build}} \approx 15\text{s} + (\text{Total Pages} / 600)$.*
 
-### 2. Monitoring & Override Thresholds
-Set timers at **50%, 100%, and 125%** of the calculated TTC. If execution logs diverge from these benchmarks, execute the corresponding action:
+### 2. Two-Level Monitoring & Override Thresholds
+Set active monitoring timers at **50%, 100%, and 125%** of the expected duration at both the **individual batch level** (within each stage) and the **overall pipeline level** (for the entire state onboarding process).
+
+#### A. Batch-Level Monitoring (Within Individual Stages)
+For each batch size $B$ passed to a script (e.g. Apify search, crawl, or Gemini run):
+* **50% of Batch TTC**: Check that the script's log output shows active processing (e.g. at least 25% of queries have successfully returned).
+* **100% of Batch TTC**: Check that the database updates or cache writes match the batch count. If updates are $< 80\%$, the threads are throttling or blocked.
+* **125% of Batch TTC (Hard Stop)**: If the batch loop is still running, kill it immediately to prevent infinite retries.
+
+#### B. Overall Pipeline Monitoring (Master Process)
+For the calculated master TTC across the entire state ingestion:
 
 | Benchmark | Expected Milestone | Status Check / Override Actions |
 | :--- | :--- | :--- |
-| **50% of TTC** | Apify Places search completed; crawled text files cached; Gemini Q&A loops initiated. | **Verify Logs**: Confirm `apify_raw_dataset_*.json` is created in `/cache` and `crawled_text/` has file updates. If 0 crawls are cached, check network settings. |
-| **100% of TTC** | Gemini listing enrichment complete; Gemini review scorecards (Driller Scores) complete. | **Verify DB**: Open the state SQLite database. If `qa_1_question` count is $< 80\%$ of expected website-eligible records, the Gemini worker pool has stalled. |
-| **125% of TTC** | Database consolidated, appended, build complete, sitemap generated. | **Hard Stop / Manual Override**: If the script has not exited, **something is wrong** (e.g., SQLite connection lock, API quota soft block, or infinite retry loops). **Kill the process immediately**, review the logs, and rerun in a smaller batch size (`--limit`). |
+| **50% of Master TTC** | Apify Places search completed; crawled text files cached; Gemini Q&A loops initiated. | **Verify Logs**: Confirm `apify_raw_dataset_*.json` is created in `/cache` and `crawled_text/` has file updates. If 0 crawls are cached, check network settings. |
+| **100% of Master TTC** | Gemini listing enrichment complete; Gemini review scorecards (Driller Scores) complete. | **Verify DB**: Open the state SQLite database. If `qa_1_question` count is $< 80\%$ of expected website-eligible records, the Gemini worker pool has stalled. |
+| **125% of Master TTC** | Database consolidated, appended, build complete, sitemap generated. | **Hard Stop / Manual Override**: If the script has not exited, **something is wrong** (e.g., SQLite connection lock, API quota soft block, or infinite retry loops). **Kill the process immediately**, review the logs, and rerun in a smaller batch size (`--limit`). |
+
 
 
