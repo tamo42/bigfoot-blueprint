@@ -1,7 +1,12 @@
 import os
+import re
 import json
+import base64
+import subprocess
 import sqlite3
 import urllib.parse
+import urllib.request
+import urllib.error
 from datetime import datetime, timezone
 import feedparser
 from googlenewsdecoder import new_decoderv1
@@ -18,6 +23,17 @@ client = genai.Client() # Uses GEMINI_API_KEY from environment
 
 # Database setup
 DB_PATH = os.path.join("cache", "content_queue.db")
+PUBLISHED_DIR = os.path.join("cache", "published")
+
+# Maps niche_id -> the live Astro site repo that receives the daily published post.
+# Niches with no live site yet (e.g. hvaccommercialhub, still in Phase 2 prototyping)
+# are intentionally omitted; their posts stay staged locally only.
+NICHE_REPO_MAP = {
+    "gaclosinglawyers": {"repo": "tamo42/gaclosinglawyers.com", "branch": "master"},
+    "georgiagreasetrap": {"repo": "tamo42/georgiagreasetrap.com", "branch": "main"},
+    "waterwelldrillers": {"repo": "tamo42/uswelldrillers.com", "branch": "master"},
+}
+GITHUB_CONTENT_PATH = "src/content/news"
 
 def init_db():
     os.makedirs("cache", exist_ok=True)
@@ -196,6 +212,135 @@ summary: "YOUR ONE SENTENCE SUMMARY"
         contents=prompt
     )
     return response.text
+
+def slugify(title: str) -> str:
+    slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+    return slug[:80] or "untitled"
+
+
+def publish_daily_selection(conn, profiles: dict):
+    """Enforces the Rule of One: picks the single highest-scoring APPROVED
+    story generated today for each niche, marks it PUBLISHED, and writes it
+    to the staging directory. All other APPROVED stories stay queued
+    (available for the weekly newsletter digest)."""
+    print("\n" + "=" * 50)
+    print("=== APPLYING RULE OF ONE (DAILY PUBLISH SELECTION) ===")
+    print("=" * 50)
+
+    cursor = conn.cursor()
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    published = []  # list of dicts: niche_id, slug, local_path, title
+
+    for niche_id, profile in profiles.items():
+        cursor.execute("""
+            SELECT id, original_title, editor_score_json, generated_markdown
+            FROM articles
+            WHERE niche_id = ? AND status = 'APPROVED' AND date(created_at) = date('now')
+        """, (niche_id,))
+        rows = cursor.fetchall()
+
+        if not rows:
+            print(f"[{niche_id}] No approved stories today. Nothing to publish.")
+            continue
+
+        best = max(rows, key=lambda r: json.loads(r[2]).get("total_score", 0))
+        best_id, best_title, best_score_json, best_markdown = best
+        best_score = json.loads(best_score_json).get("total_score", 0)
+
+        cursor.execute("UPDATE articles SET status = 'PUBLISHED' WHERE id = ?", (best_id,))
+        conn.commit()
+
+        slug = slugify(best_title)
+        niche_dir = os.path.join(PUBLISHED_DIR, niche_id)
+        os.makedirs(niche_dir, exist_ok=True)
+        out_path = os.path.join(niche_dir, f"{today}-{slug}.md")
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(best_markdown)
+
+        skipped = len(rows) - 1
+        print(f"[{niche_id}] PUBLISHED (score {best_score}): {best_title}")
+        print(f"   -> {out_path}")
+        if skipped:
+            print(f"   {skipped} other approved stor{'y' if skipped == 1 else 'ies'} left queued for the newsletter.")
+
+        published.append({
+            "niche_id": niche_id,
+            "slug": slug,
+            "title": best_title,
+            "markdown": best_markdown,
+        })
+
+    return published
+
+
+def get_github_token() -> str:
+    result = subprocess.run(["gh", "auth", "token"], capture_output=True, text=True, check=True)
+    return result.stdout.strip()
+
+
+def github_api_request(method: str, url: str, token: str, body: dict = None):
+    data = json.dumps(body).encode("utf-8") if body is not None else None
+    req = urllib.request.Request(url, data=data, method=method)
+    req.add_header("Authorization", f"Bearer {token}")
+    req.add_header("Accept", "application/vnd.github+json")
+    req.add_header("X-GitHub-Api-Version", "2022-11-28")
+    try:
+        with urllib.request.urlopen(req) as resp:
+            return resp.status, json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        return e.code, json.loads(e.read().decode("utf-8")) if e.fp else {}
+
+
+def push_published_to_github(published: list):
+    """Pushes each niche's single daily PUBLISHED post to its live Astro site
+    repo via the GitHub Contents API, per NICHE_REPO_MAP."""
+    if not published:
+        return
+
+    print("\n" + "=" * 50)
+    print("=== PUSHING PUBLISHED POSTS TO GITHUB ===")
+    print("=" * 50)
+
+    try:
+        token = get_github_token()
+    except Exception as e:
+        print(f"[ERROR] Could not obtain GitHub token via gh CLI: {e}")
+        return
+
+    for item in published:
+        niche_id = item["niche_id"]
+        target = NICHE_REPO_MAP.get(niche_id)
+        if not target:
+            print(f"[{niche_id}] No live site repo configured. Skipping GitHub push (staged locally only).")
+            continue
+
+        repo = target["repo"]
+        branch = target["branch"]
+        remote_path = f"{GITHUB_CONTENT_PATH}/{item['slug']}.md"
+        api_url = f"https://api.github.com/repos/{repo}/contents/{remote_path}"
+
+        # Check if the file already exists on this branch (needed to update vs create).
+        status, existing = github_api_request("GET", f"{api_url}?ref={branch}", token)
+        sha = existing.get("sha") if status == 200 else None
+
+        content_b64 = base64.b64encode(item["markdown"].encode("utf-8")).decode("ascii")
+        commit_body = {
+            "message": f"content(news): {'update' if sha else 'add'} newsjacking post - {item['title']}",
+            "content": content_b64,
+            "branch": branch,
+        }
+        if sha:
+            commit_body["sha"] = sha
+
+        put_status, put_resp = github_api_request("PUT", api_url, token, commit_body)
+        if put_status in (200, 201):
+            html_url = put_resp.get("content", {}).get("html_url", "")
+            print(f"[{niche_id}] Pushed to {repo}@{branch}: {remote_path}")
+            if html_url:
+                print(f"   -> {html_url}")
+        else:
+            print(f"[{niche_id}] [ERROR] Push failed ({put_status}): {put_resp.get('message', put_resp)}")
+
 
 def main():
     print("[START] Initializing Bigfoot Newsjacking Engine...")
@@ -390,6 +535,12 @@ def main():
         except Exception as e:
             print(f"[ERROR] Error running Triage Matrix: {e}")
             
+    # === RULE OF ONE: SELECT TODAY'S PUBLISHED STORY PER NICHE ===
+    published = publish_daily_selection(conn, profiles)
+
+    # === PUSH TODAY'S SELECTIONS TO THE LIVE SITE REPOS ===
+    push_published_to_github(published)
+
     print("\n[COMPLETE] Newsjacking Engine Run Complete!")
 
 if __name__ == "__main__":
