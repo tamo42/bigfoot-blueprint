@@ -11,6 +11,11 @@ This repository hosts:
 ---
 
 ## Workspace Structure
+* `GEMINI.md` / `CONTEXT.md` - workspace rules, folder map and task routing; `directory-registry.md` - live sites and KPI board.
+* `01-context/` - global context docs (`project-index.md`, status snapshots).
+* `02-workbench/` - per-niche project work (`p1_`-`p4_` files; project PRDs and phase docs).
+* `03-frameworks/` - site-agnostic scoping, operation and orchestrator frameworks.
+* `scripts/` - cross-project scripts (see `scripts/README.md`), including `secret_scan.py`.
 * `gabar-scraper.py` - Georgia State Bar Real Property Law section scraper.
 * `gabar-enricher.py` - Gemini-powered profile enrichment pipeline.
 * `directory.sqlite` - Active SQLite database containing scraped and enriched profiles.

@@ -9,6 +9,10 @@ This workspace is the central control plane and prototyping repository for the *
 | Task Type | Go To | Description / Reference |
 | :--- | :--- | :--- |
 | **Manage Agent Rules & Blueprints** | `/` (root) | Core BLEEP manifests (`01_intent_manifest.bleep.md` through `04_feedback_loop.bleep.md`). |
+| **Scope, run or orchestrate a project** | [03-frameworks/README.md](03-frameworks/README.md) | Scoping framework (idea to phases), operation framework (one step), orchestrator (many steps). |
+| **See active projects and status** | [01-context/project-index.md](01-context/project-index.md) | One row per scoped project, plus [status-2026-11-02.md](01-context/status-2026-11-02.md) (latest review of live sites and Search Console). |
+| **Canonical tags and trailing slashes (uswelldrillers.com)** | [p4_canonical_trailing_slash_plan.md](02-workbench/03-wells-water-well-drillers/p4_canonical_trailing_slash_plan.md) | Project `p4_canonical`: 6-phase PRD with phase docs and a technical reference beside it. |
+| **Check credentials safety before commit** | `/scripts/secret_scan.py` | Credential scan of added lines and untracked files (used by the orchestrator's verifier). |
 | **Niche Discovery & Keyword Audits** | [Perry's Directory Ideas.md](file:///C:/Users/tamo4/git/nhq-bigfoot-blueprint/references/Perry's%20Directory%20Ideas.md) | Compilation of niche candidate opportunities, Belcher's lists, and keyword resources. |
 | **Execute Scrapers & Data Extraction** | `/scripts/` | Scrapers (e.g. `gabar-scraper.py`) and raw files in `/cache/`. |
 | **Extract PowerBI Grids** | `/scripts/scrape_powerbi_grid_template.py` | Generic Playwright DOM scraper for bypassing Microsoft PowerBI (`app.powerbigov.us`) virtualization. |
@@ -31,6 +35,9 @@ This workspace is the central control plane and prototyping repository for the *
 | **Context Boundary (BLEEP 2)** | [02_context_boundary.bleep.md](file:///C:/Users/tamo4/git/nhq-bigfoot-blueprint/02_context_boundary.bleep.md) | Tech stack boundaries & quality auditor gyroscopes. |
 | **Mechanism Blueprint (BLEEP 3)** | [03_mechanism_blueprint.bleep.md](file:///C:/Users/tamo4/git/nhq-bigfoot-blueprint/03_mechanism_blueprint.bleep.md) | 4-Phase build state machine. |
 | **Feedback Loop (BLEEP 4)** | [04_feedback_loop.bleep.md](file:///C:/Users/tamo4/git/nhq-bigfoot-blueprint/04_feedback_loop.bleep.md) | Learning rules & error adaptation. |
+| **Project Index** | [01-context/project-index.md](01-context/project-index.md) | Scoped projects and their project-level status. |
+| **Frameworks** | [03-frameworks/](03-frameworks/) | Scoping, operation and orchestrator documents. |
+| **Directory Registry** | [directory-registry.md](directory-registry.md) | Live directory sites, KPI board and improvement projects. |
 | **Active Rules Registry** | [.system-rules.md](file:///C:/Users/tamo4/git/nhq-bigfoot-blueprint/.system-rules.md) | System-level rule abstractions compiled over runs. |
 
 ---

@@ -37,9 +37,21 @@ Directories listed below are in Stage 1 (Static SQLite + Astro) and are being tr
 
 | Directory ID | Launch Date | Pages Generated | Indexing % (GSC) | Impressions/Wk | Clicks/Wk | Claims (30d) | Upgrade Eligible? |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **01-GABAR** | 6/14/26 | 5438 | 0.0% | 0 | 0 | 0 | **No** |
-| **02-SEPTIC** | 6/13/26 | 714 | 0.0% | 0 | 0 | 0 | **No** |
-| **03-WELLS** | 6/16/26 | TBD | 0.0% | 0 | 0 | 0 | **No** |
+| **01-GABAR** | 6/14/26 | 5442 (sitemap) | 0.1% (8 of 5,686) | 0 | 0 | 0 | **No** |
+| **02-SEPTIC** | 6/13/26 | 714 | not checked | not checked | not checked | not checked | **Unknown** |
+| **03-WELLS** | 6/16/26 | 9420 (sitemap) | 32.4% (6,359 of 19,599 known URLs) | 10,258 | 109 | 0 | **Yes** (impressions and clicks triggers met; migration decision is Neal's) |
+
+*KPI values for 01-GABAR and 03-WELLS were taken from Google Search Console on 2026-11-02 (impressions and clicks are the last 7 days to 2026-10-31). 02-SEPTIC was not reviewed. Details and findings: `01-context/status-2026-11-02.md`.*
+
+---
+
+## 🔧 Improvement Projects on Live Directories
+
+Scoped under `03-frameworks/bigfoot-project-scoping-framework.md`; one row per project in `01-context/project-index.md`.
+
+| Key | Directory | Purpose | Status | PRD |
+| :--- | :--- | :--- | :--- | :--- |
+| `p4_canonical` | 03-WELLS | Canonical tags and trailing-slash consolidation (6,066 duplicate-canonical pages in GSC) | **Draft** (awaiting Neal's go-ahead) | `02-workbench/03-wells-water-well-drillers/p4_canonical_trailing_slash_plan.md` |
 
 ---
 

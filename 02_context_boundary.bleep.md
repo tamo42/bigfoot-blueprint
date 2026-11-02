@@ -22,7 +22,7 @@
       - SOURCE OF TRUTH: `nhq-bigfoot-blueprint` is the master registry, configuration, and scripting control plane.
       - DATA RETENTION: Raw scraped cache (HTML/JSON) must be stored locally in `/cache/` or Google Drive references.
       - SEPARATION OF TENANTS: All verified directory entries in Supabase must carry a valid foreign key `directory_id` linking to the master site registry.
-      - CREDENTIAL SECURITY: API keys, Supabase connection strings, and service roles must be loaded exclusively from local `.env` files; never commit credentials to GitHub.
+      - CREDENTIAL SECURITY: API keys, Supabase connection strings, and service roles must be loaded exclusively from local `.env` files; never commit credentials to GitHub. `/scripts/secret_scan.py` checks added lines and untracked files for credentials; the orchestrator's verifier runs it on every step.
     </DATA_PROFILE_CONSTRAINTS>
 
     <WORKSPACE_MAPPING>
@@ -32,6 +32,9 @@
       - LAYER 3 (References): `/references/` (workshop analyses, SWOT, setups, slides, and copywriting guides).
       - LAYER 4 (Scripts & Data): `/scripts/` (scraping, geocoding, and enrichment engines) and `directory.sqlite`.
       - LAYER 5 (Behavioral Rules): `.system-rules.md` (learning and rule logs).
+      - LAYER 6 (Context): `/01-context/` (project index, status snapshots).
+      - LAYER 7 (Projects): `/02-workbench/` (per-niche work; project PRDs, phase docs and evidence, flat `pN_` files).
+      - LAYER 8 (Frameworks): `/03-frameworks/` (scoping, operation and orchestrator for scoped projects).
     </WORKSPACE_MAPPING>
   </TAB_3_INPUT_BOUNDARY>
 

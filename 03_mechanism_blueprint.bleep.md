@@ -9,7 +9,7 @@
 
   <TAB_5_STATE_MACHINE>
     <STATE_MAP>
-      - CURRENT_STATE: STATE_01_SELECTION_VIABILITY
+      - CURRENT_STATE: tracked per directory, not workspace-wide (see `directory-registry.md`; as of 2026-11-02 01-GABAR, 02-SEPTIC and 03-WELLS are live, 04-HVAC-HUB is in STATE_02, 05-NOTARIES is in STATE_01). Improvement projects on live directories are scoped under `03-frameworks/`.
       - TRANSITION_PATHS:
           STATE_01_SELECTION_VIABILITY -> STATE_02_AGENTIC_DISCOVERY
           STATE_02_AGENTIC_DISCOVERY -> STATE_03_ENGINEERING_PIPELINE
