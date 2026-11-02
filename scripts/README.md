@@ -53,3 +53,9 @@ As per System Rule **R-131**, every script is documented below.
 * **Why it does it:** To fully automate overnight/unattended pipeline execution by bypassing terminal security confirmations and silently healing transient network errors (e.g. Google SDK 503 errors).
 * **Inputs:** A target Python script and batch limits.
 * **Outputs:** Real-time terminal streams and automated process recovery.
+
+### `secret_scan.py`
+* **What it does:** Scans the lines a working tree adds (`git diff HEAD` plus untracked, non-ignored files) in one or more repos for leaked credentials: cloud and API keys (AWS, Google, OpenAI, Apify, GitHub), JWTs, private keys, database URLs with passwords, assigned `api_key`/`secret`/`token`/`password`/`service_role` strings, and real `.env` files. Placeholders (`YOUR_...`, `<password>`, `changeme`, `example`, `xxxx`) pass. `--self-test` seeds bad and good cases.
+* **Why it does it:** Credentials must live only in local `.env` files and never be committed (02_context_boundary). One script serves both the orchestrated step agent's self-scan and the verifier's check V3, so they cannot disagree. Directory data is public registry data, so personal-data scanning is deliberately not part of it.
+* **Inputs:** One or more repo paths (the control plane plus any site repo a step touched), run from anywhere: `python -I scripts/secret_scan.py <repo> [<repo> ...]`.
+* **Outputs:** `HIT <repo>:<file>:<line> <kind> <first 3 chars>...` lines and a `SUMMARY hits=<n>` line; exit 0 clean, 1 hits, 2 error. Matches are cut to 3 characters so a secret is never printed whole.
