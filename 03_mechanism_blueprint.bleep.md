@@ -14,6 +14,7 @@
           STATE_01_SELECTION_VIABILITY -> STATE_02_AGENTIC_DISCOVERY
           STATE_02_AGENTIC_DISCOVERY -> STATE_03_ENGINEERING_PIPELINE
           STATE_03_ENGINEERING_PIPELINE -> STATE_04_ANTIGRAVITY_DEPLOYMENT
+      - FILE ORGANIZATION: Do not create deeply nested phase folders (e.g. `03-engineering/scripts`). Use flat phase prefixes on workspace files (`p1_viability.md`, `p2_scraper.py`, `p3_enrich.py`, `p4_deploy.json`) mapping to the 4-Phase Agent-Accelerated Factory (R-126).
     </STATE_MAP>
 
     <STATE_01_SELECTION_VIABILITY>

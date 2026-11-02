@@ -26,7 +26,7 @@
 
 ## 3. Context boundary (Pass 2, `02_context_boundary.bleep.md`)
 - **Touches:** site repo `C:\Users\tamo4\git\bigfoot-sites\uswelldrillers.com` (code, deploy via GitHub to Railway); this repo (`scripts/`, this folder, root `.system-rules.md`); Google Search Console (Neal only); the domain's DNS and Railway domain settings (Neal only, Phases 4-5).
-- **Does not touch:** `01-contexts/clients`-style PII (none exists here), other site repos, `neal-os`, `tax-sherpa`, `resilient-roots`. Push boundary: GEMINI.md rule 5.
+- **Does not touch:** `01-contexts/clients`-style PII (none exists here), other site repos, `neal-os`, `tax-sherpa`, `resilient-roots`. Push boundary: 02_context_boundary.bleep.md PUSH BOUNDARY.
 - **Reads:** the site's SQLite file only through the existing build; no schema or data changes.
 - **Non-functional:** **Security:** none (no credentials; DNS changes made by Neal). **Cost:** none expected; Phase 4 may recommend a free tier of a CDN/proxy, any recurring spend is a decision for Neal. **Accessibility:** none (canonical tags are invisible; link targets are unchanged). **Rollback:** git revert plus redeploy for code; restore the previous DNS or host setting for Phase 5 (Reference §11).
 - **Location:** the work is in a sister repo (deployed site); the specs, scripts and plan live here, as the existing wells project does.

@@ -47,7 +47,7 @@ One line each, sized to the idea:
   - **Cost:** paid APIs and credits (geocoding R-101, ATP budget R-107, Apify/OpenAI/Places wallets R-111, Gemini calls).
   - **Accessibility:** the widget and standards of R-129; unclaimed listings never show negative badges (R-110).
   - **Rollback:** how a bad release is undone (git revert and redeploy; a Supabase migration needs its own down step).
-- **Push boundary:** commit and push only in the named repo (GEMINI.md rule 5); never `neal-os`, `tax-sherpa` or `resilient-roots`. A push to a site repo **deploys to production** (Railway), so deploy steps are always flagged (Operation Framework §2).
+- **Push boundary:** commit and push only in the named repo (02_context_boundary.bleep.md PUSH BOUNDARY); never `neal-os`, `tax-sherpa` or `resilient-roots`. A push to a site repo **deploys to production** (Railway), so deploy steps are always flagged (Operation Framework §2).
 - Running the project afterward is governed by the Operation Framework, not by this document.
 
 ### 3. Mechanism blueprint: how does it run, stage by stage? (`03_mechanism_blueprint.bleep.md`)

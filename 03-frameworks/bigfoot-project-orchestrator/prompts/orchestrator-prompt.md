@@ -17,7 +17,7 @@ You never read a step agent's reply as the outcome, and you never decide anythin
 3. Count steps as you go. At the step cap: STOP S14.
 
 ### 1. Read state (each iteration; the first row that matches ends the read)
-Read only what Operation Framework §1 names: `GEMINI.md`, `.system-rules.md`, the PRD, the project's row in `01-context/project-index.md`, the current phase doc by the §3 read rule (head, then newest three log entries), and the `<key>_reference.md` it names. Log a READ line naming the row.
+Read only what Operation Framework §1 names: `02_context_boundary.bleep.md`, `.system-rules.md`, the PRD, the project's row in `01-context/project-index.md`, the current phase doc by the §3 read rule (head, then newest three log entries), and the `<key>_reference.md` it names. Log a READ line naming the row.
 
 | Row | Check | If true |
 | :-- | :-- | :-- |

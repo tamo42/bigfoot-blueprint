@@ -23,7 +23,7 @@ Facts, paths, commands and code a fresh agent needs. Facts were verified 2026-11
 
 Site commands (run inside the site repo): `npm install` (only if `node_modules` is missing), `npm run build` (writes `dist/`, which is git-ignored), `npm run preview` (serves `dist/` on `http://localhost:4321`; stop it when done).
 
-Repo-boundary rule (GEMINI.md rule 5): commit or push only inside ONE repo at a time. Never run git commands that touch `neal-os`, `tax-sherpa`, `resilient-roots` or other sites. Never commit credentials or `.env` files.
+Repo-boundary rule (02_context_boundary.bleep.md PUSH BOUNDARY): commit or push only inside ONE repo at a time. Never run git commands that touch `neal-os`, `tax-sherpa`, `resilient-roots` or other sites. Never commit credentials or `.env` files.
 
 ## 3. URL policy (decided by Neal, 2026-11-02)
 Every page has exactly one URL: `https://uswelldrillers.com/<path>/`: https, apex (no www), **trailing slash on every page**. The home page is `https://uswelldrillers.com/`. Files with an extension (`/search-index.json`, `/favicon.svg`, `/robots.txt`, `/sitemap-index.xml`, `/llms.txt`) never get a trailing slash. Query strings and fragments follow the slash: `/search/?q=pump`, `/va/accomack-well-pump-troubleshooting/#tab-diag`.

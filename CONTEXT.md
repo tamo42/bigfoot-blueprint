@@ -30,9 +30,9 @@ This workspace is the central control plane and prototyping repository for the *
 
 | Resource / Tool | Location | Contains |
 | :--- | :--- | :--- |
-| **Workspace Index** | [GEMINI.md](file:///C:/Users/tamo4/git/nhq-bigfoot-blueprint/GEMINI.md) | Repository rules, active directories registry, and folder maps. |
+| **Pointer Files** | `CLAUDE.md`, `GEMINI.md`, `README.md` | Pointers only. Rules, folder map, routing and boundaries live in the BLEEP manifests (mainly BLEEP 2) and `.system-rules.md`. |
 | **Intent Manifest (BLEEP 1)** | [01_intent_manifest.bleep.md](file:///C:/Users/tamo4/git/nhq-bigfoot-blueprint/01_intent_manifest.bleep.md) | Vision & quantifiable success conditions. |
-| **Context Boundary (BLEEP 2)** | [02_context_boundary.bleep.md](file:///C:/Users/tamo4/git/nhq-bigfoot-blueprint/02_context_boundary.bleep.md) | Tech stack boundaries & quality auditor gyroscopes. |
+| **Context Boundary (BLEEP 2)** | [02_context_boundary.bleep.md](file:///C:/Users/tamo4/git/nhq-bigfoot-blueprint/02_context_boundary.bleep.md) | Tech stack, push/deploy boundaries, workspace map, task routing & quality auditor gyroscopes. |
 | **Mechanism Blueprint (BLEEP 3)** | [03_mechanism_blueprint.bleep.md](file:///C:/Users/tamo4/git/nhq-bigfoot-blueprint/03_mechanism_blueprint.bleep.md) | 4-Phase build state machine. |
 | **Feedback Loop (BLEEP 4)** | [04_feedback_loop.bleep.md](file:///C:/Users/tamo4/git/nhq-bigfoot-blueprint/04_feedback_loop.bleep.md) | Learning rules & error adaptation. |
 | **Project Index** | [01-context/project-index.md](01-context/project-index.md) | Scoped projects and their project-level status. |
